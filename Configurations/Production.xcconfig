@@ -1,0 +1,4 @@
+BACKEND_URL = https:\/\/mobven.com\/
+BUNDLE_ID = com.mobven.beytasdenizcan.FirstOfficer
+APP_NAME = FirstOfficer
+SHOW_VERSION = NO

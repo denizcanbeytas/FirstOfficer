@@ -1,0 +1,10 @@
+git_url("https://github.com/denizcanbeytas/FirstOfficer.git")
+
+storage_mode("git")
+
+type("enterprise") 
+
+app_identifier(["com.mobven.denizcan.FirstOfficer",
+                "com.mobven.denizcan.FirstOfficer.dev"])
+username("denizcan.beytas@mobven.com")#Your Apple Developer Portal username
+team_id("TBXF7RJBHZ")

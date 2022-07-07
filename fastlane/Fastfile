@@ -1,0 +1,49 @@
+PROJECT_NAME ="FirstOfficer"
+PROJECT_BUNDLE ="com.mobven.denizcan.FirstOfficer"
+DEVELOPMENT_PROJECT_BUNDLE ="com.mobven.denizcan.FirstOfficer.dev"
+PROJECT_SCHEME ="FirstOfficer"
+
+
+#development build
+lane :build_test do |values|
+    #match(app_identifier: DEVELOPMENT_PROJECT_BUNDLE, type: "enterprise", readonly: true)
+    build("DevelopmentRelease", 'enterprise', "#(DEVELOPMENT_PROJECT_BUNDLE}", "#{DEVELOPMENT_PROJECT_BUNDLE} pp")
+end
+
+# production build
+lane :build_production do |values|
+    #match(app_identifier: PROJECT_BUNDLE, type: "enterprise", readonly: true)
+    build("ProductionRelease", 'enterprise', "#{PROJECT_BUNDLE}", "#{PROJECT_BUNDLE} pp")
+end
+
+def build(configuration, export_method, project_bundle, certificateName)
+    gym( scheme: "#{PROJECT_SCHEME}",
+    configuration: configuration,
+    export_method: export_method,
+    clean: true,
+    export_options: {
+        export_method: export_method,
+        export_xcargs: "-allowProvisioningUpdates",
+        provisioningProfiles: {
+            project_bundle => certificateName
+        }
+    }
+    )
+end
+
+lane :increment do
+    increment_build_number(
+        xcodeproj: "./#{PROJECT_NAME}/#{PROJECT_NAME}.xcodeproj"
+    )
+    increment_version_number(
+        xcodeproj: "./#{PROJECT_NAME}/#{PROJECT_NAME}.xcodeproj"
+    )
+end
+
+# fastlane set_version version:"0.4.0"
+lane :set_version do |options|
+    increment_version_number(
+        xcodeproj: "./#{PROJECT_NAME}/#{PROJECT_NAME}.xcodeproj",
+        version_number: options[:version]
+    )
+end
