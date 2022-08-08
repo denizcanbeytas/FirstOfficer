@@ -9,6 +9,31 @@
 /* Begin PBXBuildFile section */
 		221B846428908F2400347EDD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B846328908F2400347EDD /* RegisterViewController.swift */; };
 		221B8466289094AB00347EDD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B8465289094AB00347EDD /* WelcomeViewController.swift */; };
+		2223AA72289DDB98003D765F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA71289DDB98003D765F /* HTTPClient.swift */; };
+		2223AA74289DDBBD003D765F /* OfficeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA73289DDBBD003D765F /* OfficeLoader.swift */; };
+		2223AA76289DDBD1003D765F /* RemoteOfficeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA75289DDBD1003D765F /* RemoteOfficeLoader.swift */; };
+		2223AA7A289FFEC3003D765F /* OfficesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA78289FFEC3003D765F /* OfficesTableViewCell.swift */; };
+		2223AA7B289FFEC3003D765F /* OfficesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2223AA79289FFEC3003D765F /* OfficesTableViewCell.xib */; };
+		2223AA7E28A00121003D765F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2223AA7D28A00121003D765F /* SDWebImage */; };
+		2223AA8028A00121003D765F /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2223AA7F28A00121003D765F /* SDWebImageMapKit */; };
+		2223AA8928A052B7003D765F /* OfficeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2223AA8228A052B7003D765F /* OfficeDetail.storyboard */; };
+		2223AA8A28A052B7003D765F /* OfficeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA8328A052B7003D765F /* OfficeDetailViewController.swift */; };
+		2223AA8B28A052B7003D765F /* OfficeDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA8428A052B7003D765F /* OfficeDetailPresenter.swift */; };
+		2223AA8C28A052B7003D765F /* OfficeDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA8528A052B7003D765F /* OfficeDetailInteractor.swift */; };
+		2223AA8D28A052B7003D765F /* OfficeDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA8628A052B7003D765F /* OfficeDetailModels.swift */; };
+		2223AA8E28A052B7003D765F /* OfficeDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA8728A052B7003D765F /* OfficeDetailWorker.swift */; };
+		2223AA8F28A052B7003D765F /* OfficeDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA8828A052B7003D765F /* OfficeDetailRouter.swift */; };
+		2223AA9728A067D3003D765F /* OfficeDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA9528A067D3003D765F /* OfficeDetailCollectionViewCell.swift */; };
+		2223AA9828A067D3003D765F /* OfficeDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2223AA9628A067D3003D765F /* OfficeDetailCollectionViewCell.xib */; };
+		2284FC33289D906300D5ADD8 /* Offices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2284FC2C289D906300D5ADD8 /* Offices.storyboard */; };
+		2284FC34289D906300D5ADD8 /* OfficesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284FC2D289D906300D5ADD8 /* OfficesViewController.swift */; };
+		2284FC35289D906300D5ADD8 /* OfficesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284FC2E289D906300D5ADD8 /* OfficesPresenter.swift */; };
+		2284FC36289D906300D5ADD8 /* OfficesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284FC2F289D906300D5ADD8 /* OfficesInteractor.swift */; };
+		2284FC37289D906300D5ADD8 /* OfficesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284FC30289D906300D5ADD8 /* OfficesModels.swift */; };
+		2284FC38289D906300D5ADD8 /* OfficesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284FC31289D906300D5ADD8 /* OfficesWorker.swift */; };
+		2284FC39289D906300D5ADD8 /* OfficesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284FC32289D906300D5ADD8 /* OfficesRouter.swift */; };
+		2284FC3C289D9B2900D5ADD8 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284FC3B289D9B2900D5ADD8 /* NetworkModel.swift */; };
+		2284FC3E289D9B7700D5ADD8 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284FC3D289D9B7700D5ADD8 /* ResponseModel.swift */; };
 		22948B8B2874579D0084862E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22948B8A2874579D0084862E /* AppDelegate.swift */; };
 		22948B8D2874579D0084862E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22948B8C2874579D0084862E /* SceneDelegate.swift */; };
 		22948B8F2874579D0084862E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22948B8E2874579D0084862E /* ViewController.swift */; };
@@ -40,6 +65,29 @@
 /* Begin PBXFileReference section */
 		221B846328908F2400347EDD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		221B8465289094AB00347EDD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		2223AA71289DDB98003D765F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		2223AA73289DDBBD003D765F /* OfficeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeLoader.swift; sourceTree = "<group>"; };
+		2223AA75289DDBD1003D765F /* RemoteOfficeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteOfficeLoader.swift; sourceTree = "<group>"; };
+		2223AA78289FFEC3003D765F /* OfficesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficesTableViewCell.swift; sourceTree = "<group>"; };
+		2223AA79289FFEC3003D765F /* OfficesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfficesTableViewCell.xib; sourceTree = "<group>"; };
+		2223AA8228A052B7003D765F /* OfficeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OfficeDetail.storyboard; sourceTree = "<group>"; };
+		2223AA8328A052B7003D765F /* OfficeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeDetailViewController.swift; sourceTree = "<group>"; };
+		2223AA8428A052B7003D765F /* OfficeDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeDetailPresenter.swift; sourceTree = "<group>"; };
+		2223AA8528A052B7003D765F /* OfficeDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeDetailInteractor.swift; sourceTree = "<group>"; };
+		2223AA8628A052B7003D765F /* OfficeDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeDetailModels.swift; sourceTree = "<group>"; };
+		2223AA8728A052B7003D765F /* OfficeDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeDetailWorker.swift; sourceTree = "<group>"; };
+		2223AA8828A052B7003D765F /* OfficeDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeDetailRouter.swift; sourceTree = "<group>"; };
+		2223AA9528A067D3003D765F /* OfficeDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		2223AA9628A067D3003D765F /* OfficeDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfficeDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		2284FC2C289D906300D5ADD8 /* Offices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Offices.storyboard; sourceTree = "<group>"; };
+		2284FC2D289D906300D5ADD8 /* OfficesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficesViewController.swift; sourceTree = "<group>"; };
+		2284FC2E289D906300D5ADD8 /* OfficesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficesPresenter.swift; sourceTree = "<group>"; };
+		2284FC2F289D906300D5ADD8 /* OfficesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficesInteractor.swift; sourceTree = "<group>"; };
+		2284FC30289D906300D5ADD8 /* OfficesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficesModels.swift; sourceTree = "<group>"; };
+		2284FC31289D906300D5ADD8 /* OfficesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficesWorker.swift; sourceTree = "<group>"; };
+		2284FC32289D906300D5ADD8 /* OfficesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficesRouter.swift; sourceTree = "<group>"; };
+		2284FC3B289D9B2900D5ADD8 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		2284FC3D289D9B7700D5ADD8 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		22948B872874579D0084862E /* FirstOfficer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstOfficer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22948B8A2874579D0084862E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22948B8C2874579D0084862E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2223AA8028A00121003D765F /* SDWebImageMapKit in Frameworks */,
+				2223AA7E28A00121003D765F /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +133,121 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2223AA77289FF0B4003D765F /* exNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				2223AA71289DDB98003D765F /* HTTPClient.swift */,
+				2223AA73289DDBBD003D765F /* OfficeLoader.swift */,
+				2223AA75289DDBD1003D765F /* RemoteOfficeLoader.swift */,
+			);
+			path = exNetwork;
+			sourceTree = "<group>";
+		};
+		2223AA8128A05292003D765F /* OfficeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2223AA9028A052DB003D765F /* OfficeDetailCell */,
+				2223AA8228A052B7003D765F /* OfficeDetail.storyboard */,
+				2223AA8328A052B7003D765F /* OfficeDetailViewController.swift */,
+				2223AA8528A052B7003D765F /* OfficeDetailInteractor.swift */,
+				2223AA8428A052B7003D765F /* OfficeDetailPresenter.swift */,
+				2223AA8628A052B7003D765F /* OfficeDetailModels.swift */,
+				2223AA8728A052B7003D765F /* OfficeDetailWorker.swift */,
+				2223AA8828A052B7003D765F /* OfficeDetailRouter.swift */,
+			);
+			name = OfficeDetail;
+			path = "OfficeDetailş";
+			sourceTree = "<group>";
+		};
+		2223AA9028A052DB003D765F /* OfficeDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				2223AA9528A067D3003D765F /* OfficeDetailCollectionViewCell.swift */,
+				2223AA9628A067D3003D765F /* OfficeDetailCollectionViewCell.xib */,
+			);
+			path = OfficeDetailCell;
+			sourceTree = "<group>";
+		};
+		2284FC25289D8E0B00D5ADD8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2284FC2B289D904900D5ADD8 /* Offices */,
+				2223AA8128A05292003D765F /* OfficeDetail */,
+				2284FC28289D8E5E00D5ADD8 /* LogoutPage */,
+				2284FC27289D8E3800D5ADD8 /* LoginPage */,
+				2284FC26289D8E1700D5ADD8 /* WelcomePage */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2284FC26289D8E1700D5ADD8 /* WelcomePage */ = {
+			isa = PBXGroup;
+			children = (
+				221B8465289094AB00347EDD /* WelcomeViewController.swift */,
+			);
+			path = WelcomePage;
+			sourceTree = "<group>";
+		};
+		2284FC27289D8E3800D5ADD8 /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				221B846328908F2400347EDD /* RegisterViewController.swift */,
+			);
+			path = LoginPage;
+			sourceTree = "<group>";
+		};
+		2284FC28289D8E5E00D5ADD8 /* LogoutPage */ = {
+			isa = PBXGroup;
+			children = (
+				22948B8E2874579D0084862E /* ViewController.swift */,
+			);
+			path = LogoutPage;
+			sourceTree = "<group>";
+		};
+		2284FC29289D8EB100D5ADD8 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2223AA77289FF0B4003D765F /* exNetwork */,
+				2284FC3B289D9B2900D5ADD8 /* NetworkModel.swift */,
+				2284FC3D289D9B7700D5ADD8 /* ResponseModel.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		2284FC2A289D8EC500D5ADD8 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				22948B93287457A10084862E /* Assets.xcassets */,
+				22948B8C2874579D0084862E /* SceneDelegate.swift */,
+				22948B8A2874579D0084862E /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		2284FC2B289D904900D5ADD8 /* Offices */ = {
+			isa = PBXGroup;
+			children = (
+				2284FC3A289D98F200D5ADD8 /* OfficesCell */,
+				2284FC2C289D906300D5ADD8 /* Offices.storyboard */,
+				2284FC2D289D906300D5ADD8 /* OfficesViewController.swift */,
+				2284FC2F289D906300D5ADD8 /* OfficesInteractor.swift */,
+				2284FC2E289D906300D5ADD8 /* OfficesPresenter.swift */,
+				2284FC30289D906300D5ADD8 /* OfficesModels.swift */,
+				2284FC31289D906300D5ADD8 /* OfficesWorker.swift */,
+				2284FC32289D906300D5ADD8 /* OfficesRouter.swift */,
+			);
+			path = Offices;
+			sourceTree = "<group>";
+		};
+		2284FC3A289D98F200D5ADD8 /* OfficesCell */ = {
+			isa = PBXGroup;
+			children = (
+				2223AA78289FFEC3003D765F /* OfficesTableViewCell.swift */,
+				2223AA79289FFEC3003D765F /* OfficesTableViewCell.xib */,
+			);
+			path = OfficesCell;
+			sourceTree = "<group>";
+		};
 		22948B7E2874579D0084862E = {
 			isa = PBXGroup;
 			children = (
@@ -107,14 +272,11 @@
 		22948B892874579D0084862E /* FirstOfficer */ = {
 			isa = PBXGroup;
 			children = (
+				2284FC29289D8EB100D5ADD8 /* NetworkLayer */,
+				2284FC25289D8E0B00D5ADD8 /* Scenes */,
+				2284FC2A289D8EC500D5ADD8 /* SupportingFiles */,
 				229EB1CA2874B104009D9718 /* FirstOfficer.entitlements */,
-				22948B8A2874579D0084862E /* AppDelegate.swift */,
-				22948B8C2874579D0084862E /* SceneDelegate.swift */,
-				221B846328908F2400347EDD /* RegisterViewController.swift */,
-				22948B8E2874579D0084862E /* ViewController.swift */,
-				221B8465289094AB00347EDD /* WelcomeViewController.swift */,
 				22948B902874579D0084862E /* Main.storyboard */,
-				22948B93287457A10084862E /* Assets.xcassets */,
 				22948B95287457A10084862E /* LaunchScreen.storyboard */,
 				22948B98287457A10084862E /* Info.plist */,
 			);
@@ -163,6 +325,10 @@
 			dependencies = (
 			);
 			name = FirstOfficer;
+			packageProductDependencies = (
+				2223AA7D28A00121003D765F /* SDWebImage */,
+				2223AA7F28A00121003D765F /* SDWebImageMapKit */,
+			);
 			productName = FirstOfficer;
 			productReference = 22948B872874579D0084862E /* FirstOfficer.app */;
 			productType = "com.apple.product-type.application";
@@ -235,6 +401,9 @@
 				Base,
 			);
 			mainGroup = 22948B7E2874579D0084862E;
+			packageReferences = (
+				2223AA7C28A00121003D765F /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 22948B882874579D0084862E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -251,6 +420,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2284FC33289D906300D5ADD8 /* Offices.storyboard in Resources */,
+				2223AA8928A052B7003D765F /* OfficeDetail.storyboard in Resources */,
+				2223AA7B289FFEC3003D765F /* OfficesTableViewCell.xib in Resources */,
+				2223AA9828A067D3003D765F /* OfficeDetailCollectionViewCell.xib in Resources */,
 				22948B97287457A10084862E /* LaunchScreen.storyboard in Resources */,
 				22948B94287457A10084862E /* Assets.xcassets in Resources */,
 				22948B922874579D0084862E /* Main.storyboard in Resources */,
@@ -280,9 +453,28 @@
 			files = (
 				22948B8F2874579D0084862E /* ViewController.swift in Sources */,
 				221B8466289094AB00347EDD /* WelcomeViewController.swift in Sources */,
+				2223AA76289DDBD1003D765F /* RemoteOfficeLoader.swift in Sources */,
 				22948B8B2874579D0084862E /* AppDelegate.swift in Sources */,
+				2223AA74289DDBBD003D765F /* OfficeLoader.swift in Sources */,
+				2223AA9728A067D3003D765F /* OfficeDetailCollectionViewCell.swift in Sources */,
+				2223AA8C28A052B7003D765F /* OfficeDetailInteractor.swift in Sources */,
+				2223AA8B28A052B7003D765F /* OfficeDetailPresenter.swift in Sources */,
+				2223AA8D28A052B7003D765F /* OfficeDetailModels.swift in Sources */,
 				22948B8D2874579D0084862E /* SceneDelegate.swift in Sources */,
+				2284FC36289D906300D5ADD8 /* OfficesInteractor.swift in Sources */,
+				2223AA8F28A052B7003D765F /* OfficeDetailRouter.swift in Sources */,
+				2284FC35289D906300D5ADD8 /* OfficesPresenter.swift in Sources */,
+				2284FC39289D906300D5ADD8 /* OfficesRouter.swift in Sources */,
+				2284FC34289D906300D5ADD8 /* OfficesViewController.swift in Sources */,
+				2223AA8A28A052B7003D765F /* OfficeDetailViewController.swift in Sources */,
+				2284FC37289D906300D5ADD8 /* OfficesModels.swift in Sources */,
+				2284FC3E289D9B7700D5ADD8 /* ResponseModel.swift in Sources */,
+				2223AA72289DDB98003D765F /* HTTPClient.swift in Sources */,
 				221B846428908F2400347EDD /* RegisterViewController.swift in Sources */,
+				2223AA7A289FFEC3003D765F /* OfficesTableViewCell.swift in Sources */,
+				2284FC38289D906300D5ADD8 /* OfficesWorker.swift in Sources */,
+				2223AA8E28A052B7003D765F /* OfficeDetailWorker.swift in Sources */,
+				2284FC3C289D9B2900D5ADD8 /* NetworkModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,6 +1102,30 @@
 			defaultConfigurationName = ProductionRelease;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2223AA7C28A00121003D765F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = exactVersion;
+				version = 5.9.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2223AA7D28A00121003D765F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2223AA7C28A00121003D765F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		2223AA7F28A00121003D765F /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2223AA7C28A00121003D765F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 22948B7F2874579D0084862E /* Project object */;
 }
