@@ -143,7 +143,7 @@
 			path = exNetwork;
 			sourceTree = "<group>";
 		};
-		2223AA8128A05292003D765F /* OfficeDetail */ = {
+		2223AA8128A05292003D765F /* OfficesDetail */ = {
 			isa = PBXGroup;
 			children = (
 				2223AA9028A052DB003D765F /* OfficeDetailCell */,
@@ -155,7 +155,7 @@
 				2223AA8728A052B7003D765F /* OfficeDetailWorker.swift */,
 				2223AA8828A052B7003D765F /* OfficeDetailRouter.swift */,
 			);
-			name = OfficeDetail;
+			name = OfficesDetail;
 			path = "OfficeDetailş";
 			sourceTree = "<group>";
 		};
@@ -171,8 +171,8 @@
 		2284FC25289D8E0B00D5ADD8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				2223AA8128A05292003D765F /* OfficeDetail */,
 				2284FC2B289D904900D5ADD8 /* Offices */,
+				2223AA8128A05292003D765F /* OfficesDetail */,
 				2284FC26289D8E1700D5ADD8 /* WelcomePage */,
 				2284FC27289D8E3800D5ADD8 /* LoginPage */,
 				2284FC28289D8E5E00D5ADD8 /* LogoutPage */,
