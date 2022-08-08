@@ -171,11 +171,11 @@
 		2284FC25289D8E0B00D5ADD8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				2284FC2B289D904900D5ADD8 /* Offices */,
 				2223AA8128A05292003D765F /* OfficeDetail */,
-				2284FC28289D8E5E00D5ADD8 /* LogoutPage */,
-				2284FC27289D8E3800D5ADD8 /* LoginPage */,
+				2284FC2B289D904900D5ADD8 /* Offices */,
 				2284FC26289D8E1700D5ADD8 /* WelcomePage */,
+				2284FC27289D8E3800D5ADD8 /* LoginPage */,
+				2284FC28289D8E5E00D5ADD8 /* LogoutPage */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -227,7 +227,6 @@
 		2284FC2B289D904900D5ADD8 /* Offices */ = {
 			isa = PBXGroup;
 			children = (
-				2284FC3A289D98F200D5ADD8 /* OfficesCell */,
 				2284FC2C289D906300D5ADD8 /* Offices.storyboard */,
 				2284FC2D289D906300D5ADD8 /* OfficesViewController.swift */,
 				2284FC2F289D906300D5ADD8 /* OfficesInteractor.swift */,
@@ -235,6 +234,7 @@
 				2284FC30289D906300D5ADD8 /* OfficesModels.swift */,
 				2284FC31289D906300D5ADD8 /* OfficesWorker.swift */,
 				2284FC32289D906300D5ADD8 /* OfficesRouter.swift */,
+				2284FC3A289D98F200D5ADD8 /* OfficesCell */,
 			);
 			path = Offices;
 			sourceTree = "<group>";
