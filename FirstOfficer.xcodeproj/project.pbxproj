@@ -25,6 +25,13 @@
 		2223AA8F28A052B7003D765F /* OfficeDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA8828A052B7003D765F /* OfficeDetailRouter.swift */; };
 		2223AA9728A067D3003D765F /* OfficeDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA9528A067D3003D765F /* OfficeDetailCollectionViewCell.swift */; };
 		2223AA9828A067D3003D765F /* OfficeDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2223AA9628A067D3003D765F /* OfficeDetailCollectionViewCell.xib */; };
+		2223AAA228A301AF003D765F /* FullScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2223AA9B28A301AF003D765F /* FullScreen.storyboard */; };
+		2223AAA328A301AF003D765F /* FullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA9C28A301AF003D765F /* FullScreenViewController.swift */; };
+		2223AAA428A301AF003D765F /* FullScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA9D28A301AF003D765F /* FullScreenPresenter.swift */; };
+		2223AAA528A301AF003D765F /* FullScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA9E28A301AF003D765F /* FullScreenInteractor.swift */; };
+		2223AAA628A301AF003D765F /* FullScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA9F28A301AF003D765F /* FullScreenModels.swift */; };
+		2223AAA728A301AF003D765F /* FullScreenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AAA028A301AF003D765F /* FullScreenWorker.swift */; };
+		2223AAA828A301AF003D765F /* FullScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AAA128A301AF003D765F /* FullScreenRouter.swift */; };
 		2284FC33289D906300D5ADD8 /* Offices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2284FC2C289D906300D5ADD8 /* Offices.storyboard */; };
 		2284FC34289D906300D5ADD8 /* OfficesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284FC2D289D906300D5ADD8 /* OfficesViewController.swift */; };
 		2284FC35289D906300D5ADD8 /* OfficesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2284FC2E289D906300D5ADD8 /* OfficesPresenter.swift */; };
@@ -79,6 +86,13 @@
 		2223AA8828A052B7003D765F /* OfficeDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeDetailRouter.swift; sourceTree = "<group>"; };
 		2223AA9528A067D3003D765F /* OfficeDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		2223AA9628A067D3003D765F /* OfficeDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfficeDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		2223AA9B28A301AF003D765F /* FullScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FullScreen.storyboard; sourceTree = "<group>"; };
+		2223AA9C28A301AF003D765F /* FullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenViewController.swift; sourceTree = "<group>"; };
+		2223AA9D28A301AF003D765F /* FullScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenPresenter.swift; sourceTree = "<group>"; };
+		2223AA9E28A301AF003D765F /* FullScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenInteractor.swift; sourceTree = "<group>"; };
+		2223AA9F28A301AF003D765F /* FullScreenModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenModels.swift; sourceTree = "<group>"; };
+		2223AAA028A301AF003D765F /* FullScreenWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenWorker.swift; sourceTree = "<group>"; };
+		2223AAA128A301AF003D765F /* FullScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenRouter.swift; sourceTree = "<group>"; };
 		2284FC2C289D906300D5ADD8 /* Offices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Offices.storyboard; sourceTree = "<group>"; };
 		2284FC2D289D906300D5ADD8 /* OfficesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficesViewController.swift; sourceTree = "<group>"; };
 		2284FC2E289D906300D5ADD8 /* OfficesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficesPresenter.swift; sourceTree = "<group>"; };
@@ -168,11 +182,26 @@
 			path = OfficeDetailCell;
 			sourceTree = "<group>";
 		};
+		2223AA9A28A3015C003D765F /* DetailImagesFullScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2223AA9B28A301AF003D765F /* FullScreen.storyboard */,
+				2223AA9C28A301AF003D765F /* FullScreenViewController.swift */,
+				2223AA9D28A301AF003D765F /* FullScreenPresenter.swift */,
+				2223AA9E28A301AF003D765F /* FullScreenInteractor.swift */,
+				2223AA9F28A301AF003D765F /* FullScreenModels.swift */,
+				2223AAA028A301AF003D765F /* FullScreenWorker.swift */,
+				2223AAA128A301AF003D765F /* FullScreenRouter.swift */,
+			);
+			path = DetailImagesFullScreen;
+			sourceTree = "<group>";
+		};
 		2284FC25289D8E0B00D5ADD8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				2284FC2B289D904900D5ADD8 /* Offices */,
 				2223AA8128A05292003D765F /* OfficesDetail */,
+				2223AA9A28A3015C003D765F /* DetailImagesFullScreen */,
 				2284FC26289D8E1700D5ADD8 /* WelcomePage */,
 				2284FC27289D8E3800D5ADD8 /* LoginPage */,
 				2284FC28289D8E5E00D5ADD8 /* LogoutPage */,
@@ -427,6 +456,7 @@
 				22948B97287457A10084862E /* LaunchScreen.storyboard in Resources */,
 				22948B94287457A10084862E /* Assets.xcassets in Resources */,
 				22948B922874579D0084862E /* Main.storyboard in Resources */,
+				2223AAA228A301AF003D765F /* FullScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,22 +481,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2223AAA328A301AF003D765F /* FullScreenViewController.swift in Sources */,
 				22948B8F2874579D0084862E /* ViewController.swift in Sources */,
 				221B8466289094AB00347EDD /* WelcomeViewController.swift in Sources */,
 				2223AA76289DDBD1003D765F /* RemoteOfficeLoader.swift in Sources */,
 				22948B8B2874579D0084862E /* AppDelegate.swift in Sources */,
 				2223AA74289DDBBD003D765F /* OfficeLoader.swift in Sources */,
+				2223AAA728A301AF003D765F /* FullScreenWorker.swift in Sources */,
+				2223AAA528A301AF003D765F /* FullScreenInteractor.swift in Sources */,
 				2223AA9728A067D3003D765F /* OfficeDetailCollectionViewCell.swift in Sources */,
+				2223AAA628A301AF003D765F /* FullScreenModels.swift in Sources */,
 				2223AA8C28A052B7003D765F /* OfficeDetailInteractor.swift in Sources */,
 				2223AA8B28A052B7003D765F /* OfficeDetailPresenter.swift in Sources */,
 				2223AA8D28A052B7003D765F /* OfficeDetailModels.swift in Sources */,
 				22948B8D2874579D0084862E /* SceneDelegate.swift in Sources */,
 				2284FC36289D906300D5ADD8 /* OfficesInteractor.swift in Sources */,
+				2223AAA828A301AF003D765F /* FullScreenRouter.swift in Sources */,
 				2223AA8F28A052B7003D765F /* OfficeDetailRouter.swift in Sources */,
 				2284FC35289D906300D5ADD8 /* OfficesPresenter.swift in Sources */,
 				2284FC39289D906300D5ADD8 /* OfficesRouter.swift in Sources */,
 				2284FC34289D906300D5ADD8 /* OfficesViewController.swift in Sources */,
 				2223AA8A28A052B7003D765F /* OfficeDetailViewController.swift in Sources */,
+				2223AAA428A301AF003D765F /* FullScreenPresenter.swift in Sources */,
 				2284FC37289D906300D5ADD8 /* OfficesModels.swift in Sources */,
 				2284FC3E289D9B7700D5ADD8 /* ResponseModel.swift in Sources */,
 				2223AA72289DDB98003D765F /* HTTPClient.swift in Sources */,
