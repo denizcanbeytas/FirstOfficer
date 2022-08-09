@@ -227,6 +227,7 @@
 		2284FC2B289D904900D5ADD8 /* Offices */ = {
 			isa = PBXGroup;
 			children = (
+				2284FC3A289D98F200D5ADD8 /* OfficesCell */,
 				2284FC2C289D906300D5ADD8 /* Offices.storyboard */,
 				2284FC2D289D906300D5ADD8 /* OfficesViewController.swift */,
 				2284FC2F289D906300D5ADD8 /* OfficesInteractor.swift */,
@@ -234,7 +235,6 @@
 				2284FC30289D906300D5ADD8 /* OfficesModels.swift */,
 				2284FC31289D906300D5ADD8 /* OfficesWorker.swift */,
 				2284FC32289D906300D5ADD8 /* OfficesRouter.swift */,
-				2284FC3A289D98F200D5ADD8 /* OfficesCell */,
 			);
 			path = Offices;
 			sourceTree = "<group>";

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 protocol OfficeDetailDisplayLogic: AnyObject {
     func displayData(viewModel:OfficeDetail.Fetch.ViewModel)
@@ -14,6 +15,17 @@ protocol OfficeDetailDisplayLogic: AnyObject {
 final class OfficeDetailViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var detailImageView: UIImageView!
+    @IBOutlet weak var detailRoomsLabel: UILabel!
+    @IBOutlet weak var detailSpaceLabel: UILabel!
+    @IBOutlet weak var detailCapacityLabel: UILabel!
+    @IBOutlet weak var detailAddressLabel: UILabel!
+    @IBOutlet weak var roomsView: UIView!
+    @IBOutlet weak var spaceView: UIView!
+    @IBOutlet weak var capacityView: UIView!
+    @IBOutlet weak var emptyView: UIView!
+    
+    @IBOutlet weak var detailOfficeName: UILabel!
     
     var interactor: OfficeDetailBusinessLogic?
     var router: (OfficeDetailRoutingLogic & OfficeDetailDataPassing)?
@@ -34,6 +46,16 @@ final class OfficeDetailViewController: UIViewController {
     override func viewDidLoad() {
         collectionView.register(UINib(nibName: "OfficeDetailCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "OfficeDetailCollectionViewCell")
         interactor?.fetchOfficeDetail(request: OfficeDetail.Fetch.Request())
+        setupUI()
+    }
+    
+    func setupUI() {
+        detailImageView.sd_setImage(with: URL(string: viewModel?.image ?? ""))
+        detailRoomsLabel.text = viewModel?.rooms
+        detailSpaceLabel.text = viewModel?.space
+        detailCapacityLabel.text = viewModel?.capacity
+        detailAddressLabel.text = viewModel?.address
+        detailOfficeName.text = viewModel?.name
     }
     
     // MARK: Setup
@@ -80,4 +102,8 @@ extension OfficeDetailViewController : UICollectionViewDelegate, UICollectionVie
     }
     
     
+}
+
+extension OfficeDetailViewController{
+
 }

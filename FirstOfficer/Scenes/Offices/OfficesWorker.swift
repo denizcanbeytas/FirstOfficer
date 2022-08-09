@@ -13,6 +13,7 @@ protocol OfficesWorkingLogic: AnyObject {
 
 final class OfficesWorker: OfficesWorkingLogic {
     func getOffices (completion: @escaping ((Result<OfficeArray, Error>) -> Void)) {
+        
         NetworkManager().getOffice { result in
             switch result{
             case.success(let response):

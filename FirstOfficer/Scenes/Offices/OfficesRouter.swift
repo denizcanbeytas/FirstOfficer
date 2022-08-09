@@ -13,7 +13,7 @@ protocol OfficesRoutingLogic: AnyObject {
 }
 
 protocol OfficesDataPassing: class {
-    var dataStore: OfficesDataStore? { get }
+    var dataStore: OfficesDataStore? { get } // interactor daki OfficesDataStore protocol ü tipinde bir değişken
 }
 
 final class OfficesRouter: OfficesRoutingLogic, OfficesDataPassing {
@@ -30,3 +30,12 @@ final class OfficesRouter: OfficesRoutingLogic, OfficesDataPassing {
     }
 
 }
+
+/*
+    - destinationVC.router?.dataStore?.officeDetailData = dataStore?.officeData?[index] -> açıklaması
+        . Detail sayfasına, tıklanan tableView hücresindeki elemanın değerlerini göndereceğimiz için, karşı taraftaki data array olmayacak.
+ 
+    - destinationVC ile diğer sayfanın router ına erişebildik çünkü router değişkeni diğer sayafanın vc sinde var.
+    - Data nın işlenmeden önceki geldiği son nokta interactor dadır.
+ 
+ */
