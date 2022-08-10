@@ -97,7 +97,8 @@ extension OfficeDetailViewController : UICollectionViewDelegate, UICollectionVie
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OfficeDetailCollectionViewCell", for: indexPath) as? OfficeDetailCollectionViewCell
         guard let model = self.viewModel else {return UICollectionViewCell()}
-        cell?.config(viewModel: model)
+        cell?.config(images: model.images?[indexPath.row] ?? "") // -> cell de görünmesi için images'ın tıklanılan index'teki elemanını gönderdik
+        //cell?.config(image: model.images![indexPath.row] )
         return cell ?? UICollectionViewCell()
     }
     

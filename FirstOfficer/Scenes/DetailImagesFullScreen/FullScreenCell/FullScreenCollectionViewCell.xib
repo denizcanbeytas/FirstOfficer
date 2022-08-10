@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FullScreenCollectionViewCell" customModule="FirstOfficer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="500"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="374" height="500"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Kn-1R-itl">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="500"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="374" id="XIg-Wk-wNj"/>
+                            <constraint firstAttribute="height" constant="500" id="e33-on-bpo"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="18"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="2Kn-1R-itl" secondAttribute="bottom" id="YpZ-nO-N8v"/>
+                <constraint firstAttribute="trailing" secondItem="2Kn-1R-itl" secondAttribute="trailing" id="alE-Ll-3tz"/>
+                <constraint firstItem="2Kn-1R-itl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="r1O-Oa-2SB"/>
+                <constraint firstItem="2Kn-1R-itl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rXT-tc-mwx"/>
+            </constraints>
+            <size key="customSize" width="451" height="436"/>
+            <connections>
+                <outlet property="imageView" destination="2Kn-1R-itl" id="4o0-Jb-UaV"/>
+            </connections>
+            <point key="canvasLocation" x="107.24637681159422" y="272.87946428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,14 +1,14 @@
 //
-//  OfficeDetailCollectionViewCell.swift
+//  FullScreenCollectionViewCell.swift
 //  FirstOfficer
 //
-//  Created by Deniz on 8.08.2022.
+//  Created by Deniz on 10.08.2022.
 //
 
 import UIKit
 import SDWebImage
 
-class OfficeDetailCollectionViewCell: UICollectionViewCell {
+class FullScreenCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -17,19 +17,20 @@ class OfficeDetailCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func config(images: String) {
-//        viewModel.images?.forEach{ result in
-//           imageView.sd_setImage(with: URL(string: result))
-//        }
+    func configCell(images: String){
         imageView.sd_setImage(with: URL(string: images))
+        
+        
+        
 //        for imageSingle in viewModel.images! {
 //            imageView.sd_setImage(with: URL(string: imageSingle))
 //        }
-        
     }
     
-//    func config(image: String){
+//    func configureCell(image: String){
 //        imageView.image = UIImage(named: image)
 //    }
+    
+    
 
 }

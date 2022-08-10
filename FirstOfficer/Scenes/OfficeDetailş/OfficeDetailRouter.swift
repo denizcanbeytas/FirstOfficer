@@ -27,10 +27,12 @@ final class OfficeDetailRouter: OfficeDetailRoutingLogic, OfficeDetailDataPassin
         let storyBoard = UIStoryboard(name: "FullScreen", bundle: nil)
         let destinationVC: FullScreenViewController = storyBoard.instantiateViewController(withIdentifier: "fullScreenVC") as! FullScreenViewController
         destinationVC.router?.dataStore?.ImageData = dataStore?.officeDetailData
+        destinationVC.router?.dataStore?.selectedIndex = index
        // destinationVC.router?.dataStore?.ImageData = dataStore?.officeDetailData?.images?[index]
         
 //       self.viewController?.navigationController?.pushViewController(destinationVC, animated: true)
         
+       // destinationVC.delegateFullScreen = viewController as! FullScreenDelegate
         viewController?.present(destinationVC, animated: true) // -> pop up geçiş
     }
     

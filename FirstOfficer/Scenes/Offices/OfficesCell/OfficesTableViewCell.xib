@@ -3,15 +3,13 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OfficesTableViewCell" rowHeight="181" id="KGk-i7-Jjw" customClass="OfficesTableViewCell" customModule="FirstOfficer" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="OfficesTableViewCell" rowHeight="181" id="KGk-i7-Jjw" customClass="OfficesTableViewCell" customModule="FirstOfficer" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="185"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -73,13 +71,13 @@
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3C-5O-ihn">
                         <rect key="frame" x="0.0" y="145" width="414" height="40"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="k3C-5O-ihn" secondAttribute="height" multiplier="207:20" id="881-pL-5YI"/>
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" name="LoginViewColor"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="k3C-5O-ihn" secondAttribute="bottom" id="76H-Uf-lcL"/>
                     <constraint firstItem="k3C-5O-ihn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Bgm-gU-YDu"/>
@@ -107,11 +105,5 @@
     </objects>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>
-        <namedColor name="LoginViewColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

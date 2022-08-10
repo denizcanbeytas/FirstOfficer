@@ -13,16 +13,19 @@ protocol FullScreenBusinessLogic: AnyObject {
 
 protocol FullScreenDataStore: AnyObject {
     var ImageData: OfficeData? {get set}
+    var selectedIndex: Int? {get set}
 }
 
 final class FullScreenInteractor: FullScreenBusinessLogic, FullScreenDataStore {
+    var selectedIndex: Int?
+    
     
     var ImageData: OfficeData?
     var presenter: FullScreenPresentationLogic?
     var worker: FullScreenWorkingLogic = FullScreenWorker()
     
     func fetchImage(request: FullScreen.Fetch.Request) {
-        self.presenter?.presentImage(response: .init(officeImages: ImageData))
+        self.presenter?.presentImage(response: .init(officeImages: ImageData, selectedIndex: selectedIndex))
     }
     
     
