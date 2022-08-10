@@ -20,11 +20,14 @@ final class OfficeDetailRouter: OfficeDetailRoutingLogic, OfficeDetailDataPassin
 
     weak var viewController: OfficeDetailViewController?
     var dataStore: OfficeDetailDataStore?
+    //var officeData: [OfficeData]?
+   // var office: self.dataStore?.officeDetailData?
     
     func routeToFullScreen(index: Int) {
         let storyBoard = UIStoryboard(name: "FullScreen", bundle: nil)
         let destinationVC: FullScreenViewController = storyBoard.instantiateViewController(withIdentifier: "fullScreenVC") as! FullScreenViewController
         destinationVC.router?.dataStore?.ImageData = dataStore?.officeDetailData
+       // destinationVC.router?.dataStore?.ImageData = dataStore?.officeDetailData?.images?[index]
         
 //       self.viewController?.navigationController?.pushViewController(destinationVC, animated: true)
         

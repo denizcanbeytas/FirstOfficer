@@ -32,7 +32,7 @@ final class FullScreenViewController: UIViewController {
     }
     override func viewDidLoad() {
         interactor?.fetchImage(request: FullScreen.Fetch.Request())
-        //imageView.sd_setImage(with: URL(string: viewModel?.images))
+        imageView.sd_setImage(with: URL(string: viewModel?.image ?? ""))
         
     }
     

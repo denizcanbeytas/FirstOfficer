@@ -9,17 +9,6 @@ import Foundation
 
 // MARK: - OfficeData
 public struct OfficeData: Codable {
-//    internal init(address: String?, capacity: String?, id: Int?, image: String?, images: [String]?, location: Location?, name: String?, rooms: Int?, space: String?) {
-//        self.address = address
-//        self.capacity = capacity
-//        self.id = id
-//        self.image = image
-//        self.images = images
-//        self.location = location
-//        self.name = name
-//        self.rooms = rooms
-//        self.space = space
-//    }
     
     let address, capacity: String?
     let id: Int?

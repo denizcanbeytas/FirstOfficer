@@ -17,12 +17,20 @@ enum FullScreen {
         }
         
         struct Response {
-            let officeImages : OfficeData?
+            var officeImages : OfficeData?
             
         }
         
         struct ViewModel {
-            let images: [String]?
+ 
+//            let images: [String]?
+//            let address, capacity: String?
+//            let id: Int?
+             var image: String?
+//            let location: Location?
+//            let name: String?
+//            let rooms: String?
+//            let space: String?
         }
         
     }
