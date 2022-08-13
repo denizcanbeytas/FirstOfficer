@@ -30,10 +30,10 @@ final class OfficeDetailRouter: OfficeDetailRoutingLogic, OfficeDetailDataPassin
         destinationVC.router?.dataStore?.selectedIndex = index
        // destinationVC.router?.dataStore?.ImageData = dataStore?.officeDetailData?.images?[index]
         
-//       self.viewController?.navigationController?.pushViewController(destinationVC, animated: true)
+        self.viewController?.navigationController?.pushViewController(destinationVC, animated: true)
         
        // destinationVC.delegateFullScreen = viewController as! FullScreenDelegate
-        viewController?.present(destinationVC, animated: true) // -> pop up geçiş
+       // viewController?.present(destinationVC, animated: true) // -> pop up geçiş
     }
     
     

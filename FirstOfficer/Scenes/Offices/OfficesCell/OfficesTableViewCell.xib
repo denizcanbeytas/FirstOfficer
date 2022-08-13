@@ -18,6 +18,7 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bo0-V3-Dna">
                         <rect key="frame" x="0.0" y="0.0" width="185" height="145"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Bo0-V3-Dna" secondAttribute="height" multiplier="37:29" id="maR-HH-Yqt"/>
                             <constraint firstAttribute="height" constant="145" id="u0W-q2-XWf"/>

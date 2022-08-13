@@ -169,8 +169,8 @@
 				2223AA8328A052B7003D765F /* OfficeDetailViewController.swift */,
 				2223AA8528A052B7003D765F /* OfficeDetailInteractor.swift */,
 				2223AA8428A052B7003D765F /* OfficeDetailPresenter.swift */,
-				2223AA8628A052B7003D765F /* OfficeDetailModels.swift */,
 				2223AA8728A052B7003D765F /* OfficeDetailWorker.swift */,
+				2223AA8628A052B7003D765F /* OfficeDetailModels.swift */,
 				2223AA8828A052B7003D765F /* OfficeDetailRouter.swift */,
 			);
 			name = OfficesDetail;
