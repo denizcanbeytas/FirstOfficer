@@ -38,4 +38,9 @@ enum Offices {
     }
     
 }
+
+struct itemsForFiltering {
+    let firstItem: String?
+    let secondItem: [String]?
+}
 // swiftlint:enable nesting

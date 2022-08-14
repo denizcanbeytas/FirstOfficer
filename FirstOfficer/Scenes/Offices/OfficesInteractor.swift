@@ -9,6 +9,7 @@ import Foundation
 
 protocol OfficesBusinessLogic: AnyObject {
     func fetchOffices(request: Offices.Fetch.Request)
+    func fetchFilteringData(request: String)
 }
 
 protocol OfficesDataStore: AnyObject {
@@ -35,6 +36,10 @@ final class OfficesInteractor: OfficesBusinessLogic, OfficesDataStore {
                 
             }
         }
+    }
+    
+    func fetchFilteringData(request: String){
+            
     }
 }
 
