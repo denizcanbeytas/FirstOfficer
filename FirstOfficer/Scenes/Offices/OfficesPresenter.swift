@@ -8,7 +8,8 @@
 import Foundation
 
 protocol OfficesPresentationLogic: AnyObject {
-    func presenterOfficeData ( response: Offices.Fetch.Response)
+    func presenterOfficeData (response: Offices.Fetch.Response)
+    //func presenterFilteringData(response: Offices.Fetch.FilterResponse)
 }
 
 final class OfficesPresenter: OfficesPresentationLogic {
@@ -28,8 +29,8 @@ final class OfficesPresenter: OfficesPresentationLogic {
                                                              name: $0.name, // real data
                                                              rooms: String($0.rooms ?? 0), // real data
                                                              space: $0.space)) // real data
+            
         }
-        
         viewController?.showOffices(viewModel: Offices.Fetch.ViewModel(offices: dataModels))
         
     }

@@ -34,7 +34,6 @@ enum Offices {
                 let space: String?
             }
         }
-        
     }
     
 }

@@ -118,6 +118,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="filterBtnImage" destination="WnZ-PL-gZ7" id="ouz-2x-kgc"/>
                         <outlet property="searcBar" destination="4T8-MQ-UCs" id="cFS-5Z-IEY"/>
                         <outlet property="tableView" destination="rNU-tZ-gEv" id="gdL-wt-WHI"/>
                     </connections>

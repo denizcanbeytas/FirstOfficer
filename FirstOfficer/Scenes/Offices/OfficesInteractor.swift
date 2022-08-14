@@ -39,7 +39,14 @@ final class OfficesInteractor: OfficesBusinessLogic, OfficesDataStore {
     }
     
     func fetchFilteringData(request: String){
-            
+        let filteringData = officeData?.filter { filter in
+            return filter.space == request || filter.capacity == request || String(filter.rooms ?? 0) == request
+        }
+        guard let filteringData = filteringData else {
+            return
+        }
+        self.presenter?.presenterOfficeData(response: Offices.Fetch.Response(offices: filteringData))
+        print("\(filteringData)")
     }
 }
 

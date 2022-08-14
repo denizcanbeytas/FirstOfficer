@@ -15,15 +15,19 @@ final class OfficesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searcBar: UISearchBar!
+    @IBOutlet weak var filterBtnImage: UIImageView!
     
     var interactor: OfficesBusinessLogic?
     var router: (OfficesRoutingLogic & OfficesDataPassing)?
     var viewModel: Offices.Fetch.ViewModel?
     
+    
     var items = [itemsForFiltering]()
     let screenWidth = UIScreen.main.bounds.width - 10
     let screenHeight = UIScreen.main.bounds.height / 4
     var selectedRow = 0
+    
+    
     
     // for the searchBar
     var allData = [Offices.Fetch.ViewModel.Office]()
@@ -42,11 +46,14 @@ final class OfficesViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        self.navigationItem.setHidesBackButton(true, animated: false)
+       // self.navigationController?.setNavigationBarHidden(true, animated: false)
         interactor?.fetchOffices(request: Offices.Fetch.Request())
         tableView.register(UINib(nibName: "OfficesTableViewCell", bundle: .main), forCellReuseIdentifier: "OfficesTableViewCell")
         searcBar.delegate = self
         
     }
+    
     // MARK: Setup
     
     private func setup() {
@@ -66,7 +73,11 @@ final class OfficesViewController: UIViewController {
     // MARK: PickerView and ToolBar
     
     @IBAction func pickerButton(_ sender: Any) {
+        
         createPickerView()
+        // for filter btn selected image
+        filterBtnImage.image = UIImage(named: "filterCloseIamge")
+        
     }
     private func createPickerView(){
 
@@ -92,8 +103,12 @@ final class OfficesViewController: UIViewController {
         let alert = UIAlertController(title: "Select Office Detail", message: "", preferredStyle: .actionSheet)
         alert.setValue(vc, forKey: "contentViewController")
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) in
+            // for filter btn selected image
+            self.filterBtnImage.image = UIImage(named: "filterImage")
         }))
         alert.addAction(UIAlertAction(title: "Select", style: .default, handler: { (UIAlertAction) in
+            // for filter btn selected image
+            self.filterBtnImage.image = UIImage(named: "filterImage")
         }))
         self.present(alert, animated: true, completion: nil)
         //
@@ -102,6 +117,7 @@ final class OfficesViewController: UIViewController {
 }
 // MARK: Extensions
 extension OfficesViewController: OfficesDisplayLogic {
+
     func showOffices(viewModel: Offices.Fetch.ViewModel) {
         self.viewModel = viewModel
         // for the searchBar
@@ -122,11 +138,12 @@ extension OfficesViewController : UITableViewDelegate, UITableViewDataSource {
         }else {
             return viewModel?.offices.count ?? 1
         }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OfficesTableViewCell", for: indexPath) as? OfficesTableViewCell
-       // guard let model = viewModel?.offices[indexPath.row] else { return UITableViewCell()}
+        //guard let model = viewModel?.offices[indexPath.row] else { return UITableViewCell()}
         
         if !filteringData.isEmpty { // for the searchBar
             let hey = filteringData[indexPath.row]
@@ -136,13 +153,12 @@ extension OfficesViewController : UITableViewDelegate, UITableViewDataSource {
             //cell?.config(viewModel: model)
             return UITableViewCell()
         }
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         router?.routerToOfficeDetail(index:indexPath.row ) // diğer sayfaya veri göndermek için router'a satırı gönderiyoruz
     }
-    
-    
 }
 
 extension OfficesViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -173,6 +189,7 @@ extension OfficesViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         let selectedItem = pickerView.selectedRow(inComponent: 0)
         //let selectedSecondItem = pickerView.selectedRow(inComponent: 0)
         let selectedData = items[selectedItem].secondItem?[row]
+       // print("\(selectedData)")
         interactor?.fetchFilteringData(request: selectedData ?? "")
         //searchTF.text = selectedData
     }
