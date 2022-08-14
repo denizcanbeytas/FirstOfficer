@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -105,7 +104,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="acR-sl-ate"/>
-                        <color key="backgroundColor" name="DetailContentView"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NSL-EZ-X8j" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="2rf-AR-B7a"/>
                             <constraint firstItem="rNU-tZ-gEv" firstAttribute="top" secondItem="NSL-EZ-X8j" secondAttribute="bottom" constant="31" id="6my-qT-EcS"/>
@@ -130,9 +129,9 @@
     </scenes>
     <resources>
         <image name="filterImage" width="48" height="48"/>
-        <namedColor name="DetailContentView">
-            <color red="0.98400002717971802" green="0.97299998998641968" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

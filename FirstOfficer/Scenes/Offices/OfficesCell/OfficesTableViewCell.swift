@@ -14,9 +14,12 @@ class OfficesTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
     
+    @IBOutlet weak var contentsView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setupUI()
     }
     
     func config(viewModel: Offices.Fetch.ViewModel.Office) {
@@ -30,6 +33,16 @@ class OfficesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupUI(){
+        contentsView.layer.cornerRadius = 18
+        contentsView.layer.masksToBounds = false
+        contentsView.layer.shadowColor = UIColor.black.cgColor
+        contentsView.layer.shadowOpacity = 0.2
+        contentsView.layer.shadowOffset = .zero
+        contentsView.layer.shadowRadius = 3
+
     }
     
 }
