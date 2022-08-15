@@ -19,18 +19,24 @@ final class OfficesWorker: OfficesWorkingLogic {
             case.success(let response):
                 completion(.success(response))
             case .failure(let error):
-                completion(.failure(error))
+                //completion(.failure(error))
+                switch error {
+                case .badRequest:
+                    print("BadRequest: \(error.localizedDescription)")
+                case .serverError:
+                    print("serverError: \(error.localizedDescription)")
+                case .tooManyRequest:
+                    print("tooManyRequest: \(error.localizedDescription)")
+                case .decoding:
+                    print("decoding: \(error.localizedDescription)")
+                case .unauthorized:
+                    print("unauthorized: \(error.localizedDescription)")
+                default:
+                    break
+                }
             }
-       
-            
         }
-                                 
-        
     }
-    
- 
-    
-    
 }
 
 // 2.adım : network modelden gelen veriyi result a alıyor respons ile interactor a gönderiyor

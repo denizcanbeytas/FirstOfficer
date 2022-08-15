@@ -27,6 +27,7 @@ final class OfficesViewController: UIViewController {
     let screenHeight = UIScreen.main.bounds.height / 4
     var selectedRow = 0
     
+    var iter = ""
     
     
     // for the searchBar
@@ -106,9 +107,10 @@ final class OfficesViewController: UIViewController {
             // for filter btn selected image
             self.filterBtnImage.image = UIImage(named: "filterImage")
         }))
-        alert.addAction(UIAlertAction(title: "Select", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: "Select", style: .default, handler: { [self] (UIAlertAction) in
             // for filter btn selected image
             self.filterBtnImage.image = UIImage(named: "filterImage")
+            //interactor?.fetchFilteringData(request: self.iter )
         }))
         self.present(alert, animated: true, completion: nil)
         //
@@ -189,7 +191,7 @@ extension OfficesViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         let selectedItem = pickerView.selectedRow(inComponent: 0)
         //let selectedSecondItem = pickerView.selectedRow(inComponent: 0)
         let selectedData = items[selectedItem].secondItem?[row]
-       // print("\(selectedData)")
+        iter = selectedData ?? ""
         interactor?.fetchFilteringData(request: selectedData ?? "")
         //searchTF.text = selectedData
     }
