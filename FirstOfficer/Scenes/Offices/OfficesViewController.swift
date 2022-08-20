@@ -145,16 +145,20 @@ extension OfficesViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OfficesTableViewCell", for: indexPath) as? OfficesTableViewCell
-        //guard let model = viewModel?.offices[indexPath.row] else { return UITableViewCell()}
+        guard let model = viewModel?.offices[indexPath.row] else { return UITableViewCell()}
+        cell?.config(viewModel: model)
         
-        if !filteringData.isEmpty { // for the searchBar
-            let hey = filteringData[indexPath.row]
-            cell?.config(viewModel: hey)
-            return cell!
-        } else {
-            //cell?.config(viewModel: model)
-            return UITableViewCell()
-        }
+        cell?.delegateAdd = self
+        cell?.delegateRemove = self
+        return cell!
+//        if !filteringData.isEmpty { // for the searchBar
+//            let hey = filteringData[indexPath.row]
+//            cell?.config(viewModel: hey)
+//            return cell!
+//        } else {
+//            //cell?.config(viewModel: model)
+//            return UITableViewCell()
+//        }
         
     }
     
@@ -202,6 +206,19 @@ extension OfficesViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
 }
 
+extension OfficesViewController: addToFavoriteProtocol, removeAtFavoritesProtocol {
+    
+    func addToFavorite(officeResult: Offices.Fetch.ViewModel.Office) {
+        CoreDataManager.shared.saveFavoritesToCoreData(with: officeResult)
+    }
+    
+    func removeAtFavorites(favoriteId: Int) {
+        //jkl
+    }
+    
+    
+}
+
 extension OfficesViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
        
@@ -220,3 +237,4 @@ extension OfficesViewController: UISearchBarDelegate {
         self.tableView.reloadData()
     }
 }
+

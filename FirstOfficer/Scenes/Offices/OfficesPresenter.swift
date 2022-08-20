@@ -22,7 +22,7 @@ final class OfficesPresenter: OfficesPresentationLogic {
         response.offices.forEach{ // response modeldeki data
             dataModels.append(Offices.Fetch.ViewModel.Office(address: $0.address, // real data
                                                              capacity: $0.capacity, // real data
-                                                             id: $0.id, // real data
+                                                             id: String($0.id ?? 0), // real data
                                                              image: $0.image, // real data
                                                              images: $0.images, // real data
                                                              location: $0.location, // real data

@@ -8,6 +8,15 @@
 import UIKit
 import SDWebImage
 
+protocol addToFavoriteProtocol {
+    func addToFavorite(officeResult: Offices.Fetch.ViewModel.Office)
+}
+
+protocol removeAtFavoritesProtocol {
+    func removeAtFavorites(favoriteId: Int)
+}
+
+
 class OfficesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var adressLabel: UILabel!
@@ -23,6 +32,12 @@ class OfficesTableViewCell: UITableViewCell {
     
     var heartBtnIsTapped : Bool = true
     
+    var delegateAdd: addToFavoriteProtocol?
+    var delegateRemove: removeAtFavoritesProtocol?
+    
+    var ViewModel: Offices.Fetch.ViewModel.Office?
+    var officeId: Int?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,21 +48,18 @@ class OfficesTableViewCell: UITableViewCell {
         if heartBtnIsTapped == true {
             favoriteImage.image = UIImage(named: "FavoriteClicked")
             heartBtnIsTapped = false
+            delegateAdd?.addToFavorite(officeResult: self.ViewModel!)
         }else {
-            favoriteImage.image = UIImage(named: "FavoriteUnClicked")
+            favoriteImage.image = UIImage(named: "favoriteNoneClicked")
             heartBtnIsTapped = true
+            delegateRemove?.removeAtFavorites(favoriteId: officeId ?? 0)
         }
-        // or you can use this
-//        if favoriteBtn.tag == 0 {
-//            favoriteImage.image = UIImage(named: "FavoriteUnClicked")
-//            favoriteBtn.tag = 1
-//        } else {
-//            favoriteImage.image = UIImage(named: "FavoriteClicked")
-//            favoriteBtn.tag = 0
-//        }
+
     }
     
     func config(viewModel: Offices.Fetch.ViewModel.Office) {
+        self.ViewModel = viewModel
+        officeId = Int(viewModel.id ?? "")
         adressLabel.text = viewModel.address
         nameLabel.text = viewModel.name
         capacityLabel.text = viewModel.capacity
@@ -55,12 +67,6 @@ class OfficesTableViewCell: UITableViewCell {
         spaceLabel.text = viewModel.space
         cellImage.sd_setImage(with: URL(string: viewModel.image ?? ""))
         
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func setupUI(){
@@ -70,6 +76,7 @@ class OfficesTableViewCell: UITableViewCell {
         contentsView.layer.shadowOpacity = 0.2
         contentsView.layer.shadowOffset = .zero
         contentsView.layer.shadowRadius = 3
+        favoriteImage.image = UIImage(named: "favoriteNoneClicked")
 
     }
     

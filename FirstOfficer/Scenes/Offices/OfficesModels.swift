@@ -25,7 +25,7 @@ enum Offices {
             
             struct Office {
                 let address, capacity: String?
-                let id: Int?
+                let id: String? //
                 let image: String?
                 let images: [String]?
                 let location: Location?

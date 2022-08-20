@@ -32,6 +32,9 @@
 		2223AAA628A301AF003D765F /* FullScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA9F28A301AF003D765F /* FullScreenModels.swift */; };
 		2223AAA728A301AF003D765F /* FullScreenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AAA028A301AF003D765F /* FullScreenWorker.swift */; };
 		2223AAA828A301AF003D765F /* FullScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AAA128A301AF003D765F /* FullScreenRouter.swift */; };
+		222F8FC828B03D05003EFAA5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 222F8FC628B03D05003EFAA5 /* Model.xcdatamodeld */; };
+		222F8FCB28B03DED003EFAA5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F8FCA28B03DED003EFAA5 /* CoreDataManager.swift */; };
+		222F8FCD28B03DF8003EFAA5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F8FCC28B03DF8003EFAA5 /* CoreDataStack.swift */; };
 		227B71C628A3EEA600D1278B /* FullScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B71C428A3EEA600D1278B /* FullScreenCollectionViewCell.swift */; };
 		227B71C728A3EEA600D1278B /* FullScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227B71C528A3EEA600D1278B /* FullScreenCollectionViewCell.xib */; };
 		2284FC33289D906300D5ADD8 /* Offices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2284FC2C289D906300D5ADD8 /* Offices.storyboard */; };
@@ -95,6 +98,9 @@
 		2223AA9F28A301AF003D765F /* FullScreenModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenModels.swift; sourceTree = "<group>"; };
 		2223AAA028A301AF003D765F /* FullScreenWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenWorker.swift; sourceTree = "<group>"; };
 		2223AAA128A301AF003D765F /* FullScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenRouter.swift; sourceTree = "<group>"; };
+		222F8FC728B03D05003EFAA5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		222F8FCA28B03DED003EFAA5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		222F8FCC28B03DF8003EFAA5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		227B71C428A3EEA600D1278B /* FullScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		227B71C528A3EEA600D1278B /* FullScreenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullScreenCollectionViewCell.xib; sourceTree = "<group>"; };
 		2284FC2C289D906300D5ADD8 /* Offices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Offices.storyboard; sourceTree = "<group>"; };
@@ -201,6 +207,15 @@
 			path = DetailImagesFullScreen;
 			sourceTree = "<group>";
 		};
+		222F8FC928B03DD9003EFAA5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				222F8FCA28B03DED003EFAA5 /* CoreDataManager.swift */,
+				222F8FCC28B03DF8003EFAA5 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		227B71C328A3EE6300D1278B /* FullScreenCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +278,7 @@
 				22948B93287457A10084862E /* Assets.xcassets */,
 				22948B8C2874579D0084862E /* SceneDelegate.swift */,
 				22948B8A2874579D0084862E /* AppDelegate.swift */,
+				222F8FC628B03D05003EFAA5 /* Model.xcdatamodeld */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -315,6 +331,7 @@
 		22948B892874579D0084862E /* FirstOfficer */ = {
 			isa = PBXGroup;
 			children = (
+				222F8FC928B03DD9003EFAA5 /* CoreData */,
 				2284FC29289D8EB100D5ADD8 /* NetworkLayer */,
 				2284FC25289D8E0B00D5ADD8 /* Scenes */,
 				2284FC2A289D8EC500D5ADD8 /* SupportingFiles */,
@@ -517,12 +534,15 @@
 				2284FC39289D906300D5ADD8 /* OfficesRouter.swift in Sources */,
 				2284FC34289D906300D5ADD8 /* OfficesViewController.swift in Sources */,
 				2223AA8A28A052B7003D765F /* OfficeDetailViewController.swift in Sources */,
+				222F8FCB28B03DED003EFAA5 /* CoreDataManager.swift in Sources */,
 				2223AAA428A301AF003D765F /* FullScreenPresenter.swift in Sources */,
 				2284FC37289D906300D5ADD8 /* OfficesModels.swift in Sources */,
 				2284FC3E289D9B7700D5ADD8 /* ResponseModel.swift in Sources */,
 				2223AA72289DDB98003D765F /* HTTPClient.swift in Sources */,
 				221B846428908F2400347EDD /* RegisterViewController.swift in Sources */,
 				227B71C628A3EEA600D1278B /* FullScreenCollectionViewCell.swift in Sources */,
+				222F8FC828B03D05003EFAA5 /* Model.xcdatamodeld in Sources */,
+				222F8FCD28B03DF8003EFAA5 /* CoreDataStack.swift in Sources */,
 				2223AA7A289FFEC3003D765F /* OfficesTableViewCell.swift in Sources */,
 				2284FC38289D906300D5ADD8 /* OfficesWorker.swift in Sources */,
 				2223AA8E28A052B7003D765F /* OfficeDetailWorker.swift in Sources */,
@@ -1178,6 +1198,19 @@
 			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		222F8FC628B03D05003EFAA5 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				222F8FC728B03D05003EFAA5 /* Model.xcdatamodel */,
+			);
+			currentVersion = 222F8FC728B03D05003EFAA5 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 22948B7F2874579D0084862E /* Project object */;
 }
