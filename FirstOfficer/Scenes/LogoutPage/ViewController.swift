@@ -36,9 +36,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginClicked(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Offices", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(identifier: "OfficesVC")
-        self.navigationController?.pushViewController(destinationVC, animated: true)
+//        let storyboard = UIStoryboard(name: "Offices", bundle: nil)
+//        let destinationVC = storyboard.instantiateViewController(identifier: "OfficesVC")
+//        self.navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

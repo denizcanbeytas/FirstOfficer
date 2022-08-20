@@ -35,6 +35,13 @@
 		222F8FC828B03D05003EFAA5 /* FavoritesCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 222F8FC628B03D05003EFAA5 /* FavoritesCoreData.xcdatamodeld */; };
 		222F8FCB28B03DED003EFAA5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F8FCA28B03DED003EFAA5 /* CoreDataManager.swift */; };
 		222F8FCD28B03DF8003EFAA5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F8FCC28B03DF8003EFAA5 /* CoreDataStack.swift */; };
+		224C568528B189F5001F5A8E /* FavoriteOffices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224C567E28B189F5001F5A8E /* FavoriteOffices.storyboard */; };
+		224C568628B189F5001F5A8E /* FavoriteOfficesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C567F28B189F5001F5A8E /* FavoriteOfficesViewController.swift */; };
+		224C568728B189F5001F5A8E /* FavoriteOfficesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C568028B189F5001F5A8E /* FavoriteOfficesPresenter.swift */; };
+		224C568828B189F5001F5A8E /* FavoriteOfficesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C568128B189F5001F5A8E /* FavoriteOfficesInteractor.swift */; };
+		224C568928B189F5001F5A8E /* FavoriteOfficesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C568228B189F5001F5A8E /* FavoriteOfficesModels.swift */; };
+		224C568A28B189F5001F5A8E /* FavoriteOfficesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C568328B189F5001F5A8E /* FavoriteOfficesWorker.swift */; };
+		224C568B28B189F5001F5A8E /* FavoriteOfficesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C568428B189F5001F5A8E /* FavoriteOfficesRouter.swift */; };
 		227B71C628A3EEA600D1278B /* FullScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B71C428A3EEA600D1278B /* FullScreenCollectionViewCell.swift */; };
 		227B71C728A3EEA600D1278B /* FullScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227B71C528A3EEA600D1278B /* FullScreenCollectionViewCell.xib */; };
 		2284FC33289D906300D5ADD8 /* Offices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2284FC2C289D906300D5ADD8 /* Offices.storyboard */; };
@@ -101,6 +108,13 @@
 		222F8FC728B03D05003EFAA5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		222F8FCA28B03DED003EFAA5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		222F8FCC28B03DF8003EFAA5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		224C567E28B189F5001F5A8E /* FavoriteOffices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteOffices.storyboard; sourceTree = "<group>"; };
+		224C567F28B189F5001F5A8E /* FavoriteOfficesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteOfficesViewController.swift; sourceTree = "<group>"; };
+		224C568028B189F5001F5A8E /* FavoriteOfficesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteOfficesPresenter.swift; sourceTree = "<group>"; };
+		224C568128B189F5001F5A8E /* FavoriteOfficesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteOfficesInteractor.swift; sourceTree = "<group>"; };
+		224C568228B189F5001F5A8E /* FavoriteOfficesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteOfficesModels.swift; sourceTree = "<group>"; };
+		224C568328B189F5001F5A8E /* FavoriteOfficesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteOfficesWorker.swift; sourceTree = "<group>"; };
+		224C568428B189F5001F5A8E /* FavoriteOfficesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteOfficesRouter.swift; sourceTree = "<group>"; };
 		227B71C428A3EEA600D1278B /* FullScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		227B71C528A3EEA600D1278B /* FullScreenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullScreenCollectionViewCell.xib; sourceTree = "<group>"; };
 		2284FC2C289D906300D5ADD8 /* Offices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Offices.storyboard; sourceTree = "<group>"; };
@@ -216,6 +230,20 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		224C567D28B189CC001F5A8E /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				224C567E28B189F5001F5A8E /* FavoriteOffices.storyboard */,
+				224C567F28B189F5001F5A8E /* FavoriteOfficesViewController.swift */,
+				224C568028B189F5001F5A8E /* FavoriteOfficesPresenter.swift */,
+				224C568128B189F5001F5A8E /* FavoriteOfficesInteractor.swift */,
+				224C568228B189F5001F5A8E /* FavoriteOfficesModels.swift */,
+				224C568328B189F5001F5A8E /* FavoriteOfficesWorker.swift */,
+				224C568428B189F5001F5A8E /* FavoriteOfficesRouter.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		227B71C328A3EE6300D1278B /* FullScreenCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +256,7 @@
 		2284FC25289D8E0B00D5ADD8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				224C567D28B189CC001F5A8E /* Favorites */,
 				2284FC2B289D904900D5ADD8 /* Offices */,
 				2223AA8128A05292003D765F /* OfficesDetail */,
 				2223AA9A28A3015C003D765F /* DetailImagesFullScreen */,
@@ -484,6 +513,7 @@
 				2223AA8928A052B7003D765F /* OfficeDetail.storyboard in Resources */,
 				2223AA7B289FFEC3003D765F /* OfficesTableViewCell.xib in Resources */,
 				2223AA9828A067D3003D765F /* OfficeDetailCollectionViewCell.xib in Resources */,
+				224C568528B189F5001F5A8E /* FavoriteOffices.storyboard in Resources */,
 				227B71C728A3EEA600D1278B /* FullScreenCollectionViewCell.xib in Resources */,
 				22948B97287457A10084862E /* LaunchScreen.storyboard in Resources */,
 				22948B94287457A10084862E /* Assets.xcassets in Resources */,
@@ -519,7 +549,10 @@
 				2223AA76289DDBD1003D765F /* RemoteOfficeLoader.swift in Sources */,
 				22948B8B2874579D0084862E /* AppDelegate.swift in Sources */,
 				2223AA74289DDBBD003D765F /* OfficeLoader.swift in Sources */,
+				224C568628B189F5001F5A8E /* FavoriteOfficesViewController.swift in Sources */,
 				2223AAA728A301AF003D765F /* FullScreenWorker.swift in Sources */,
+				224C568728B189F5001F5A8E /* FavoriteOfficesPresenter.swift in Sources */,
+				224C568928B189F5001F5A8E /* FavoriteOfficesModels.swift in Sources */,
 				2223AAA528A301AF003D765F /* FullScreenInteractor.swift in Sources */,
 				2223AA9728A067D3003D765F /* OfficeDetailCollectionViewCell.swift in Sources */,
 				2223AAA628A301AF003D765F /* FullScreenModels.swift in Sources */,
@@ -539,13 +572,16 @@
 				2284FC37289D906300D5ADD8 /* OfficesModels.swift in Sources */,
 				2284FC3E289D9B7700D5ADD8 /* ResponseModel.swift in Sources */,
 				2223AA72289DDB98003D765F /* HTTPClient.swift in Sources */,
+				224C568A28B189F5001F5A8E /* FavoriteOfficesWorker.swift in Sources */,
 				221B846428908F2400347EDD /* RegisterViewController.swift in Sources */,
 				227B71C628A3EEA600D1278B /* FullScreenCollectionViewCell.swift in Sources */,
 				222F8FC828B03D05003EFAA5 /* FavoritesCoreData.xcdatamodeld in Sources */,
 				222F8FCD28B03DF8003EFAA5 /* CoreDataStack.swift in Sources */,
 				2223AA7A289FFEC3003D765F /* OfficesTableViewCell.swift in Sources */,
+				224C568828B189F5001F5A8E /* FavoriteOfficesInteractor.swift in Sources */,
 				2284FC38289D906300D5ADD8 /* OfficesWorker.swift in Sources */,
 				2223AA8E28A052B7003D765F /* OfficeDetailWorker.swift in Sources */,
+				224C568B28B189F5001F5A8E /* FavoriteOfficesRouter.swift in Sources */,
 				2284FC3C289D9B2900D5ADD8 /* NetworkModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

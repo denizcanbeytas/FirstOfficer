@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nxe-uw-h5I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qxp-xp-e4j">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Offices View Controller-->
+        <!--House-->
         <scene sceneID="D3m-6j-bBI">
             <objects>
                 <viewController storyboardIdentifier="OfficesVC" id="nxe-uw-h5I" customClass="OfficesViewController" customModule="FirstOfficer" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,6 +117,7 @@
                             <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="rNU-tZ-gEv" secondAttribute="trailing" constant="20" id="ijh-ZK-QM6"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="House" image="house" catalog="system" selectedImage="house.fill" id="69o-VK-NaX"/>
                     <connections>
                         <outlet property="filterBtnImage" destination="WnZ-PL-gZ7" id="ouz-2x-kgc"/>
                         <outlet property="searcBar" destination="4T8-MQ-UCs" id="cFS-5Z-IEY"/>
@@ -125,11 +126,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZo-gs-e4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-81.159420289855078" y="26.785714285714285"/>
+            <point key="canvasLocation" x="722" y="-206"/>
+        </scene>
+        <!--favoritesVC-->
+        <scene sceneID="LyG-wr-dq9">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="favoritesVC" storyboardName="FavoriteOffices" referencedIdentifier="favoritesVC" id="NUw-6g-wLy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="7kE-Ev-FZv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8UC-R2-7sH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="253"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hwZ-TV-laV">
+            <objects>
+                <tabBarController storyboardIdentifier="TabbarController" automaticallyAdjustsScrollViewInsets="NO" id="Qxp-xp-e4j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sr1-2k-nJC">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.45517957180000002" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nxe-uw-h5I" kind="relationship" relationship="viewControllers" id="bTK-bM-s1e"/>
+                        <segue destination="NUw-6g-wLy" kind="relationship" relationship="viewControllers" id="YXP-6c-Nf4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6uI-Ax-Muf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-326" y="-24"/>
         </scene>
     </scenes>
     <resources>
         <image name="filterImage" width="48" height="48"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
