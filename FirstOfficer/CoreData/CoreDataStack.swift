@@ -3,12 +3,12 @@
 //  FirstOfficer
 //
 //  Created by Deniz on 20.08.2022.
-//
 
-//import Foundation
-//import CoreData
+
+import Foundation
+import CoreData
 //
-//final class CoreDataStack {
+final class CoreDataStack {
 //
 //    private let modelName: String
 //
@@ -42,4 +42,4 @@
 //            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
 //        }
 //    }
-//}
+}

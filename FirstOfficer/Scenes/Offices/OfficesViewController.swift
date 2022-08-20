@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 protocol OfficesDisplayLogic: AnyObject {
     func showOffices(viewModel: Offices.Fetch.ViewModel)
@@ -28,7 +29,7 @@ final class OfficesViewController: UIViewController {
     var selectedRow = 0
     
     var iter = ""
-    
+    var idArray = [String]()
     
     // for the searchBar
     var allData = [Offices.Fetch.ViewModel.Office]()
@@ -52,8 +53,14 @@ final class OfficesViewController: UIViewController {
         interactor?.fetchOffices(request: Offices.Fetch.Request())
         tableView.register(UINib(nibName: "OfficesTableViewCell", bundle: .main), forCellReuseIdentifier: "OfficesTableViewCell")
         searcBar.delegate = self
+       
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+
     
     // MARK: Setup
     
@@ -150,6 +157,15 @@ extension OfficesViewController : UITableViewDelegate, UITableViewDataSource {
         
         cell?.delegateAdd = self
         cell?.delegateRemove = self
+        
+        cell?.heartBtnIsTapped = true
+        for i in idArray {
+            if i == model.id {
+                cell?.favoriteImage.image = UIImage(named: "favoriteNoneClicked")
+                cell?.heartBtnIsTapped = false
+            }
+        }
+        
         return cell!
 //        if !filteringData.isEmpty { // for the searchBar
 //            let hey = filteringData[indexPath.row]
@@ -209,13 +225,32 @@ extension OfficesViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 extension OfficesViewController: addToFavoriteProtocol, removeAtFavoritesProtocol {
     
     func addToFavorite(officeResult: Offices.Fetch.ViewModel.Office) {
-        CoreDataManager.shared.saveFavoritesToCoreData(with: officeResult)
+        //CoreDataManager.shared.saveFavoritesToCoreData(with: officeResult)
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate{
+            let context = appDelegate.persistentContainer.viewContext
+
+            let entityDescription = NSEntityDescription.insertNewObject(forEntityName: "Model", into: context)
+           // entityDescription.setValue(viewModel.images, forKey: "images")
+            entityDescription.setValue(officeResult.name, forKey: "name")
+            entityDescription.setValue(officeResult.rooms, forKey: "rooms")
+            entityDescription.setValue(officeResult.address, forKey: "address")
+            entityDescription.setValue(officeResult.capacity, forKey: "capacity")
+            entityDescription.setValue(officeResult.image, forKey: "image")
+            entityDescription.setValue(officeResult.id, forKey: "id")
+            entityDescription.setValue(officeResult.space, forKey: "space")
+            //entityDescription.setValue(true, forKey: "fav")
+            do{
+                try context.save()
+                print("Saved")
+            }catch{
+                print("Saving Error")
+            }
+        }
     }
     
     func removeAtFavorites(favoriteId: Int) {
         //jkl
     }
-    
     
 }
 
