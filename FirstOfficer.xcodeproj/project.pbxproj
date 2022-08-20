@@ -291,8 +291,8 @@
 				2284FC2D289D906300D5ADD8 /* OfficesViewController.swift */,
 				2284FC2F289D906300D5ADD8 /* OfficesInteractor.swift */,
 				2284FC2E289D906300D5ADD8 /* OfficesPresenter.swift */,
-				2284FC30289D906300D5ADD8 /* OfficesModels.swift */,
 				2284FC31289D906300D5ADD8 /* OfficesWorker.swift */,
+				2284FC30289D906300D5ADD8 /* OfficesModels.swift */,
 				2284FC32289D906300D5ADD8 /* OfficesRouter.swift */,
 			);
 			path = Offices;

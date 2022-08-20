@@ -48,6 +48,25 @@ class CoreDataManager {
             completion(.failure(error))
         }
     }
+    
+    func getFavouritesId(completion: @escaping (Result<[String], Error>) -> Void){
+        var coreDataOfficeId : [String] = []
+        let request: NSFetchRequest<Model> = Model.fetchRequest()
+        request.returnsObjectsAsFaults = false
+        do {
+            let favorites = try moc.fetch(request)
+            for result in favorites as [NSManagedObject] {
+                if let id = result.value(forKey: "id") as? String{
+                    coreDataOfficeId.append(id)
+                }
+            }
+            completion(.success(coreDataOfficeId))
+        }
+        catch {
+            completion(.failure(error))
+        }
+        
+    }
 
     func saveFavoritesToCoreData(with officeResult: Offices.Fetch.ViewModel.Office) {
         

@@ -42,6 +42,7 @@ class OfficesTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         setupUI()
+       
     }
     @IBAction func favoriteClicked(_ sender: Any) {
        
@@ -51,7 +52,7 @@ class OfficesTableViewCell: UITableViewCell {
             heartBtnIsTapped = false
         }else {
             delegateRemove?.removeAtFavorites(favoriteId: officeId ?? 0)
-            favoriteImage.image = UIImage(named: "favoriteNoneClicked")
+            favoriteImage.image = UIImage(named: "FavoriteUnClicked")
             heartBtnIsTapped = true
         }
 
@@ -76,7 +77,7 @@ class OfficesTableViewCell: UITableViewCell {
         contentsView.layer.shadowOpacity = 0.2
         contentsView.layer.shadowOffset = .zero
         contentsView.layer.shadowRadius = 3
-        favoriteImage.image = UIImage(named: "favoriteNoneClicked")
+        favoriteImage.image = UIImage(named: "FavoriteUnClicked")
 
     }
     

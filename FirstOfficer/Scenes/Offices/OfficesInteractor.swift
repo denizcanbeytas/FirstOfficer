@@ -12,7 +12,7 @@ protocol OfficesBusinessLogic: AnyObject {
     func fetchFilteringData(request: String)
     func saveFavoritesToCoreData(officeResult: Offices.Fetch.ViewModel.Office)
     func deleteFavoritesFromCoreData(favoriId: Int)
-    //func getFavoritesID(favoritesID: Int)
+    func getFavoritesID()
 }
 
 protocol OfficesDataStore: AnyObject {
@@ -62,16 +62,17 @@ final class OfficesInteractor: OfficesBusinessLogic, OfficesDataStore {
         worker.deleteFavoritesFromCoreData(favoriId: favoriId)
     }
     
-//    func getFavoritesID(favoritesID: Int){
-//        CoreDataManager.shared.checkIsFavourite(with: favoritesID) { result in
-//            switch result {
-//            case .success(let bool):
-//             
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-//    }
+    func getFavoritesID(){
+        CoreDataManager.shared.getFavouritesId { response in
+            switch response {
+            case .success(let favouriteID):
+                self.presenter?.sendFavoritesIDToVC(favouritesID: favouriteID)
+            case .failure(let error):
+                print(error)
+            }
+        
+        }
+    }
     
 }
 

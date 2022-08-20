@@ -10,7 +10,7 @@ import CoreData
 
 protocol OfficesDisplayLogic: AnyObject {
     func showOffices(viewModel: Offices.Fetch.ViewModel)
-   // func getFavoritesIDFromCoreData(favouritesID: Int)
+    func getFavoritesIDFromCoreData(favouritesID: [String])
 }
 
 final class OfficesViewController: UIViewController {
@@ -29,8 +29,8 @@ final class OfficesViewController: UIViewController {
     let screenHeight = UIScreen.main.bounds.height / 4
     var selectedRow = 0
     
-    var favouriteOfficesArray: [Model] = []
     var favouritesID: Int?
+    var coreDataFavouriteOfficeId : [String] = []
     
     var iter = ""
     var idArray = [String]()
@@ -52,20 +52,20 @@ final class OfficesViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        self.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationItem.setHidesBackButton(true, animated: false) // back butonu kaldırır
        // self.navigationController?.setNavigationBarHidden(true, animated: false)
         interactor?.fetchOffices(request: Offices.Fetch.Request())
         tableView.register(UINib(nibName: "OfficesTableViewCell", bundle: .main), forCellReuseIdentifier: "OfficesTableViewCell")
         searcBar.delegate = self
-        
-       
-        
+        //interactor?.getFavoritesID()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+        interactor?.getFavoritesID()
     }
-
+    
     
     // MARK: Setup
     
@@ -131,11 +131,11 @@ final class OfficesViewController: UIViewController {
 }
 // MARK: Extensions
 extension OfficesViewController: OfficesDisplayLogic {
-//    func getFavoritesIDFromCoreData(favouritesID: Int) {
-//        interactor?.getFavoritesID()
-//        //print(favoriteArray)
-//        tableView.reloadData()
-//    }
+    func getFavoritesIDFromCoreData(favouritesID: [String]) {
+        coreDataFavouriteOfficeId.removeAll()
+        coreDataFavouriteOfficeId = favouritesID
+        fetch()
+    }
     
 
     func showOffices(viewModel: Offices.Fetch.ViewModel) {
@@ -157,28 +157,29 @@ extension OfficesViewController : UITableViewDelegate, UITableViewDataSource {
             return filteringData.count // for the searchBar
         }else {
             return viewModel?.offices.count ?? 1
-        }
         
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OfficesTableViewCell", for: indexPath) as? OfficesTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "OfficesTableViewCell", for: indexPath) as? OfficesTableViewCell else {return UITableViewCell()}
+        
         guard let model = viewModel?.offices[indexPath.row] else { return UITableViewCell()}
-        cell?.config(viewModel: model)
+        cell.config(viewModel: model)
         
-        cell?.delegateAdd = self
-        cell?.delegateRemove = self
+        cell.delegateAdd = self
+        cell.delegateRemove = self
         
-        cell?.favoriteImage.image = UIImage(named: "favoriteNoneClicked")
-        cell?.heartBtnIsTapped = true
-        for i in idArray {
+        cell.favoriteImage.image = UIImage(named: "FavoriteUnClicked")
+        cell.heartBtnIsTapped = true
+        for i in coreDataFavouriteOfficeId {
             if i == model.id {
-                cell?.favoriteImage.image = UIImage(named: "favoriteClicked")
-                cell?.heartBtnIsTapped = false
+                cell.favoriteImage.image = UIImage(named: "FavoriteClicked")
+                cell.heartBtnIsTapped = false
             }
         }
         
-        return cell!
+        return cell
 //        if !filteringData.isEmpty { // for the searchBar
 //            let hey = filteringData[indexPath.row]
 //            cell?.config(viewModel: hey)
@@ -238,10 +239,16 @@ extension OfficesViewController: addToFavoriteProtocol, removeAtFavoritesProtoco
     
     func addToFavorite(officeResult: Offices.Fetch.ViewModel.Office) {
         interactor?.saveFavoritesToCoreData(officeResult: officeResult)
+        
     }
     
     func removeAtFavorites(favoriteId: Int) {
         interactor?.deleteFavoritesFromCoreData(favoriId: favoriteId)
+    }
+    
+    func fetch(){
+        // burada reload edilmesi gererkiyor
+        tableView.reloadData()
     }
     
 }

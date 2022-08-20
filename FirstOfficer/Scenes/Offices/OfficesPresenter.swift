@@ -10,7 +10,7 @@ import Foundation
 protocol OfficesPresentationLogic: AnyObject {
     func presenterOfficeData (response: Offices.Fetch.Response)
     //func presenterFilteringData(response: Offices.Fetch.FilterResponse)
-    //func sendFavoritesIDToVC(favouritesID: Int)
+    func sendFavoritesIDToVC(favouritesID: [String])
 }
 
 final class OfficesPresenter: OfficesPresentationLogic {
@@ -36,9 +36,9 @@ final class OfficesPresenter: OfficesPresentationLogic {
         
     }
     
-//    func sendFavoritesIDToVC(favouritesID: Int){
-//        viewController?.getFavoritesIDFromCoreData(favouritesID: favoritesID)
-//    }
+    func sendFavoritesIDToVC(favouritesID: [String]){
+        viewController?.getFavoritesIDFromCoreData(favouritesID: favouritesID)
+    }
 }
 
 
