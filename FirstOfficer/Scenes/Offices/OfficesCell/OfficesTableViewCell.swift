@@ -46,13 +46,13 @@ class OfficesTableViewCell: UITableViewCell {
     @IBAction func favoriteClicked(_ sender: Any) {
        
         if heartBtnIsTapped == true {
+            delegateAdd?.addToFavorite(officeResult: ViewModel!)
             favoriteImage.image = UIImage(named: "FavoriteClicked")
             heartBtnIsTapped = false
-            delegateAdd?.addToFavorite(officeResult: self.ViewModel!)
         }else {
+            delegateRemove?.removeAtFavorites(favoriteId: officeId ?? 0)
             favoriteImage.image = UIImage(named: "favoriteNoneClicked")
             heartBtnIsTapped = true
-            delegateRemove?.removeAtFavorites(favoriteId: officeId ?? 0)
         }
 
     }

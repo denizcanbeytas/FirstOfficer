@@ -11,18 +11,56 @@ import UIKit
 
 class CoreDataManager {
 
-//    static let shared = CoreDataManager()
-//
-//    func checkIsFavourite(with movieID: Int, completion: @escaping (Result<Bool, Error>) -> Void) {
-//
-//    }
-//
-//    func getMoviesFromPersistance(completion: @escaping (Result<[Model], Error>) -> Void) {
-//
-//    }
-//
-//    func saveFavoritesToCoreData(with officeResult: Offices.Fetch.ViewModel.Office) {
-//       
+    static let shared = CoreDataManager()
+    var coreDataStack: CoreDataStack
+    var moc: NSManagedObjectContext {
+        return coreDataStack.managedContext
+    }
+
+    private init(coreDataStack: CoreDataStack = CoreDataStack(modelName: "FavoritesCoreData")) {
+        self.coreDataStack = coreDataStack
+    }
+
+    private func favoritesIDPredicate(of request: NSFetchRequest<Model>, with id: Int) -> NSPredicate {
+        request.predicate = NSPredicate(format: "id == %d", id)
+        return request.predicate!
+    }
+    
+    func getFavoritesFromPersistance(completion: @escaping (Result<[Model], Error>) -> Void) {
+        do {
+            let request: NSFetchRequest<Model> = Model.fetchRequest()
+            request.returnsObjectsAsFaults = false
+            let favorites = try moc.fetch(request)
+            completion(.success(favorites))
+        } catch {
+            completion(.failure(error))
+        }
+    }
+    
+    func checkIsFavourite(with favoritesID: Int, completion: @escaping (Result<Bool, Error>) -> Void) {
+        do {
+            let request: NSFetchRequest<Model> = Model.fetchRequest()
+            request.returnsObjectsAsFaults = false
+            request.predicate = favoritesIDPredicate(of: request, with: favoritesID)
+            let fetchedResults = try moc.fetch(request)
+            fetchedResults.first != nil ? completion(.success(true)) : completion(.success(false))
+        } catch {
+            completion(.failure(error))
+        }
+    }
+
+    func saveFavoritesToCoreData(with officeResult: Offices.Fetch.ViewModel.Office) {
+        
+        let favouriteOffices = Model(context: moc)
+        favouriteOffices.id = officeResult.id
+        favouriteOffices.image = officeResult.image
+        favouriteOffices.name = officeResult.image
+        favouriteOffices.address = officeResult.address
+        favouriteOffices.space = officeResult.space
+        favouriteOffices.rooms = officeResult.rooms
+        favouriteOffices.capacity = officeResult.capacity
+        coreDataStack.saveContext()
+       
 //        if let appDelegate = UIApplication.shared.delegate as?AppDelegate{
 //            let context = appDelegate.persistentContainer.viewContext
 //
@@ -42,22 +80,25 @@ class CoreDataManager {
 //            }catch{
 //                print("Saving Error")
 //            }
-//    }
-//        
-//        //let favoriteOffices = Model(context: moc)
-////        favoriteOffices.id = officeResult.id
-////        favoriteOffices.name = officeResult.name
-////        favoriteOffices.address = officeResult.address
-////        favoriteOffices.image = officeResult.image
-////        favoriteOffices.capacity = officeResult.capacity
-////        favoriteOffices.rooms = officeResult.rooms
-////        favoriteOffices.space = officeResult.space
-//        
-//        print("Saved")
-//        
-//    }
-//
-//    func deleteFavoritesFromCoreData(with movieID: Int, completion: @escaping (Error) -> Void) {
-//
-//    }
+        
+        print("Saved")
+        
+    }
+
+    func deleteFavoritesFromCoreData(with favoriteId: Int, completion: @escaping (Error) -> Void) {
+        let request: NSFetchRequest<Model> = Model.fetchRequest()
+        request.returnsObjectsAsFaults = false
+        request.predicate = favoritesIDPredicate(of: request, with: favoriteId)
+        do {
+            let fetchedResult = try moc.fetch(request)
+            if let officeModel = fetchedResult.first {
+                moc.delete(officeModel)
+                coreDataStack.saveContext()
+            }
+        } catch {
+            completion(error)
+        }
+        
+        print("Deleted")
+    }
 }

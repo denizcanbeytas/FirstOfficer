@@ -10,6 +10,9 @@ import Foundation
 protocol OfficesBusinessLogic: AnyObject {
     func fetchOffices(request: Offices.Fetch.Request)
     func fetchFilteringData(request: String)
+    func saveFavoritesToCoreData(officeResult: Offices.Fetch.ViewModel.Office)
+    func deleteFavoritesFromCoreData(favoriId: Int)
+    //func getFavoritesID(favoritesID: Int)
 }
 
 protocol OfficesDataStore: AnyObject {
@@ -17,10 +20,12 @@ protocol OfficesDataStore: AnyObject {
 }
 
 final class OfficesInteractor: OfficesBusinessLogic, OfficesDataStore {
-    
+
     var officeData: OfficeArray?
     var presenter: OfficesPresentationLogic?
     var worker: OfficesWorkingLogic = OfficesWorker()
+    
+    
     
     func fetchOffices(request: Offices.Fetch.Request) {
         worker.getOffices { result in
@@ -48,6 +53,26 @@ final class OfficesInteractor: OfficesBusinessLogic, OfficesDataStore {
         self.presenter?.presenterOfficeData(response: Offices.Fetch.Response(offices: filteringData))
         print("\(filteringData)")
     }
+    
+    func saveFavoritesToCoreData(officeResult: Offices.Fetch.ViewModel.Office) {
+        worker.saveToCoreData(officeResult: officeResult)
+    }
+    
+    func deleteFavoritesFromCoreData(favoriId: Int){
+        worker.deleteFavoritesFromCoreData(favoriId: favoriId)
+    }
+    
+//    func getFavoritesID(favoritesID: Int){
+//        CoreDataManager.shared.checkIsFavourite(with: favoritesID) { result in
+//            switch result {
+//            case .success(let bool):
+//             
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+//    }
+    
 }
 
 // 3.adım -> çıkacağı bir yer yok completion yok

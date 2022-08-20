@@ -10,6 +10,7 @@ import CoreData
 
 protocol OfficesDisplayLogic: AnyObject {
     func showOffices(viewModel: Offices.Fetch.ViewModel)
+   // func getFavoritesIDFromCoreData(favouritesID: Int)
 }
 
 final class OfficesViewController: UIViewController {
@@ -27,6 +28,9 @@ final class OfficesViewController: UIViewController {
     let screenWidth = UIScreen.main.bounds.width - 10
     let screenHeight = UIScreen.main.bounds.height / 4
     var selectedRow = 0
+    
+    var favouriteOfficesArray: [Model] = []
+    var favouritesID: Int?
     
     var iter = ""
     var idArray = [String]()
@@ -53,6 +57,7 @@ final class OfficesViewController: UIViewController {
         interactor?.fetchOffices(request: Offices.Fetch.Request())
         tableView.register(UINib(nibName: "OfficesTableViewCell", bundle: .main), forCellReuseIdentifier: "OfficesTableViewCell")
         searcBar.delegate = self
+        
        
         
     }
@@ -126,6 +131,12 @@ final class OfficesViewController: UIViewController {
 }
 // MARK: Extensions
 extension OfficesViewController: OfficesDisplayLogic {
+//    func getFavoritesIDFromCoreData(favouritesID: Int) {
+//        interactor?.getFavoritesID()
+//        //print(favoriteArray)
+//        tableView.reloadData()
+//    }
+    
 
     func showOffices(viewModel: Offices.Fetch.ViewModel) {
         self.viewModel = viewModel
@@ -158,10 +169,11 @@ extension OfficesViewController : UITableViewDelegate, UITableViewDataSource {
         cell?.delegateAdd = self
         cell?.delegateRemove = self
         
+        cell?.favoriteImage.image = UIImage(named: "favoriteNoneClicked")
         cell?.heartBtnIsTapped = true
         for i in idArray {
             if i == model.id {
-                cell?.favoriteImage.image = UIImage(named: "favoriteNoneClicked")
+                cell?.favoriteImage.image = UIImage(named: "favoriteClicked")
                 cell?.heartBtnIsTapped = false
             }
         }
@@ -225,31 +237,11 @@ extension OfficesViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 extension OfficesViewController: addToFavoriteProtocol, removeAtFavoritesProtocol {
     
     func addToFavorite(officeResult: Offices.Fetch.ViewModel.Office) {
-        //CoreDataManager.shared.saveFavoritesToCoreData(with: officeResult)
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate{
-            let context = appDelegate.persistentContainer.viewContext
-
-            let entityDescription = NSEntityDescription.insertNewObject(forEntityName: "Model", into: context)
-           // entityDescription.setValue(viewModel.images, forKey: "images")
-            entityDescription.setValue(officeResult.name, forKey: "name")
-            entityDescription.setValue(officeResult.rooms, forKey: "rooms")
-            entityDescription.setValue(officeResult.address, forKey: "address")
-            entityDescription.setValue(officeResult.capacity, forKey: "capacity")
-            entityDescription.setValue(officeResult.image, forKey: "image")
-            entityDescription.setValue(officeResult.id, forKey: "id")
-            entityDescription.setValue(officeResult.space, forKey: "space")
-            //entityDescription.setValue(true, forKey: "fav")
-            do{
-                try context.save()
-                print("Saved")
-            }catch{
-                print("Saving Error")
-            }
-        }
+        interactor?.saveFavoritesToCoreData(officeResult: officeResult)
     }
     
     func removeAtFavorites(favoriteId: Int) {
-        //jkl
+        interactor?.deleteFavoritesFromCoreData(favoriId: favoriteId)
     }
     
 }

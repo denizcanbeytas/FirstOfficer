@@ -9,6 +9,8 @@ import Foundation
 
 protocol OfficesWorkingLogic: AnyObject {
     func getOffices (completion: @escaping ((Result<OfficeArray, Error>) -> Void))
+    func saveToCoreData(officeResult: Offices.Fetch.ViewModel.Office)
+    func deleteFavoritesFromCoreData(favoriId: Int)
 }
 
 final class OfficesWorker: OfficesWorkingLogic {
@@ -37,6 +39,16 @@ final class OfficesWorker: OfficesWorkingLogic {
             }
         }
     }
+    
+    func saveToCoreData(officeResult: Offices.Fetch.ViewModel.Office){
+        CoreDataManager.shared.saveFavoritesToCoreData(with: officeResult)
+    }
+    func deleteFavoritesFromCoreData(favoriId: Int){
+        CoreDataManager.shared.deleteFavoritesFromCoreData(with: favoriId) { error in
+            print("Error: \(error)")
+        }
+    }
+    
 }
 
 // 2.adım : network modelden gelen veriyi result a alıyor respons ile interactor a gönderiyor
