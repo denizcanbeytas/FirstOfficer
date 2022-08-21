@@ -141,7 +141,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrG-hc-Z8m" userLabel="ImageView">
                                         <rect key="frame" x="251" y="0.0" width="28" height="28"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favoriteNoneClicked" translatesAutoresizingMaskIntoConstraints="NO" id="Oo3-3W-hsI">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FavoriteUnClicked" translatesAutoresizingMaskIntoConstraints="NO" id="Oo3-3W-hsI">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
@@ -227,7 +227,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="favoriteNoneClicked" width="48" height="48"/>
+        <image name="FavoriteUnClicked" width="48" height="48"/>
         <namedColor name="DetailContentView">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
