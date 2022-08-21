@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rVZ-xP-5WW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -725,7 +725,7 @@ Ipsum is not simply.</string>
         <!--Navigation Controller-->
         <scene sceneID="EVb-Z3-B3R">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rVZ-xP-5WW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" id="rVZ-xP-5WW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yLI-bO-1an">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -738,7 +738,7 @@ Ipsum is not simply.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DoL-p6-gDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1225" y="125"/>
+            <point key="canvasLocation" x="-990" y="125"/>
         </scene>
     </scenes>
     <resources>
