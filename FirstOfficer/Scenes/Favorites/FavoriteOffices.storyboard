@@ -16,23 +16,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvQ-7g-BzM">
-                                <rect key="frame" x="20" y="93" width="121" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvQ-7g-BzM">
+                                <rect key="frame" x="20" y="94" width="414" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rvQ-7g-BzM" secondAttribute="height" multiplier="394:41" id="Bb6-Ra-z4I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Eqc-RJ-OT6">
+                                <rect key="frame" x="20" y="157" width="374" height="656"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nxe-uw-h5I" id="eqS-7D-46m"/>
+                                    <outlet property="delegate" destination="nxe-uw-h5I" id="jGq-ya-u5R"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="acR-sl-ate"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eqc-RJ-OT6" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="8m2-5R-2lq"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="bottom" secondItem="Eqc-RJ-OT6" secondAttribute="bottom" id="9ig-KL-pa1"/>
+                            <constraint firstItem="Eqc-RJ-OT6" firstAttribute="top" secondItem="rvQ-7g-BzM" secondAttribute="bottom" constant="20" id="EVA-yT-heP"/>
+                            <constraint firstItem="rvQ-7g-BzM" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="50" id="dMl-X1-SZf"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="Eqc-RJ-OT6" secondAttribute="trailing" constant="20" id="juZ-Nu-Wx0"/>
+                            <constraint firstItem="rvQ-7g-BzM" firstAttribute="trailing" secondItem="acR-sl-ate" secondAttribute="trailing" constant="20" id="o8c-9e-xQH"/>
+                            <constraint firstItem="rvQ-7g-BzM" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="oej-va-hdY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" image="heart" catalog="system" selectedImage="heart.fill" id="ToU-2a-e1y"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Eqc-RJ-OT6" id="16H-xi-rSb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZo-gs-e4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="107" y="28"/>
+            <point key="canvasLocation" x="105.79710144927537" y="27.455357142857142"/>
         </scene>
     </scenes>
     <resources>

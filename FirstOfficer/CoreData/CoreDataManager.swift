@@ -37,18 +37,6 @@ class CoreDataManager {
         }
     }
     
-    func checkIsFavourite(with favoritesID: Int, completion: @escaping (Result<Bool, Error>) -> Void) {
-        do {
-            let request: NSFetchRequest<Model> = Model.fetchRequest()
-            request.returnsObjectsAsFaults = false
-            request.predicate = favoritesIDPredicate(of: request, with: favoritesID)
-            let fetchedResults = try moc.fetch(request)
-            fetchedResults.first != nil ? completion(.success(true)) : completion(.success(false))
-        } catch {
-            completion(.failure(error))
-        }
-    }
-    
     func getFavouritesId(completion: @escaping (Result<[String], Error>) -> Void){
         var coreDataOfficeId : [String] = []
         let request: NSFetchRequest<Model> = Model.fetchRequest()
@@ -73,7 +61,7 @@ class CoreDataManager {
         let favouriteOffices = Model(context: moc)
         favouriteOffices.id = officeResult.id
         favouriteOffices.image = officeResult.image
-        favouriteOffices.name = officeResult.image
+        favouriteOffices.name = officeResult.name
         favouriteOffices.address = officeResult.address
         favouriteOffices.space = officeResult.space
         favouriteOffices.rooms = officeResult.rooms
@@ -120,4 +108,16 @@ class CoreDataManager {
         
         print("Deleted")
     }
+    
+    //    func checkIsFavourite(with favoritesID: Int, completion: @escaping (Result<Bool, Error>) -> Void) {
+    //        do {
+    //            let request: NSFetchRequest<Model> = Model.fetchRequest()
+    //            request.returnsObjectsAsFaults = false
+    //            request.predicate = favoritesIDPredicate(of: request, with: favoritesID)
+    //            let fetchedResults = try moc.fetch(request)
+    //            fetchedResults.first != nil ? completion(.success(true)) : completion(.success(false))
+    //        } catch {
+    //            completion(.failure(error))
+    //        }
+    //    }
 }

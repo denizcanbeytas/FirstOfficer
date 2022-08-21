@@ -70,6 +70,15 @@ class OfficesTableViewCell: UITableViewCell {
         
     }
     
+    func configCellForFavorites(_ model: Model){
+        adressLabel.text = model.address
+        nameLabel.text = model.name
+        capacityLabel.text = model.capacity
+        roomsLabel.text = model.rooms
+        spaceLabel.text = model.space
+        cellImage.sd_setImage(with: URL(string: model.image ?? ""))
+    }
+    
     func setupUI(){
         contentsView.layer.cornerRadius = 18
         contentsView.layer.masksToBounds = false
