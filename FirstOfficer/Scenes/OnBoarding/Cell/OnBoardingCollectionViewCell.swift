@@ -31,6 +31,7 @@ class OnBoardingCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell(_ slide: OnBoardingSlide){
+        //btnOutlet.backgroundColor = UIColor(named: slide.btnColor)
         btnOutlet.backgroundColor = slide.btnColor
         btnOutlet.setTitle(slide.btnTitle, for: .normal)
         labelChild.text = slide.titleChild
@@ -40,6 +41,7 @@ class OnBoardingCollectionViewCell: UICollectionViewCell {
         let animation = Animation.named("\(slide.animationName)")
         lottieView.animation = animation
         lottieView.loopMode = .loop
+        lottieView.animationSpeed = 0.5
         
         if (!lottieView.isAnimationPlaying){
             lottieView.play()

@@ -13,12 +13,66 @@ class OnBoardingViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     
     var slides: [OnBoardingSlide] = []
+    var currentPage = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
         setupSlideContent()
         //setupPageControl()
+    }
+    
+}
+
+extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return slides.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OnBoardingCollectionViewCell.identifer, for: indexPath) as? OnBoardingCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        let slide = slides[indexPath.row]
+        cell.configureCell(slide)
+        cell.btnActionTap = {[weak self] in
+            // for, when btn is tapped its understand in which indexPath
+            self?.handleActionBtnTapped(at: indexPath)
+        }
+
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemWidth = collectionView.bounds.width
+        let itemHeight = collectionView.bounds.height
+        return CGSize(width: itemWidth, height: itemHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        // for pageControl understand to scroll and change pageControll
+        let width = scrollView.frame.width
+        currentPage = Int(scrollView.contentOffset.x / width)
+        pageControl.currentPage = currentPage
+        
+    }
+    
+    
+}
+
+
+extension OnBoardingViewController {
+    func setupSlideContent(){
+        slides = [
+            .init(titleHead: "Find The Most Suitable Office", titleChild: "Find the office that suits you best and start working comfortably", animationName: "findOffice", btnColor: UIColor(named: "OnBoardingSkipBtn")!, btnTitle: "Skip"),
+            .init(titleHead: "Office Details", titleChild: "Select the most suitable office for you by viewing the details of the offices.", animationName: "find", btnColor: UIColor(named: "OnBoardingSkipBtn")!, btnTitle: "Skip"),
+            .init(titleHead: "Map View", titleChild: "Get an easier use by displaying the locations of the offices on the map.", animationName: "map", btnColor: UIColor(named: "OnBoardingGoBtn")!, btnTitle: "Go!")
+        ]
     }
     
     private func setupCollectionView(){
@@ -41,56 +95,10 @@ class OnBoardingViewController: UIViewController {
     }
     
     private func showWelcomePage(){
-        let welcomePageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "navigationController")
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-            let sceneDelegate = windowScene.delegate as? SceneDelegate,
-            let window = sceneDelegate.window {
-            window.rootViewController = welcomePageVC
-            UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
-        }
-    }
-}
-
-extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return slides.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OnBoardingCollectionViewCell.identifer, for: indexPath) as? OnBoardingCollectionViewCell else {
-            return UICollectionViewCell()
-        }
-        
-        let slide = slides[indexPath.row]
-        cell.configureCell(slide)
-        cell.btnActionTap = {[weak self] in
-            self?.handleActionBtnTapped(at: indexPath)
-        }
-
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = collectionView.bounds.width
-        let itemHeight = collectionView.bounds.height
-        return CGSize(width: itemWidth, height: itemHeight)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    
-}
-
-
-extension OnBoardingViewController {
-    func setupSlideContent(){
-        slides = [
-            .init(titleHead: "Find the most suitable office", titleChild: "Find the office that suits you best and start working comfortably", animationName: "findOffice", btnColor: .yellow, btnTitle: "Skip"),
-            .init(titleHead: "Office Details", titleChild: "Select the most suitable office for you by viewing the details of the offices.", animationName: "find", btnColor: .yellow, btnTitle: "Skip"),
-            .init(titleHead: "Map View", titleChild: "Get an easier use by displaying the locations of the offices on the map.", animationName: "map", btnColor: .green, btnTitle: "Go!")
-        ]
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "navigationController")
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .flipHorizontal
+        present(controller, animated: true, completion: nil)
     }
     
 }

@@ -31,9 +31,11 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="PoM-Ul-NM2"/>
                                 </connections>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="11L-hb-dbq">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="11L-hb-dbq">
                                 <rect key="frame" x="149" y="728" width="116" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="11L-hb-dbq" secondAttribute="height" multiplier="58:13" id="qFq-oE-rmN"/>
+                                </constraints>
                                 <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.45517957180000002" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
@@ -43,7 +45,9 @@
                         <constraints>
                             <constraint firstItem="0aI-az-Ktl" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="5fa-37-5iw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0aI-az-Ktl" secondAttribute="trailing" id="Gd4-1h-SGw"/>
+                            <constraint firstItem="11L-hb-dbq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Nxd-ZY-FNF"/>
                             <constraint firstItem="0aI-az-Ktl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Px5-d9-sz2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="11L-hb-dbq" secondAttribute="bottom" constant="108" id="QCS-3w-dr3"/>
                             <constraint firstAttribute="bottom" secondItem="0aI-az-Ktl" secondAttribute="bottom" id="zpr-7d-AH4"/>
                         </constraints>
                     </view>
