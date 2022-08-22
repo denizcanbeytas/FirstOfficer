@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 class OfficeAnnotation : NSObject,MKAnnotation {
     var coordinate: CLLocationCoordinate2D

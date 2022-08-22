@@ -17,16 +17,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yzr-rg-7jS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="9V8-MR-Bk4"/>
+                                    <constraint firstAttribute="height" constant="818" id="wPS-r1-nnk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="18"/>
+                                </userDefinedRuntimeAttributes>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="acR-sl-ate"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yzr-rg-7jS" firstAttribute="top" secondItem="chM-je-gA4" secondAttribute="top" id="DDz-QK-FHm"/>
-                            <constraint firstAttribute="bottom" secondItem="yzr-rg-7jS" secondAttribute="bottom" id="kPv-ry-Ivo"/>
-                            <constraint firstItem="yzr-rg-7jS" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" id="s5E-lM-oJt"/>
-                            <constraint firstItem="yzr-rg-7jS" firstAttribute="trailing" secondItem="acR-sl-ate" secondAttribute="trailing" id="wyq-bc-JKn"/>
+                            <constraint firstItem="yzr-rg-7jS" firstAttribute="bottom" secondItem="acR-sl-ate" secondAttribute="bottom" id="Cjn-ch-RZG"/>
+                            <constraint firstItem="yzr-rg-7jS" firstAttribute="centerX" secondItem="chM-je-gA4" secondAttribute="centerX" id="Y4W-Qc-I4J"/>
+                            <constraint firstItem="yzr-rg-7jS" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" id="sJJ-cA-DRP"/>
                         </constraints>
                     </view>
                     <connections>
