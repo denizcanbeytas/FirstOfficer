@@ -69,7 +69,7 @@ extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDa
 extension OnBoardingViewController {
     func setupSlideContent(){
         slides = [
-            .init(titleHead: "Find The Most Suitable Office", titleChild: "Find the office that suits you best and start working comfortably", animationName: "findOffice", btnColor: UIColor(named: "OnBoardingSkipBtn")!, btnTitle: "Skip"),
+            .init(titleHead: "Find The Most Suitable Office", titleChild: "Find the office that suits you best and start working comfortably.", animationName: "findOffice", btnColor: UIColor(named: "OnBoardingSkipBtn")!, btnTitle: "Skip"),
             .init(titleHead: "Office Details", titleChild: "Select the most suitable office for you by viewing the details of the offices.", animationName: "find", btnColor: UIColor(named: "OnBoardingSkipBtn")!, btnTitle: "Skip"),
             .init(titleHead: "Map View", titleChild: "Get an easier use by displaying the locations of the offices on the map.", animationName: "map", btnColor: UIColor(named: "OnBoardingGoBtn")!, btnTitle: "Go!")
         ]

@@ -15,11 +15,13 @@ final class FavoriteOfficesViewController: UIViewController {
     
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var favoritesTabItem: UITabBarItem!
     
     var interactor: FavoriteOfficesBusinessLogic?
     var router: (FavoriteOfficesRoutingLogic & FavoriteOfficesDataPassing)?
     
-    var favouriteOfficesArray: [Model] = [] 
+   
+    var favouriteOfficesArray: [Model] = []
     var coreDataFavouriteOfficeId : [String] = []
     
     // MARK: Object lifecycle
@@ -45,6 +47,10 @@ final class FavoriteOfficesViewController: UIViewController {
         tableView.reloadData()
         fetchFavoritesOfficesFromPersistance()
         fetchData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        favoritesTabItem.badgeValue = nil
     }
     
     // MARK: Setup

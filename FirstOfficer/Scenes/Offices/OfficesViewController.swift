@@ -169,7 +169,7 @@ extension OfficesViewController : UITableViewDelegate, UITableViewDataSource {
         
         cell.delegateAdd = self
         cell.delegateRemove = self
-        
+
         cell.favoriteImage.image = UIImage(named: "FavoriteUnClicked")
         cell.heartBtnIsTapped = true
         for i in coreDataFavouriteOfficeId {
@@ -178,6 +178,18 @@ extension OfficesViewController : UITableViewDelegate, UITableViewDataSource {
                 cell.heartBtnIsTapped = false
             }
         }
+        
+        cell.btnActionTap = { [weak self] in
+            if cell.heartBtnIsTapped == true {
+                if let tabItems = self?.tabBarController?.tabBar.items{
+                    let item = tabItems[1]
+                    item.badgeValue = "new"
+                    item.badgeColor = UIColor.lightGray
+                }
+            }
+        }
+        
+        //cell.favoriteBtn.addTarget(self, action: #selector(tapped), for: .touchUpInside)
         
         return cell
 //        if !filteringData.isEmpty { // for the searchBar

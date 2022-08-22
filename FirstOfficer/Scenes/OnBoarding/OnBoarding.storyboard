@@ -36,7 +36,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="11L-hb-dbq" secondAttribute="height" multiplier="58:13" id="qFq-oE-rmN"/>
                                 </constraints>
-                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="pageIndicatorTintColor" systemColor="labelColor"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.45517957180000002" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                         </subviews>
@@ -62,6 +62,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

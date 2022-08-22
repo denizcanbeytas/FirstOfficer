@@ -38,15 +38,18 @@ class OfficesTableViewCell: UITableViewCell {
     var ViewModel: Offices.Fetch.ViewModel.Office?
     var officeId: Int?
     
+    var btnActionTap: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         setupUI()
        
     }
+    
     @IBAction func favoriteClicked(_ sender: Any) {
-       
         if heartBtnIsTapped == true {
+            btnActionTap?()
             delegateAdd?.addToFavorite(officeResult: ViewModel!)
             favoriteImage.image = UIImage(named: "FavoriteClicked")
             heartBtnIsTapped = false
@@ -90,4 +93,15 @@ class OfficesTableViewCell: UITableViewCell {
 
     }
     
+//    func setupTAbbarBadgeValue(){
+//        let tabBar = self.inputViewController?.tabBarController!.tabBar
+//        let addedItem = tabBar?.items![1]
+//        var iter = 1
+//        iter += 1
+//        addedItem?.badgeValue = "\(iter)"
+//        addedItem?.badgeColor = UIColor.red
+//    }
+    
 }
+
+
