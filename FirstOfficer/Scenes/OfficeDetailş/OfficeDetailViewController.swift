@@ -24,7 +24,6 @@ final class OfficeDetailViewController: UIViewController {
     @IBOutlet weak var spaceView: UIView!
     @IBOutlet weak var capacityView: UIView!
     @IBOutlet weak var emptyView: UIView!
-    
     @IBOutlet weak var detailOfficeName: UILabel!
     
     var interactor: OfficeDetailBusinessLogic?
@@ -71,6 +70,10 @@ final class OfficeDetailViewController: UIViewController {
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
+    }
+    
+    @IBAction func webKitButtonClicked(_ sender: Any) {
+        router?.routeToWebPage()
     }
 }
 

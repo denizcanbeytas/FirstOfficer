@@ -10,6 +10,7 @@ import UIKit
 
 protocol OfficeDetailRoutingLogic: AnyObject {
     func routeToFullScreen(index: Int)
+    func routeToWebPage()
 }
 
 protocol OfficeDetailDataPassing: class {
@@ -36,6 +37,10 @@ final class OfficeDetailRouter: OfficeDetailRoutingLogic, OfficeDetailDataPassin
        // viewController?.present(destinationVC, animated: true) // -> pop up geçiş
     }
     
-    
+    func routeToWebPage(){
+        let storyBoard = UIStoryboard(name: "WebKit", bundle: nil)
+        let destinationVC: WebKitViewController = storyBoard.instantiateViewController(withIdentifier: "WebKitVC") as! WebKitViewController
+        self.viewController?.navigationController?.pushViewController(destinationVC, animated: true)
+    }
     
 }

@@ -35,6 +35,13 @@
 		222F8FC828B03D05003EFAA5 /* FavoritesCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 222F8FC628B03D05003EFAA5 /* FavoritesCoreData.xcdatamodeld */; };
 		222F8FCB28B03DED003EFAA5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F8FCA28B03DED003EFAA5 /* CoreDataManager.swift */; };
 		222F8FCD28B03DF8003EFAA5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F8FCC28B03DF8003EFAA5 /* CoreDataStack.swift */; };
+		2245BE1E28B3B08200ABB4FF /* WebKit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2245BE1728B3B08200ABB4FF /* WebKit.storyboard */; };
+		2245BE1F28B3B08200ABB4FF /* WebKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245BE1828B3B08200ABB4FF /* WebKitViewController.swift */; };
+		2245BE2028B3B08200ABB4FF /* WebKitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245BE1928B3B08200ABB4FF /* WebKitPresenter.swift */; };
+		2245BE2128B3B08200ABB4FF /* WebKitInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245BE1A28B3B08200ABB4FF /* WebKitInteractor.swift */; };
+		2245BE2228B3B08200ABB4FF /* WebKitModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245BE1B28B3B08200ABB4FF /* WebKitModels.swift */; };
+		2245BE2328B3B08200ABB4FF /* WebKitWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245BE1C28B3B08200ABB4FF /* WebKitWorker.swift */; };
+		2245BE2428B3B08200ABB4FF /* WebKitRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245BE1D28B3B08200ABB4FF /* WebKitRouter.swift */; };
 		224BD43028B29E5E00F4E252 /* find.json in Resources */ = {isa = PBXBuildFile; fileRef = 224BD42F28B29E5E00F4E252 /* find.json */; };
 		224BD43328B2E7CC00F4E252 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BD43228B2E7CC00F4E252 /* CustomTabBarController.swift */; };
 		224C568528B189F5001F5A8E /* FavoriteOffices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224C567E28B189F5001F5A8E /* FavoriteOffices.storyboard */; };
@@ -118,6 +125,13 @@
 		222F8FC728B03D05003EFAA5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		222F8FCA28B03DED003EFAA5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		222F8FCC28B03DF8003EFAA5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		2245BE1728B3B08200ABB4FF /* WebKit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebKit.storyboard; sourceTree = "<group>"; };
+		2245BE1828B3B08200ABB4FF /* WebKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitViewController.swift; sourceTree = "<group>"; };
+		2245BE1928B3B08200ABB4FF /* WebKitPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitPresenter.swift; sourceTree = "<group>"; };
+		2245BE1A28B3B08200ABB4FF /* WebKitInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitInteractor.swift; sourceTree = "<group>"; };
+		2245BE1B28B3B08200ABB4FF /* WebKitModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitModels.swift; sourceTree = "<group>"; };
+		2245BE1C28B3B08200ABB4FF /* WebKitWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitWorker.swift; sourceTree = "<group>"; };
+		2245BE1D28B3B08200ABB4FF /* WebKitRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitRouter.swift; sourceTree = "<group>"; };
 		224BD42F28B29E5E00F4E252 /* find.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = find.json; sourceTree = "<group>"; };
 		224BD43228B2E7CC00F4E252 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		224C567E28B189F5001F5A8E /* FavoriteOffices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteOffices.storyboard; sourceTree = "<group>"; };
@@ -250,6 +264,20 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		2245BE1628B3B06300ABB4FF /* WebKit */ = {
+			isa = PBXGroup;
+			children = (
+				2245BE1728B3B08200ABB4FF /* WebKit.storyboard */,
+				2245BE1828B3B08200ABB4FF /* WebKitViewController.swift */,
+				2245BE1928B3B08200ABB4FF /* WebKitPresenter.swift */,
+				2245BE1A28B3B08200ABB4FF /* WebKitInteractor.swift */,
+				2245BE1B28B3B08200ABB4FF /* WebKitModels.swift */,
+				2245BE1C28B3B08200ABB4FF /* WebKitWorker.swift */,
+				2245BE1D28B3B08200ABB4FF /* WebKitRouter.swift */,
+			);
+			path = WebKit;
+			sourceTree = "<group>";
+		};
 		224BD43128B2E7AF00F4E252 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +312,7 @@
 		2284FC25289D8E0B00D5ADD8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2245BE1628B3B06300ABB4FF /* WebKit */,
 				22F7C88E28B263510058C046 /* OnBoarding */,
 				224C567D28B189CC001F5A8E /* Favorites */,
 				2284FC2B289D904900D5ADD8 /* Offices */,
@@ -586,6 +615,7 @@
 				22948B922874579D0084862E /* Main.storyboard in Resources */,
 				2223AAA228A301AF003D765F /* FullScreen.storyboard in Resources */,
 				22F7C89B28B265B30058C046 /* OnBoardingCollectionViewCell.xib in Resources */,
+				2245BE1E28B3B08200ABB4FF /* WebKit.storyboard in Resources */,
 				22F7C89628B265640058C046 /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,10 +645,12 @@
 				2223AAA328A301AF003D765F /* FullScreenViewController.swift in Sources */,
 				22948B8F2874579D0084862E /* ViewController.swift in Sources */,
 				221B8466289094AB00347EDD /* WelcomeViewController.swift in Sources */,
+				2245BE2028B3B08200ABB4FF /* WebKitPresenter.swift in Sources */,
 				2223AA76289DDBD1003D765F /* RemoteOfficeLoader.swift in Sources */,
 				22948B8B2874579D0084862E /* AppDelegate.swift in Sources */,
 				2223AA74289DDBBD003D765F /* OfficeLoader.swift in Sources */,
 				224C568628B189F5001F5A8E /* FavoriteOfficesViewController.swift in Sources */,
+				2245BE1F28B3B08200ABB4FF /* WebKitViewController.swift in Sources */,
 				2223AAA728A301AF003D765F /* FullScreenWorker.swift in Sources */,
 				224C568728B189F5001F5A8E /* FavoriteOfficesPresenter.swift in Sources */,
 				224C568928B189F5001F5A8E /* FavoriteOfficesModels.swift in Sources */,
@@ -641,6 +673,7 @@
 				2223AAA428A301AF003D765F /* FullScreenPresenter.swift in Sources */,
 				2284FC37289D906300D5ADD8 /* OfficesModels.swift in Sources */,
 				2284FC3E289D9B7700D5ADD8 /* ResponseModel.swift in Sources */,
+				2245BE2428B3B08200ABB4FF /* WebKitRouter.swift in Sources */,
 				2223AA72289DDB98003D765F /* HTTPClient.swift in Sources */,
 				224C568A28B189F5001F5A8E /* FavoriteOfficesWorker.swift in Sources */,
 				221B846428908F2400347EDD /* RegisterViewController.swift in Sources */,
@@ -648,11 +681,14 @@
 				222F8FC828B03D05003EFAA5 /* FavoritesCoreData.xcdatamodeld in Sources */,
 				222F8FCD28B03DF8003EFAA5 /* CoreDataStack.swift in Sources */,
 				2223AA7A289FFEC3003D765F /* OfficesTableViewCell.swift in Sources */,
+				2245BE2228B3B08200ABB4FF /* WebKitModels.swift in Sources */,
+				2245BE2328B3B08200ABB4FF /* WebKitWorker.swift in Sources */,
 				224C568828B189F5001F5A8E /* FavoriteOfficesInteractor.swift in Sources */,
 				224BD43328B2E7CC00F4E252 /* CustomTabBarController.swift in Sources */,
 				22F7C89D28B27A730058C046 /* OnBoardingSlide.swift in Sources */,
 				2284FC38289D906300D5ADD8 /* OfficesWorker.swift in Sources */,
 				2223AA8E28A052B7003D765F /* OfficeDetailWorker.swift in Sources */,
+				2245BE2128B3B08200ABB4FF /* WebKitInteractor.swift in Sources */,
 				224C568B28B189F5001F5A8E /* FavoriteOfficesRouter.swift in Sources */,
 				2284FC3C289D9B2900D5ADD8 /* NetworkModel.swift in Sources */,
 			);
