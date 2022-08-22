@@ -52,7 +52,7 @@ final class OfficesViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        self.navigationItem.setHidesBackButton(true, animated: false) // back butonu kaldırır
+        //navigationController?.setNavigationBarHidden(true, animated: false)
        // self.navigationController?.setNavigationBarHidden(true, animated: false)
         interactor?.fetchOffices(request: Offices.Fetch.Request())
         tableView.register(UINib(nibName: "OfficesTableViewCell", bundle: .main), forCellReuseIdentifier: "OfficesTableViewCell")

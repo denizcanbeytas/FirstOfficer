@@ -39,6 +39,8 @@ class ViewController: UIViewController {
 //        let storyboard = UIStoryboard(name: "Offices", bundle: nil)
 //        let destinationVC = storyboard.instantiateViewController(identifier: "OfficesVC")
 //        self.navigationController?.pushViewController(destinationVC, animated: true)
+        
+        self.navigationController?.pushViewController(PageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal), animated: true)
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

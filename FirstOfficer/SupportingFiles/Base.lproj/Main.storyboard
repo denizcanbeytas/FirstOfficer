@@ -115,7 +115,6 @@
                                                 <state key="normal" title="LOG IN"/>
                                                 <connections>
                                                     <action selector="loginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fek-ex-8vJ"/>
-                                                    <segue destination="BSG-3R-WAX" kind="show" id="Y0a-SO-MrW"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -278,16 +277,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1112" y="-323"/>
-        </scene>
-        <!--TabbarController-->
-        <scene sceneID="JyZ-Qi-1E8">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="TabbarController" storyboardName="Offices" referencedIdentifier="TabbarController" id="BSG-3R-WAX" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="f3x-Xp-i1G"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kw3-pH-38g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1982" y="-323"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="qsc-1N-Irg">

@@ -51,6 +51,15 @@
 		224C568928B189F5001F5A8E /* FavoriteOfficesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C568228B189F5001F5A8E /* FavoriteOfficesModels.swift */; };
 		224C568A28B189F5001F5A8E /* FavoriteOfficesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C568328B189F5001F5A8E /* FavoriteOfficesWorker.swift */; };
 		224C568B28B189F5001F5A8E /* FavoriteOfficesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C568428B189F5001F5A8E /* FavoriteOfficesRouter.swift */; };
+		2255790D28B41432006923C6 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2255790C28B41432006923C6 /* PageViewController.swift */; };
+		2255791628B41634006923C6 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2255790F28B41634006923C6 /* MapView.storyboard */; };
+		2255791728B41634006923C6 /* MapViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2255791028B41634006923C6 /* MapViewViewController.swift */; };
+		2255791828B41634006923C6 /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2255791128B41634006923C6 /* MapViewPresenter.swift */; };
+		2255791928B41634006923C6 /* MapViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2255791228B41634006923C6 /* MapViewInteractor.swift */; };
+		2255791A28B41634006923C6 /* MapViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2255791328B41634006923C6 /* MapViewModels.swift */; };
+		2255791B28B41634006923C6 /* MapViewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2255791428B41634006923C6 /* MapViewWorker.swift */; };
+		2255791C28B41634006923C6 /* MapViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2255791528B41634006923C6 /* MapViewRouter.swift */; };
+		2255792028B421A7006923C6 /* OfficeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2255791F28B421A7006923C6 /* OfficeAnnotation.swift */; };
 		227B71C628A3EEA600D1278B /* FullScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B71C428A3EEA600D1278B /* FullScreenCollectionViewCell.swift */; };
 		227B71C728A3EEA600D1278B /* FullScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227B71C528A3EEA600D1278B /* FullScreenCollectionViewCell.xib */; };
 		2284FC33289D906300D5ADD8 /* Offices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2284FC2C289D906300D5ADD8 /* Offices.storyboard */; };
@@ -141,6 +150,15 @@
 		224C568228B189F5001F5A8E /* FavoriteOfficesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteOfficesModels.swift; sourceTree = "<group>"; };
 		224C568328B189F5001F5A8E /* FavoriteOfficesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteOfficesWorker.swift; sourceTree = "<group>"; };
 		224C568428B189F5001F5A8E /* FavoriteOfficesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteOfficesRouter.swift; sourceTree = "<group>"; };
+		2255790C28B41432006923C6 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		2255790F28B41634006923C6 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
+		2255791028B41634006923C6 /* MapViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewViewController.swift; sourceTree = "<group>"; };
+		2255791128B41634006923C6 /* MapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
+		2255791228B41634006923C6 /* MapViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewInteractor.swift; sourceTree = "<group>"; };
+		2255791328B41634006923C6 /* MapViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModels.swift; sourceTree = "<group>"; };
+		2255791428B41634006923C6 /* MapViewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewWorker.swift; sourceTree = "<group>"; };
+		2255791528B41634006923C6 /* MapViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRouter.swift; sourceTree = "<group>"; };
+		2255791F28B421A7006923C6 /* OfficeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeAnnotation.swift; sourceTree = "<group>"; };
 		227B71C428A3EEA600D1278B /* FullScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		227B71C528A3EEA600D1278B /* FullScreenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullScreenCollectionViewCell.xib; sourceTree = "<group>"; };
 		2284FC2C289D906300D5ADD8 /* Offices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Offices.storyboard; sourceTree = "<group>"; };
@@ -300,6 +318,29 @@
 			path = Favorites;
 			sourceTree = "<group>";
 		};
+		2255790B28B413FF006923C6 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				2255790C28B41432006923C6 /* PageViewController.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		2255790E28B41616006923C6 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				2255790F28B41634006923C6 /* MapView.storyboard */,
+				2255791028B41634006923C6 /* MapViewViewController.swift */,
+				2255791128B41634006923C6 /* MapViewPresenter.swift */,
+				2255791228B41634006923C6 /* MapViewInteractor.swift */,
+				2255791328B41634006923C6 /* MapViewModels.swift */,
+				2255791428B41634006923C6 /* MapViewWorker.swift */,
+				2255791528B41634006923C6 /* MapViewRouter.swift */,
+				2255791F28B421A7006923C6 /* OfficeAnnotation.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
 		227B71C328A3EE6300D1278B /* FullScreenCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +353,8 @@
 		2284FC25289D8E0B00D5ADD8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2255790E28B41616006923C6 /* MapView */,
+				2255790B28B413FF006923C6 /* PageView */,
 				2245BE1628B3B06300ABB4FF /* WebKit */,
 				22F7C88E28B263510058C046 /* OnBoarding */,
 				224C567D28B189CC001F5A8E /* Favorites */,
@@ -601,6 +644,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2255791628B41634006923C6 /* MapView.storyboard in Resources */,
 				2284FC33289D906300D5ADD8 /* Offices.storyboard in Resources */,
 				2223AA8928A052B7003D765F /* OfficeDetail.storyboard in Resources */,
 				224BD43028B29E5E00F4E252 /* find.json in Resources */,
@@ -642,9 +686,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F7C89328B265390058C046 /* OnBoardingViewController.swift in Sources */,
+				2255791B28B41634006923C6 /* MapViewWorker.swift in Sources */,
 				2223AAA328A301AF003D765F /* FullScreenViewController.swift in Sources */,
 				22948B8F2874579D0084862E /* ViewController.swift in Sources */,
 				221B8466289094AB00347EDD /* WelcomeViewController.swift in Sources */,
+				2255791928B41634006923C6 /* MapViewInteractor.swift in Sources */,
 				2245BE2028B3B08200ABB4FF /* WebKitPresenter.swift in Sources */,
 				2223AA76289DDBD1003D765F /* RemoteOfficeLoader.swift in Sources */,
 				22948B8B2874579D0084862E /* AppDelegate.swift in Sources */,
@@ -654,6 +700,7 @@
 				2223AAA728A301AF003D765F /* FullScreenWorker.swift in Sources */,
 				224C568728B189F5001F5A8E /* FavoriteOfficesPresenter.swift in Sources */,
 				224C568928B189F5001F5A8E /* FavoriteOfficesModels.swift in Sources */,
+				2255791828B41634006923C6 /* MapViewPresenter.swift in Sources */,
 				2223AAA528A301AF003D765F /* FullScreenInteractor.swift in Sources */,
 				2223AA9728A067D3003D765F /* OfficeDetailCollectionViewCell.swift in Sources */,
 				2223AAA628A301AF003D765F /* FullScreenModels.swift in Sources */,
@@ -671,9 +718,12 @@
 				2223AA8A28A052B7003D765F /* OfficeDetailViewController.swift in Sources */,
 				222F8FCB28B03DED003EFAA5 /* CoreDataManager.swift in Sources */,
 				2223AAA428A301AF003D765F /* FullScreenPresenter.swift in Sources */,
+				2255791728B41634006923C6 /* MapViewViewController.swift in Sources */,
+				2255791C28B41634006923C6 /* MapViewRouter.swift in Sources */,
 				2284FC37289D906300D5ADD8 /* OfficesModels.swift in Sources */,
 				2284FC3E289D9B7700D5ADD8 /* ResponseModel.swift in Sources */,
 				2245BE2428B3B08200ABB4FF /* WebKitRouter.swift in Sources */,
+				2255792028B421A7006923C6 /* OfficeAnnotation.swift in Sources */,
 				2223AA72289DDB98003D765F /* HTTPClient.swift in Sources */,
 				224C568A28B189F5001F5A8E /* FavoriteOfficesWorker.swift in Sources */,
 				221B846428908F2400347EDD /* RegisterViewController.swift in Sources */,
@@ -683,9 +733,11 @@
 				2223AA7A289FFEC3003D765F /* OfficesTableViewCell.swift in Sources */,
 				2245BE2228B3B08200ABB4FF /* WebKitModels.swift in Sources */,
 				2245BE2328B3B08200ABB4FF /* WebKitWorker.swift in Sources */,
+				2255790D28B41432006923C6 /* PageViewController.swift in Sources */,
 				224C568828B189F5001F5A8E /* FavoriteOfficesInteractor.swift in Sources */,
 				224BD43328B2E7CC00F4E252 /* CustomTabBarController.swift in Sources */,
 				22F7C89D28B27A730058C046 /* OnBoardingSlide.swift in Sources */,
+				2255791A28B41634006923C6 /* MapViewModels.swift in Sources */,
 				2284FC38289D906300D5ADD8 /* OfficesWorker.swift in Sources */,
 				2223AA8E28A052B7003D765F /* OfficeDetailWorker.swift in Sources */,
 				2245BE2128B3B08200ABB4FF /* WebKitInteractor.swift in Sources */,
