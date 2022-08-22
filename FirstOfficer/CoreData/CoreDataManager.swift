@@ -12,6 +12,7 @@ import UIKit
 class CoreDataManager {
 
     static let shared = CoreDataManager()
+    
     var coreDataStack: CoreDataStack
     var moc: NSManagedObjectContext {
         return coreDataStack.managedContext

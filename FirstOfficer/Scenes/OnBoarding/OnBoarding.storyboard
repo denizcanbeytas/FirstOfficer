@@ -31,7 +31,7 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="PoM-Ul-NM2"/>
                                 </connections>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="11L-hb-dbq">
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="11L-hb-dbq">
                                 <rect key="frame" x="149" y="728" width="116" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="11L-hb-dbq" secondAttribute="height" multiplier="58:13" id="qFq-oE-rmN"/>

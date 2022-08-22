@@ -16,17 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WebKit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsy-gb-ocL">
-                                <rect key="frame" x="140" y="102" width="134" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eK6-ay-gJb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="cve-XF-qHz">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="acR-sl-ate"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eK6-ay-gJb" firstAttribute="top" secondItem="chM-je-gA4" secondAttribute="top" id="5s7-ab-Acc"/>
+                            <constraint firstAttribute="bottom" secondItem="eK6-ay-gJb" secondAttribute="bottom" id="6HC-ll-RwC"/>
+                            <constraint firstItem="eK6-ay-gJb" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" id="8qZ-NU-EJw"/>
+                            <constraint firstItem="cve-XF-qHz" firstAttribute="centerY" secondItem="chM-je-gA4" secondAttribute="centerY" id="Nhw-5A-dhf"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="eK6-ay-gJb" secondAttribute="trailing" id="TAe-T4-jJE"/>
+                            <constraint firstItem="cve-XF-qHz" firstAttribute="centerX" secondItem="chM-je-gA4" secondAttribute="centerX" id="f2a-tt-6lS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="indicator" destination="cve-XF-qHz" id="BWA-Qn-WYM"/>
+                        <outlet property="webView" destination="eK6-ay-gJb" id="YnC-hQ-1D9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZo-gs-e4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
