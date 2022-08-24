@@ -46,17 +46,10 @@ final class OfficeDetailViewController: UIViewController {
         collectionView.register(UINib(nibName: "OfficeDetailCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "OfficeDetailCollectionViewCell")
         interactor?.fetchOfficeDetail(request: OfficeDetail.Fetch.Request())
         setupUI()
+        setupNavigationBar()
+        
     }
-    
-    func setupUI() {
-        detailImageView.sd_setImage(with: URL(string: viewModel?.image ?? ""))
-        detailRoomsLabel.text = viewModel?.rooms
-        detailSpaceLabel.text = viewModel?.space
-        detailCapacityLabel.text = viewModel?.capacity
-        detailAddressLabel.text = viewModel?.address
-        detailOfficeName.text = viewModel?.name
-    }
-    
+
     // MARK: Setup
     
     private func setup() {
@@ -83,19 +76,14 @@ extension OfficeDetailViewController: OfficeDetailDisplayLogic {
         DispatchQueue.main.async {
            self.collectionView.reloadData()
         }
-        
     }
-    
-    
 }
 
 extension OfficeDetailViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel?.images?.count ?? 0
     }
-    
-    
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OfficeDetailCollectionViewCell", for: indexPath) as? OfficeDetailCollectionViewCell
@@ -114,5 +102,18 @@ extension OfficeDetailViewController : UICollectionViewDelegate, UICollectionVie
 }
 
 extension OfficeDetailViewController{
-
+    func setupUI() {
+        detailImageView.sd_setImage(with: URL(string: viewModel?.image ?? ""))
+        detailRoomsLabel.text = viewModel?.rooms
+        detailSpaceLabel.text = viewModel?.space
+        detailCapacityLabel.text = viewModel?.capacity
+        detailAddressLabel.text = viewModel?.address
+        detailOfficeName.text = viewModel?.name
+    }
+    
+    func setupNavigationBar(){
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
+        navigationController?.navigationBar.tintColor = UIColor.label
+    }
+    
 }

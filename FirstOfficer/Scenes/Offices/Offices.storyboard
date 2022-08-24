@@ -16,27 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVg-b4-ieR" userLabel="HeadView">
-                                <rect key="frame" x="20" y="100" width="374" height="40"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of Officies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxe-vZ-3OP">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="sxe-vZ-3OP" firstAttribute="leading" secondItem="uVg-b4-ieR" secondAttribute="leading" id="16y-7w-leJ"/>
-                                    <constraint firstItem="sxe-vZ-3OP" firstAttribute="top" secondItem="uVg-b4-ieR" secondAttribute="top" id="Grq-A3-XpI"/>
-                                    <constraint firstAttribute="bottom" secondItem="sxe-vZ-3OP" secondAttribute="bottom" id="L0U-Jx-iAi"/>
-                                    <constraint firstAttribute="trailing" secondItem="sxe-vZ-3OP" secondAttribute="trailing" id="pNe-VK-vcQ"/>
-                                    <constraint firstAttribute="width" secondItem="uVg-b4-ieR" secondAttribute="height" multiplier="187:20" id="sy8-4e-Fw7"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSL-EZ-X8j" userLabel="SearchView">
-                                <rect key="frame" x="20" y="170" width="374" height="44"/>
+                                <rect key="frame" x="20" y="74" width="374" height="44"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search by name" translatesAutoresizingMaskIntoConstraints="NO" id="4T8-MQ-UCs">
                                         <rect key="frame" x="0.0" y="0.0" width="338" height="44"/>
@@ -92,7 +73,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rNU-tZ-gEv">
-                                <rect key="frame" x="20" y="245" width="374" height="611"/>
+                                <rect key="frame" x="20" y="149" width="374" height="611"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rNU-tZ-gEv" secondAttribute="height" multiplier="374:611" id="7Mh-6A-0cr"/>
@@ -108,12 +89,9 @@
                         <constraints>
                             <constraint firstItem="NSL-EZ-X8j" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="2rf-AR-B7a"/>
                             <constraint firstItem="rNU-tZ-gEv" firstAttribute="top" secondItem="NSL-EZ-X8j" secondAttribute="bottom" constant="31" id="6my-qT-EcS"/>
-                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="uVg-b4-ieR" secondAttribute="trailing" constant="20" id="Dku-92-xu7"/>
                             <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="NSL-EZ-X8j" secondAttribute="trailing" constant="20" id="LEv-gc-k9T"/>
                             <constraint firstItem="rNU-tZ-gEv" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="PMo-ST-0Og"/>
-                            <constraint firstItem="uVg-b4-ieR" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="56" id="XhG-3Q-UT6"/>
-                            <constraint firstItem="NSL-EZ-X8j" firstAttribute="top" secondItem="uVg-b4-ieR" secondAttribute="bottom" constant="30" id="Yhw-Gx-eZO"/>
-                            <constraint firstItem="uVg-b4-ieR" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="h6V-59-JM6"/>
+                            <constraint firstItem="NSL-EZ-X8j" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="30" id="XdF-ln-MDR"/>
                             <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="rNU-tZ-gEv" secondAttribute="trailing" constant="20" id="ijh-ZK-QM6"/>
                         </constraints>
                     </view>

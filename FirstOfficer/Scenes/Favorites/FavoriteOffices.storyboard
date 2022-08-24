@@ -16,23 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvQ-7g-BzM">
-                                <rect key="frame" x="20" y="94" width="414" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvQ-7g-BzM">
+                                <rect key="frame" x="20" y="90" width="414" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rvQ-7g-BzM" secondAttribute="height" multiplier="394:41" id="Bb6-Ra-z4I"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Eqc-RJ-OT6">
-                                <rect key="frame" x="20" y="157" width="374" height="656"/>
+                                <rect key="frame" x="20" y="153" width="374" height="660"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="nxe-uw-h5I" id="eqS-7D-46m"/>
                                     <outlet property="delegate" destination="nxe-uw-h5I" id="jGq-ya-u5R"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMn-vO-a3s" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="20" y="153" width="374" height="660.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YMn-vO-a3s" secondAttribute="height" multiplier="17:30" id="zUH-bB-AQY"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="acR-sl-ate"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -40,15 +47,19 @@
                             <constraint firstItem="Eqc-RJ-OT6" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="8m2-5R-2lq"/>
                             <constraint firstItem="acR-sl-ate" firstAttribute="bottom" secondItem="Eqc-RJ-OT6" secondAttribute="bottom" id="9ig-KL-pa1"/>
                             <constraint firstItem="Eqc-RJ-OT6" firstAttribute="top" secondItem="rvQ-7g-BzM" secondAttribute="bottom" constant="20" id="EVA-yT-heP"/>
-                            <constraint firstItem="rvQ-7g-BzM" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="50" id="dMl-X1-SZf"/>
+                            <constraint firstItem="YMn-vO-a3s" firstAttribute="width" secondItem="chM-je-gA4" secondAttribute="width" multiplier="0.904" id="McC-bL-jS8"/>
+                            <constraint firstItem="YMn-vO-a3s" firstAttribute="centerX" secondItem="chM-je-gA4" secondAttribute="centerX" id="ag7-CV-kRQ"/>
+                            <constraint firstItem="rvQ-7g-BzM" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="46" id="dMl-X1-SZf"/>
                             <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="Eqc-RJ-OT6" secondAttribute="trailing" constant="20" id="juZ-Nu-Wx0"/>
                             <constraint firstItem="rvQ-7g-BzM" firstAttribute="trailing" secondItem="acR-sl-ate" secondAttribute="trailing" constant="20" id="o8c-9e-xQH"/>
                             <constraint firstItem="rvQ-7g-BzM" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="oej-va-hdY"/>
+                            <constraint firstItem="YMn-vO-a3s" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="109" id="xTY-sp-fxC"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" image="heart" catalog="system" selectedImage="heart.fill" id="ToU-2a-e1y"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="emptyLottieView" destination="YMn-vO-a3s" id="cKt-Sp-9Ci"/>
                         <outlet property="favoritesTabItem" destination="ToU-2a-e1y" id="uGR-A2-1bm"/>
                         <outlet property="tableView" destination="Eqc-RJ-OT6" id="16H-xi-rSb"/>
                     </connections>

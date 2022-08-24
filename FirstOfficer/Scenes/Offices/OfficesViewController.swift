@@ -58,6 +58,8 @@ final class OfficesViewController: UIViewController {
         tableView.register(UINib(nibName: "OfficesTableViewCell", bundle: .main), forCellReuseIdentifier: "OfficesTableViewCell")
         searcBar.delegate = self
         //interactor?.getFavoritesID()
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,8 +67,7 @@ final class OfficesViewController: UIViewController {
         tableView.reloadData()
         interactor?.getFavoritesID()
     }
-    
-    
+
     // MARK: Setup
     
     private func setup() {
@@ -147,6 +148,20 @@ extension OfficesViewController: OfficesDisplayLogic {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+}
+
+extension OfficesViewController: addToFavoriteProtocol, removeAtFavoritesProtocol {
+    
+    func addToFavorite(officeResult: Offices.Fetch.ViewModel.Office) {
+        interactor?.saveFavoritesToCoreData(officeResult: officeResult)
+    }
+    func removeAtFavorites(favoriteId: Int) {
+        interactor?.deleteFavoritesFromCoreData(favoriId: favoriteId)
+    }
+    func fetch(){
+        // burada reload edilmesi gererkiyor
+        tableView.reloadData()
     }
 }
 
@@ -243,24 +258,6 @@ extension OfficesViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat{
         return 100
-    }
-    
-}
-
-extension OfficesViewController: addToFavoriteProtocol, removeAtFavoritesProtocol {
-    
-    func addToFavorite(officeResult: Offices.Fetch.ViewModel.Office) {
-        interactor?.saveFavoritesToCoreData(officeResult: officeResult)
-        
-    }
-    
-    func removeAtFavorites(favoriteId: Int) {
-        interactor?.deleteFavoritesFromCoreData(favoriId: favoriteId)
-    }
-    
-    func fetch(){
-        // burada reload edilmesi gererkiyor
-        tableView.reloadData()
     }
     
 }

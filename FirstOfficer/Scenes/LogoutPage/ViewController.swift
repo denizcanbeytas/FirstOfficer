@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         }
 
         setupUI()
+        setupNavigationBar()
     }
     
     @IBAction func loginClicked(_ sender: UIButton) {
@@ -66,4 +67,11 @@ class ViewController: UIViewController {
         
     }
 
+}
+
+extension ViewController {
+    func setupNavigationBar(){
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
+        navigationController?.navigationBar.tintColor = UIColor.label
+    }
 }

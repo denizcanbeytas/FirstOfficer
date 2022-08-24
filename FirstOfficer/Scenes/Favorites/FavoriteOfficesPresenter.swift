@@ -17,5 +17,6 @@ final class FavoriteOfficesPresenter: FavoriteOfficesPresentationLogic {
     
     func sendFavoritesIDToVC(favouritesID: [String]){
         viewController?.getFavoritesIDFromCoreData(favouritesID: favouritesID)
+        // SİL
     }
 }

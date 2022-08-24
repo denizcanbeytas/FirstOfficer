@@ -27,6 +27,7 @@ final class FavoriteOfficesInteractor: FavoriteOfficesBusinessLogic, FavoriteOff
                 self.presenter?.sendFavoritesIDToVC(favouritesID: favouriteID)
             case .failure(let error):
                 print(error)
+                // SİL
             }
         
         }

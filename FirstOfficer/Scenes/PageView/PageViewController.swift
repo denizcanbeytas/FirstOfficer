@@ -14,9 +14,8 @@ class PageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setViewControllers()
-        
+        setupNavigationBar()
     }
-    
 }
 extension PageViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
@@ -54,5 +53,11 @@ extension PageViewController {
         if let firstVC = VCList.first {
             setViewControllers([firstVC], direction: .forward, animated: true)
         }
+    }
+    
+    func setupNavigationBar(){
+        navigationItem.setHidesBackButton(true, animated: false)
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Offices"
     }
 }
