@@ -33,11 +33,11 @@
                                     <outlet property="delegate" destination="nxe-uw-h5I" id="jGq-ya-u5R"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMn-vO-a3s" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="20" y="153" width="374" height="660.5"/>
+                            <view userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="YMn-vO-a3s" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="20" y="153" width="374" height="497.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="YMn-vO-a3s" secondAttribute="height" multiplier="17:30" id="zUH-bB-AQY"/>
+                                    <constraint firstAttribute="width" secondItem="YMn-vO-a3s" secondAttribute="height" multiplier="374:497" id="qUs-9M-yht"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -45,15 +45,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Eqc-RJ-OT6" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="8m2-5R-2lq"/>
+                            <constraint firstItem="YMn-vO-a3s" firstAttribute="centerX" secondItem="chM-je-gA4" secondAttribute="centerX" id="9O2-X6-afw"/>
                             <constraint firstItem="acR-sl-ate" firstAttribute="bottom" secondItem="Eqc-RJ-OT6" secondAttribute="bottom" id="9ig-KL-pa1"/>
                             <constraint firstItem="Eqc-RJ-OT6" firstAttribute="top" secondItem="rvQ-7g-BzM" secondAttribute="bottom" constant="20" id="EVA-yT-heP"/>
-                            <constraint firstItem="YMn-vO-a3s" firstAttribute="width" secondItem="chM-je-gA4" secondAttribute="width" multiplier="0.904" id="McC-bL-jS8"/>
-                            <constraint firstItem="YMn-vO-a3s" firstAttribute="centerX" secondItem="chM-je-gA4" secondAttribute="centerX" id="ag7-CV-kRQ"/>
+                            <constraint firstItem="YMn-vO-a3s" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="109" id="YZy-Ab-fQV"/>
                             <constraint firstItem="rvQ-7g-BzM" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="46" id="dMl-X1-SZf"/>
                             <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="Eqc-RJ-OT6" secondAttribute="trailing" constant="20" id="juZ-Nu-Wx0"/>
                             <constraint firstItem="rvQ-7g-BzM" firstAttribute="trailing" secondItem="acR-sl-ate" secondAttribute="trailing" constant="20" id="o8c-9e-xQH"/>
                             <constraint firstItem="rvQ-7g-BzM" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="oej-va-hdY"/>
-                            <constraint firstItem="YMn-vO-a3s" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="109" id="xTY-sp-fxC"/>
+                            <constraint firstItem="YMn-vO-a3s" firstAttribute="width" secondItem="chM-je-gA4" secondAttribute="width" multiplier="0.904" id="reX-JI-DIw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" image="heart" catalog="system" selectedImage="heart.fill" id="ToU-2a-e1y"/>

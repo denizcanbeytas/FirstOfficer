@@ -114,7 +114,7 @@ final class FavoriteOfficesViewController: UIViewController {
         animation = Animation.named("emptyLottie")
         emptyLottieView.animation = animation
         emptyLottieView.loopMode = .playOnce
-        emptyLottieView.animationSpeed = 0.5
+        //emptyLottieView.animationSpeed = 0.5
         
         if (!emptyLottieView.isAnimationPlaying){
             emptyLottieView.play()

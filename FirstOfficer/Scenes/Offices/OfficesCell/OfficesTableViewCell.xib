@@ -57,9 +57,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qde-or-DMK" userLabel="CapacityView">
                                                 <rect key="frame" x="0.0" y="0.0" width="83" height="11"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Capacity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTe-jQ-gUV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="11"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capacity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTe-jQ-gUV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="11"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -75,6 +74,9 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qde-or-DMK" secondAttribute="height" multiplier="83:11" id="Jm6-4a-eDe"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ZTe-jQ-gUV" secondAttribute="bottom" id="ZcD-lD-2ho"/>
+                                                    <constraint firstItem="ZTe-jQ-gUV" firstAttribute="top" secondItem="qde-or-DMK" secondAttribute="top" id="xFN-OB-gMf"/>
+                                                    <constraint firstItem="ZTe-jQ-gUV" firstAttribute="leading" secondItem="qde-or-DMK" secondAttribute="leading" id="xue-NZ-acs"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vI-iM-1Gr" userLabel="SpaceView">

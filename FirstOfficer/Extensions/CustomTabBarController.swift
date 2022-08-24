@@ -22,33 +22,18 @@ class CustomTabBarController: UITabBarController {
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         self.SimpleAnnimationWhenSelectItem(item)
     }
-    
-    override func viewDidLayoutSubviews() {
-       self.ChangeHeightOfTabbar()
-    }
-    
 }
 
 extension CustomTabBarController {
     func ChangeRadiusOfTabbar(){
         
         self.tabBar.isTranslucent = true
-        self.tabBar.layer.cornerRadius = 30
+        self.tabBar.layer.cornerRadius = 15 // !
         tabBar.layer.shadowColor = UIColor.lightGray.cgColor
         tabBar.layer.shadowOpacity = 0.5
         tabBar.layer.shadowOffset = CGSize.zero
         tabBar.layer.shadowRadius = 5
         self.tabBar.backgroundColor = UIColor(named: "tabBarColor")
-    }
-    
-    func ChangeHeightOfTabbar(){
-        if UIDevice().userInterfaceIdiom == .phone {
-            var tabFrame            = tabBar.frame
-            tabFrame.size.height    = 100
-            tabFrame.origin.y       = view.frame.size.height - 100
-            tabBar.frame            = tabFrame
-        }
-    
     }
     
     // Jump Effect
