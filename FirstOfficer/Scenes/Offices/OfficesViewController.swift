@@ -180,6 +180,7 @@ extension OfficesViewController : UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "OfficesTableViewCell", for: indexPath) as? OfficesTableViewCell else {return UITableViewCell()}
         
         guard let model = viewModel?.offices[indexPath.row] else { return UITableViewCell()}
+        
         cell.config(viewModel: model)
         
         cell.delegateAdd = self
@@ -203,19 +204,13 @@ extension OfficesViewController : UITableViewDelegate, UITableViewDataSource {
                 }
             }
         }
-        
-        //cell.favoriteBtn.addTarget(self, action: #selector(tapped), for: .touchUpInside)
-        
+        // ask !!!
+        if !filteringData.isEmpty { // for the searchBar
+            let hey = filteringData[indexPath.row]
+            cell.config(viewModel: hey)
+            return cell
+        }
         return cell
-//        if !filteringData.isEmpty { // for the searchBar
-//            let hey = filteringData[indexPath.row]
-//            cell?.config(viewModel: hey)
-//            return cell!
-//        } else {
-//            //cell?.config(viewModel: model)
-//            return UITableViewCell()
-//        }
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
