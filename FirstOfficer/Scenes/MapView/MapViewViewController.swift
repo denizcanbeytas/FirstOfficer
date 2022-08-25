@@ -7,7 +7,7 @@
 
 import UIKit
 import MapKit
-import CoreLocation
+
 
 protocol MapViewDisplayLogic: AnyObject {
     func displayOfficesForMap(viewModel: MapView.Fetch.ViewModel )
@@ -22,12 +22,12 @@ final class MapViewViewController: UIViewController {
     var interactor: MapViewBusinessLogic? {
         didSet {interactor?.getOfficeForMap(request: MapView.Fetch.Request())}
     }
+    
     var router: (MapViewRoutingLogic & MapViewDataPassing)?
     var viewModel: MapView.Fetch.ViewModel?
     
-    var locationManager = CLLocationManager()
     var annotationIndex: Int?
-    let regionInMeters: Double = 10000
+    let initialLocation = CLLocation(latitude: 41.015137, longitude: 28.979530)
     
     // MARK: Object lifecycle
     
@@ -43,9 +43,9 @@ final class MapViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self
-        locationSetup()
-        setPins()
+        mapView.centerToLocation(initialLocation)
+        setVisibleArea()
+        addAnnotations()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,17 +71,31 @@ final class MapViewViewController: UIViewController {
         router.viewController = viewController
         router.dataStore = interactor
     }
-    
-    func locationSetup(){
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        mapView.showsUserLocation = true
-        mapView.showsScale = true
+}
+
+// MARK: Extensions
+
+extension MapViewViewController: MapViewDisplayLogic {
+    func displayOfficesForMap(viewModel: MapView.Fetch.ViewModel) {
+        self.viewModel = viewModel
     }
+}
+
+private extension MKMapView {
+    // when map starts, we give any locations that we want
+  func centerToLocation(_ location: CLLocation,regionRadius: CLLocationDistance = 20000) {
+    let coordinateRegion = MKCoordinateRegion(
+      center: location.coordinate,
+      latitudinalMeters: regionRadius,
+      longitudinalMeters: regionRadius)
+    setRegion(coordinateRegion, animated: true)
+  }
+}
+
+extension MapViewViewController {
     
-    private func setPins(){
+    private func addAnnotations(){
+        // we created annotation with pin
         viewModel?.officesForMapArray.forEach { model in
             annotationIndex = model.id
             mapView.addAnnotation(OfficeAnnotation(coordinate: .init(latitude: model.latitude ?? 0.0,
@@ -90,135 +104,23 @@ final class MapViewViewController: UIViewController {
         }
     }
     
-//    func setupLocationManager() {
-//        locationManager.delegate = self
-//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//    }
-//    
-//    func checkLocationServices() {
-//        if CLLocationManager.locationServicesEnabled() {
-//             setupLocationManager()
-////            checkLocationAuthorization()
-//        } else {
-//            // Show alert letting the user know they have to turn this on.
-//        }
-//    }
-//    
-//    func checkLocationAuthorization() {
-//        switch CLLocationManager.authorizationStatus() {
-//        case .authorizedWhenInUse:
-//            mapView.showsUserLocation = true
-//            centerViewOnUserLocation()
-//            locationManager.startUpdatingLocation()
-//            break
-//        case .denied:
-//            // Show alert instructing them how to turn on permissions
-//            break
-//        case .notDetermined:
-//            locationManager.requestWhenInUseAuthorization()
-//        case .restricted:
-//            // Show an alert letting them know what's up
-//            break
-//        case .authorizedAlways:
-//            break
-//        }
-//    }
-//    
-//    func centerViewOnUserLocation() {
-//        if let location = locationManager.location?.coordinate {
-//            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-//            mapView.setRegion(region, animated: true)
-//        }
-//    }
-}
-
-extension MapViewViewController: MapViewDisplayLogic {
-    func displayOfficesForMap(viewModel: MapView.Fetch.ViewModel) {
-        self.viewModel = viewModel
+    func setVisibleArea(){
+        // we gave area limit to map
+        // user only go to area of istanbul
+        let oahuCenter = CLLocation(latitude: 41.015137, longitude: 28.979530)
+        let region = MKCoordinateRegion(
+          center: oahuCenter.coordinate,
+          latitudinalMeters: 50000,
+          longitudinalMeters: 60000)
+        mapView.setCameraBoundary(
+          MKMapView.CameraBoundary(coordinateRegion: region),
+          animated: true)
+        
+        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 200000)
+        mapView.setCameraZoomRange(zoomRange, animated: true)
     }
 }
 
-extension MapViewViewController: MKMapViewDelegate {
-//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//        guard !(annotation is MKUserLocation) else {
-//            return nil
-//        }
-//
-//        let annotationIdentifier = "\(annotationIndex ?? 0)"
-//        var annotationView: MKAnnotationView?
-//        if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) {
-//            annotationView = dequeuedAnnotationView
-//            annotationView?.annotation = annotation
-//        } else {
-//            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-//
-//            let navigationButton = UIButton(type: .detailDisclosure)
-//            navigationButton.setImage(UIImage(named: "golocation"), for: .normal)
-//            annotationView?.rightCalloutAccessoryView = navigationButton
-//
-//            let closeButton = UIButton(type: .detailDisclosure)
-//            closeButton.setImage(UIImage(named: "info"), for: .highlighted)
-//            closeButton.tag = 1
-//            annotationView?.leftCalloutAccessoryView = closeButton
-//        }
-//
-//        if let annotationView = annotationView {
-//            annotationView.canShowCallout = true
-//            annotationView.image = UIImage(named: "FavoriteClicked")
-//            annotationView.backgroundColor = .white
-//        }
-//          return annotationView
-//    }
-    //MARK: Setting annotation buttons
-//    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-//        
-//        //Birden fazla buton ve tek fonksiyon olduğu için tag'ladık.
-//        if control.tag == 0 {
-//            guard let selectedAnnotation = view.annotation else {
-//                return
-//            }
-//
-//            let requestLocation = CLLocation(latitude: selectedAnnotation.coordinate.latitude, longitude: selectedAnnotation.coordinate.longitude)
-//            
-//            CLGeocoder().reverseGeocodeLocation(requestLocation) { placemark, error in
-//                
-//                if let placemarks = placemark {
-//                    if placemarks.count > 0 {
-//                        let newPlacemark = MKPlacemark(placemark: placemarks[0])
-//                        let item = MKMapItem(placemark: newPlacemark)
-//                        
-//                        item.name = selectedAnnotation.title ?? ""
-//                        
-//                        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-//                        item.openInMaps(launchOptions: launchOptions)
-//                    }
-//                }
-//            }
-//        } else {
-//            if let routeID = Int(view.reuseIdentifier ?? "") {
-//                router?.routeToDetails(indexID: routeID)
-//            }
-//            
-//        }
-//        
-//    }
-}
-
-extension MapViewViewController: CLLocationManagerDelegate {
-//    @objc func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        guard let location = locationManager.location?.coordinate else {
-//            return
-//        }
-//        let span = MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
-//        let region = MKCoordinateRegion(center: location, span: span)
-//        mapView.setRegion(region, animated: true)
-//    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        //
-    }
-}
+/*
+ * if you want to zoom in the simulator, press opt and drag in the mapview !
+ */
