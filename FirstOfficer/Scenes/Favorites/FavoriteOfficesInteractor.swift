@@ -8,7 +8,7 @@
 import Foundation
 
 protocol FavoriteOfficesBusinessLogic: AnyObject {
-    func getFavoritesID()
+    func getFavoriteOffice()
 }
 
 protocol FavoriteOfficesDataStore: AnyObject {
@@ -20,16 +20,8 @@ final class FavoriteOfficesInteractor: FavoriteOfficesBusinessLogic, FavoriteOff
     var presenter: FavoriteOfficesPresentationLogic?
     var worker: FavoriteOfficesWorkingLogic = FavoriteOfficesWorker()
     
-    func getFavoritesID(){
-        CoreDataManager.shared.getFavouritesId { response in
-            switch response {
-            case .success(let favouriteID):
-                self.presenter?.sendFavoritesIDToVC(favouritesID: favouriteID)
-            case .failure(let error):
-                print(error)
-                // SİL
-            }
+    func getFavoriteOffice(){
         
-        }
     }
+
 }

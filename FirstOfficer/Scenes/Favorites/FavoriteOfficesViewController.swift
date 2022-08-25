@@ -9,7 +9,7 @@ import UIKit
 import Lottie
 
 protocol FavoriteOfficesDisplayLogic: AnyObject {
-    func getFavoritesIDFromCoreData(favouritesID: [String])
+
 }
 
 final class FavoriteOfficesViewController: UIViewController {
@@ -22,12 +22,8 @@ final class FavoriteOfficesViewController: UIViewController {
     
     var interactor: FavoriteOfficesBusinessLogic?
     var router: (FavoriteOfficesRoutingLogic & FavoriteOfficesDataPassing)?
-    
    
     var favouriteOfficesArray: [Model] = []
-    var coreDataFavouriteOfficeId : [String] = [] // SİL
-    
-    var animation: Animation?
     
     // MARK: Object lifecycle
     
@@ -44,14 +40,14 @@ final class FavoriteOfficesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "OfficesTableViewCell", bundle: .main), forCellReuseIdentifier: "OfficesTableViewCell")
-        interactor?.getFavoritesID()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
         fetchFavoritesOfficesFromPersistance()
-        fetchData() // SİL
+        fetchData()
         navigationController?.setNavigationBarHidden(true, animated: animated)// navigationBar make hidden when screen appear
     }
     
@@ -111,7 +107,7 @@ final class FavoriteOfficesViewController: UIViewController {
     }
     
     func createLottieAnimation(){
-        animation = Animation.named("emptyLottie")
+        let animation = Animation.named("emptyLottie")
         emptyLottieView.animation = animation
         emptyLottieView.loopMode = .playOnce
         //emptyLottieView.animationSpeed = 0.5
@@ -124,14 +120,7 @@ final class FavoriteOfficesViewController: UIViewController {
 }
 
 extension FavoriteOfficesViewController: FavoriteOfficesDisplayLogic {
-    func getFavoritesIDFromCoreData(favouritesID: [String]) {
-        coreDataFavouriteOfficeId.removeAll()
-        coreDataFavouriteOfficeId = favouritesID
-        //fetchData()
-        // BURAYI SİL
-    }
-    
-    
+
 }
 
 extension FavoriteOfficesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -148,7 +137,7 @@ extension FavoriteOfficesViewController: UITableViewDelegate, UITableViewDataSou
             cell.favoriteImage.image = UIImage(named: "FavoriteClicked")
             cell.delegateRemove = self
             cell.heartBtnIsTapped = false
-            //self.favouriteOfficesArray.remove(at: indexPath.row)
+            
         return cell
     }
     
@@ -161,6 +150,8 @@ extension FavoriteOfficesViewController: removeAtFavoritesProtocol {
             self.tableView.reloadData()
             // INTERACTOR A TAŞI
         }
+        fetchFavoritesOfficesFromPersistance()
+        
     }
     func fetchData() {
         tableView.reloadData()

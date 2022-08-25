@@ -8,15 +8,11 @@
 import Foundation
 
 protocol FavoriteOfficesPresentationLogic: AnyObject {
-    func sendFavoritesIDToVC(favouritesID: [String])
+
 }
 
 final class FavoriteOfficesPresenter: FavoriteOfficesPresentationLogic {
     
     weak var viewController: FavoriteOfficesDisplayLogic?
     
-    func sendFavoritesIDToVC(favouritesID: [String]){
-        viewController?.getFavoritesIDFromCoreData(favouritesID: favouritesID)
-        // SİL
-    }
 }

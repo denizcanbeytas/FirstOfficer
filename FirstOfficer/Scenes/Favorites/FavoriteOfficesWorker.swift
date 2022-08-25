@@ -8,9 +8,11 @@
 import Foundation
 
 protocol FavoriteOfficesWorkingLogic: AnyObject {
-    
+    func fetchFavoriteOffice()
 }
 
 final class FavoriteOfficesWorker: FavoriteOfficesWorkingLogic {
-    
+    func fetchFavoriteOffice(){
+        
+    }
 }
