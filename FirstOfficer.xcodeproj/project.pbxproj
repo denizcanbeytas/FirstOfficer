@@ -81,6 +81,9 @@
 		22948BA2287457A10084862E /* FirstOfficerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22948BA1287457A10084862E /* FirstOfficerTests.swift */; };
 		22948BAC287457A10084862E /* FirstOfficerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22948BAB287457A10084862E /* FirstOfficerUITests.swift */; };
 		22948BAE287457A10084862E /* FirstOfficerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22948BAD287457A10084862E /* FirstOfficerUITestsLaunchTests.swift */; };
+		22D02B1E28B7DF2400ADB865 /* mapPin.json in Resources */ = {isa = PBXBuildFile; fileRef = 22D02B1D28B7DF2400ADB865 /* mapPin.json */; };
+		22D02B2028B7DFD600ADB865 /* pinRed.json in Resources */ = {isa = PBXBuildFile; fileRef = 22D02B1F28B7DFD600ADB865 /* pinRed.json */; };
+		22D02B2228B7E43800ADB865 /* pin.json in Resources */ = {isa = PBXBuildFile; fileRef = 22D02B2128B7E43800ADB865 /* pin.json */; };
 		22F7C89328B265390058C046 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F7C89128B265390058C046 /* OnBoardingViewController.swift */; };
 		22F7C89628B265640058C046 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F7C89528B265640058C046 /* OnBoarding.storyboard */; };
 		22F7C89A28B265B30058C046 /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F7C89828B265B30058C046 /* OnBoardingCollectionViewCell.swift */; };
@@ -188,6 +191,9 @@
 		22948BBB2874587B0084862E /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		22948BBC2874589F0084862E /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		229EB1CA2874B104009D9718 /* FirstOfficer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirstOfficer.entitlements; sourceTree = "<group>"; };
+		22D02B1D28B7DF2400ADB865 /* mapPin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mapPin.json; sourceTree = "<group>"; };
+		22D02B1F28B7DFD600ADB865 /* pinRed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pinRed.json; sourceTree = "<group>"; };
+		22D02B2128B7E43800ADB865 /* pin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pin.json; sourceTree = "<group>"; };
 		22F7C89128B265390058C046 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		22F7C89528B265640058C046 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		22F7C89828B265B30058C046 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -534,6 +540,9 @@
 			children = (
 				22948B93287457A10084862E /* Assets.xcassets */,
 				222F8FC628B03D05003EFAA5 /* FavoritesCoreData.xcdatamodeld */,
+				22D02B2128B7E43800ADB865 /* pin.json */,
+				22D02B1F28B7DFD600ADB865 /* pinRed.json */,
+				22D02B1D28B7DF2400ADB865 /* mapPin.json */,
 				22790D2228B65D7E00CD9FDE /* emptyLottie.json */,
 				224BD42F28B29E5E00F4E252 /* find.json */,
 				22F7C8A428B286D70058C046 /* findOffice.json */,
@@ -660,6 +669,7 @@
 				22790D2328B65D7E00CD9FDE /* emptyLottie.json in Resources */,
 				2223AA8928A052B7003D765F /* OfficeDetail.storyboard in Resources */,
 				224BD43028B29E5E00F4E252 /* find.json in Resources */,
+				22D02B2228B7E43800ADB865 /* pin.json in Resources */,
 				22F7C8A728B286D70058C046 /* findOffice.json in Resources */,
 				2223AA7B289FFEC3003D765F /* OfficesTableViewCell.xib in Resources */,
 				2223AA9828A067D3003D765F /* OfficeDetailCollectionViewCell.xib in Resources */,
@@ -672,6 +682,8 @@
 				2223AAA228A301AF003D765F /* FullScreen.storyboard in Resources */,
 				22F7C89B28B265B30058C046 /* OnBoardingCollectionViewCell.xib in Resources */,
 				2245BE1E28B3B08200ABB4FF /* WebKit.storyboard in Resources */,
+				22D02B2028B7DFD600ADB865 /* pinRed.json in Resources */,
+				22D02B1E28B7DF2400ADB865 /* mapPin.json in Resources */,
 				22F7C89628B265640058C046 /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

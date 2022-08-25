@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import Lottie
 
 
 protocol MapViewDisplayLogic: AnyObject {
@@ -15,6 +16,7 @@ protocol MapViewDisplayLogic: AnyObject {
 
 final class MapViewViewController: UIViewController {
     
+    @IBOutlet weak var animationView: AnimationView!
     @IBOutlet weak var mapView: MKMapView! {
         didSet {mapView.mapType = .standard}
     }
@@ -46,15 +48,24 @@ final class MapViewViewController: UIViewController {
         mapView.centerToLocation(initialLocation)
         setVisibleArea()
         addAnnotations()
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        createLottieAnimation()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        createLottieAnimation()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
     }
     
     // MARK: Setup
@@ -118,6 +129,18 @@ extension MapViewViewController {
         
         let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 200000)
         mapView.setCameraZoomRange(zoomRange, animated: true)
+    }
+    
+    func createLottieAnimation(){
+        let animation = Animation.named("pin")
+        animationView.animation = animation
+        animationView.loopMode = .loop
+        animationView.animationSpeed = 1.4
+       
+        if (!animationView.isAnimationPlaying){
+            animationView.play()
+
+        }
     }
 }
 
