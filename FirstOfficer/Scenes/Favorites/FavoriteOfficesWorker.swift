@@ -9,6 +9,7 @@ import Foundation
 
 protocol FavoriteOfficesWorkingLogic: AnyObject {
     func fetchFavoriteOffice(complation: @escaping ((Result<[Model], Error>) -> Void))
+    func deleteFavorites(favoritesId: Int)
 }
 
 final class FavoriteOfficesWorker: FavoriteOfficesWorkingLogic {
@@ -20,6 +21,12 @@ final class FavoriteOfficesWorker: FavoriteOfficesWorkingLogic {
             case .failure(let error):
                 complation(.failure(error))
             }
+        }
+    }
+    
+    func deleteFavorites(favoritesId: Int) {
+        CoreDataManager.shared.deleteFavoritesFromCoreData(with: favoritesId) { error in
+            print("Error: \(error)")
         }
     }
 }

@@ -9,6 +9,7 @@ import Foundation
 
 protocol FavoriteOfficesBusinessLogic: AnyObject {
     func getFavoriteOffice()
+    func deleteFavorites(favoritesId: Int)
 }
 
 protocol FavoriteOfficesDataStore: AnyObject {
@@ -29,6 +30,10 @@ final class FavoriteOfficesInteractor: FavoriteOfficesBusinessLogic, FavoriteOff
                 print(error)
             }
         }
+    }
+    
+    func deleteFavorites(favoritesId: Int) {
+        worker.deleteFavorites(favoritesId: favoritesId)
     }
 
 }

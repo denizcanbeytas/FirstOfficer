@@ -40,7 +40,6 @@ final class FavoriteOfficesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "OfficesTableViewCell", bundle: .main), forCellReuseIdentifier: "OfficesTableViewCell")
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,7 +48,8 @@ final class FavoriteOfficesViewController: UIViewController {
         interactor?.getFavoriteOffice()
         playLottiAnimation()
         fetchData()
-        navigationController?.setNavigationBarHidden(true, animated: animated)// navigationBar make hidden when screen appear
+        // navigationBar make hidden when screen appear
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,7 +58,8 @@ final class FavoriteOfficesViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)// navigationBar make visible when screen Disappear
+        // navigationBar make visible when screen Disappear
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     // MARK: Setup
@@ -75,32 +76,9 @@ final class FavoriteOfficesViewController: UIViewController {
         router.viewController = viewController
         router.dataStore = interactor
     }
-    
-    func playLottiAnimation() {
-        self.tableView.reloadData()
-        if favouriteOfficesArray.isEmpty == false {
-            self.emptyLottieView.stop()
-            self.emptyLottieView.backgroundColor = UIColor.clear
-            self.tableView.reloadData()
-            //self.emptyLottieView.isHidden = true
-        } else {
-            self.tableView.reloadData()
-            self.createLottieAnimation()
-            self.emptyLottieView.backgroundColor = UIColor.systemBackground
-        }
-    }
-    
-    func createLottieAnimation(){
-        let animation = Animation.named("emptyLottie")
-        emptyLottieView.animation = animation
-        emptyLottieView.loopMode = .playOnce
-        //emptyLottieView.animationSpeed = 0.5
-        
-        if (!emptyLottieView.isAnimationPlaying){
-            emptyLottieView.play()
-        }
-    }
 }
+
+// MARK: Extensions
 
 extension FavoriteOfficesViewController: FavoriteOfficesDisplayLogic {
     func getFavorites(favorites: [Model]) {
@@ -124,23 +102,44 @@ extension FavoriteOfficesViewController: UITableViewDelegate, UITableViewDataSou
             cell.favoriteImage.image = UIImage(named: "FavoriteClicked")
             cell.delegateRemove = self
             cell.heartBtnIsTapped = false
-            
         return cell
     }
 }
 
 extension FavoriteOfficesViewController: removeAtFavoritesProtocol {
     func removeAtFavorites(favoriteId: Int) {
-        CoreDataManager.shared.deleteFavoritesFromCoreData(with: favoriteId) { error in
-            print("Error: \(error)")
-            //self.tableView.reloadData()
-            // INTERACTOR A TAŞI
-        }
+        interactor?.deleteFavorites(favoritesId: favoriteId)
         interactor?.getFavoriteOffice()
         playLottiAnimation()
-        
     }
     func fetchData() {
         tableView.reloadData()
+    }
+}
+
+extension FavoriteOfficesViewController {
+    
+    // MARK: Extension of LottieAnimation
+    func playLottiAnimation() {
+        if favouriteOfficesArray.isEmpty == false {
+            self.emptyLottieView.stop()
+            self.emptyLottieView.backgroundColor = UIColor.clear
+            //self.emptyLottieView.isHidden = true
+        } else {
+            //self.tableView.reloadData()
+            self.createLottieAnimation()
+            self.emptyLottieView.backgroundColor = UIColor.systemBackground
+        }
+    }
+    
+    func createLottieAnimation(){
+        let animation = Animation.named("emptyLottie")
+        emptyLottieView.animation = animation
+        emptyLottieView.loopMode = .playOnce
+        //emptyLottieView.animationSpeed = 0.5
+        
+        if (!emptyLottieView.isAnimationPlaying){
+            emptyLottieView.play()
+        }
     }
 }
