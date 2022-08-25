@@ -21,7 +21,14 @@ final class FavoriteOfficesInteractor: FavoriteOfficesBusinessLogic, FavoriteOff
     var worker: FavoriteOfficesWorkingLogic = FavoriteOfficesWorker()
     
     func getFavoriteOffice(){
-        
+        worker.fetchFavoriteOffice { response in
+            switch response {
+            case .success(let favorites):
+                self.presenter?.sendFavoritesToVC(favorites: favorites)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 }

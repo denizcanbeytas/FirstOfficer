@@ -9,7 +9,7 @@ import UIKit
 import Lottie
 
 protocol FavoriteOfficesDisplayLogic: AnyObject {
-
+    func getFavorites(favorites: [Model])
 }
 
 final class FavoriteOfficesViewController: UIViewController {
@@ -46,7 +46,8 @@ final class FavoriteOfficesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
-        fetchFavoritesOfficesFromPersistance()
+        interactor?.getFavoriteOffice()
+        playLottiAnimation()
         fetchData()
         navigationController?.setNavigationBarHidden(true, animated: animated)// navigationBar make hidden when screen appear
     }
@@ -75,34 +76,17 @@ final class FavoriteOfficesViewController: UIViewController {
         router.dataStore = interactor
     }
     
-    func fetchFavoritesOfficesFromPersistance() {
-        CoreDataManager.shared.getFavoritesFromPersistance { result in
-            
-            switch result {
-//            case .success(let favourites):
-//                self.favouriteOfficesArray = favourites
-//                self.tableView.reloadData()
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//            }
-            // INTERACTOR A TAŞI
-                
-            case .success(let favourites):
-                if favourites.isEmpty == false {
-                    self.emptyLottieView.stop()
-                    self.favouriteOfficesArray = favourites
-                    self.emptyLottieView.backgroundColor = UIColor.clear
-                    self.tableView.reloadData()
-                    //self.emptyLottieView.isHidden = true
-                } else {
-                    self.tableView.reloadData()
-                    self.createLottieAnimation()
-                    self.emptyLottieView.backgroundColor = UIColor.systemBackground
-                }
-
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
+    func playLottiAnimation() {
+        self.tableView.reloadData()
+        if favouriteOfficesArray.isEmpty == false {
+            self.emptyLottieView.stop()
+            self.emptyLottieView.backgroundColor = UIColor.clear
+            self.tableView.reloadData()
+            //self.emptyLottieView.isHidden = true
+        } else {
+            self.tableView.reloadData()
+            self.createLottieAnimation()
+            self.emptyLottieView.backgroundColor = UIColor.systemBackground
         }
     }
     
@@ -114,13 +98,16 @@ final class FavoriteOfficesViewController: UIViewController {
         
         if (!emptyLottieView.isAnimationPlaying){
             emptyLottieView.play()
-            
         }
     }
 }
 
 extension FavoriteOfficesViewController: FavoriteOfficesDisplayLogic {
-
+    func getFavorites(favorites: [Model]) {
+        favouriteOfficesArray.removeAll()
+        favouriteOfficesArray = favorites
+        fetchData()
+    }
 }
 
 extension FavoriteOfficesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -140,17 +127,17 @@ extension FavoriteOfficesViewController: UITableViewDelegate, UITableViewDataSou
             
         return cell
     }
-    
 }
 
 extension FavoriteOfficesViewController: removeAtFavoritesProtocol {
     func removeAtFavorites(favoriteId: Int) {
         CoreDataManager.shared.deleteFavoritesFromCoreData(with: favoriteId) { error in
             print("Error: \(error)")
-            self.tableView.reloadData()
+            //self.tableView.reloadData()
             // INTERACTOR A TAŞI
         }
-        fetchFavoritesOfficesFromPersistance()
+        interactor?.getFavoriteOffice()
+        playLottiAnimation()
         
     }
     func fetchData() {
