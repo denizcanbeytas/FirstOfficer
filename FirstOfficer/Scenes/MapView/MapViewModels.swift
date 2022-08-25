@@ -7,7 +7,6 @@
 
 import Foundation
 
-// swiftlint:disable nesting
 enum MapView {
     
     enum Fetch {
@@ -17,20 +16,22 @@ enum MapView {
         }
         
         struct Response {
+            // For presenter
             var OfficesForMap : [OfficeData]
         }
         
         struct ViewModel {
+            // For VC
             struct OfficesForMap {
-                let id: Int
-                let latitude: Double
-                let longidute: Double
-                let name: String
+                let id: Int?
+                let latitude: Double?
+                let longidute: Double?
+                let name: String?
             }
-            var officesForMapArray : [OfficesForMap]
+            let officesForMapArray : [MapView.Fetch.ViewModel.OfficesForMap]
         }
         
     }
     
 }
-// swiftlint:enable nesting
+

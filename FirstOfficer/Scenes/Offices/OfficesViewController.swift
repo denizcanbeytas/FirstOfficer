@@ -160,7 +160,7 @@ extension OfficesViewController: addToFavoriteProtocol, removeAtFavoritesProtoco
         interactor?.deleteFavoritesFromCoreData(favoriId: favoriteId)
     }
     func fetch(){
-        // burada reload edilmesi gererkiyor
+        // tableView.reloadData for all func of delegate
         tableView.reloadData()
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MapViewRoutingLogic: AnyObject {
-    
+   // func routeToDetails(indexID: Int)
 }
 
 protocol MapViewDataPassing: class {
@@ -19,5 +19,7 @@ final class MapViewRouter: MapViewRoutingLogic, MapViewDataPassing {
     
     weak var viewController: MapViewViewController?
     var dataStore: MapViewDataStore?
+    
+   // func routeToDetails(indexID: Int){}
     
 }

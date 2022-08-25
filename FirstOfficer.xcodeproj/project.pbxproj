@@ -335,9 +335,9 @@
 				2255791028B41634006923C6 /* MapViewViewController.swift */,
 				2255791128B41634006923C6 /* MapViewPresenter.swift */,
 				2255791228B41634006923C6 /* MapViewInteractor.swift */,
-				2255791328B41634006923C6 /* MapViewModels.swift */,
 				2255791428B41634006923C6 /* MapViewWorker.swift */,
 				2255791528B41634006923C6 /* MapViewRouter.swift */,
+				2255791328B41634006923C6 /* MapViewModels.swift */,
 				2255791F28B421A7006923C6 /* OfficeAnnotation.swift */,
 			);
 			path = MapView;
