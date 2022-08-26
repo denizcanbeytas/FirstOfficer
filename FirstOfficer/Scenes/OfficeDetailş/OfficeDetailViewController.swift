@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import AVKit
 
 protocol OfficeDetailDisplayLogic: AnyObject {
     func displayData(viewModel:OfficeDetail.Fetch.ViewModel)
@@ -15,7 +16,7 @@ protocol OfficeDetailDisplayLogic: AnyObject {
 final class OfficeDetailViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var detailImageView: UIImageView!
+   // @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var detailRoomsLabel: UILabel!
     @IBOutlet weak var detailSpaceLabel: UILabel!
     @IBOutlet weak var detailCapacityLabel: UILabel!
@@ -26,9 +27,14 @@ final class OfficeDetailViewController: UIViewController {
     @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var detailOfficeName: UILabel!
     
+    @IBOutlet weak var videoView: UIView!
+    
     var interactor: OfficeDetailBusinessLogic?
     var router: (OfficeDetailRoutingLogic & OfficeDetailDataPassing)?
     var viewModel: OfficeDetail.Fetch.ViewModel?
+    
+    var player: AVPlayer!
+    var avpController = AVPlayerViewController()
     
     // MARK: Object lifecycle
     
@@ -47,7 +53,17 @@ final class OfficeDetailViewController: UIViewController {
         interactor?.fetchOfficeDetail(request: OfficeDetail.Fetch.Request())
         setupUI()
         setupNavigationBar()
-        
+        configureVideoPlayer()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+       navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
     // MARK: Setup
@@ -64,9 +80,11 @@ final class OfficeDetailViewController: UIViewController {
         router.viewController = viewController
         router.dataStore = interactor
     }
-    
     @IBAction func webKitButtonClicked(_ sender: Any) {
         router?.routeToWebPage()
+    }
+    @IBAction func previousPageClicked(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
 }
 
@@ -96,14 +114,13 @@ extension OfficeDetailViewController : UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         router?.routeToFullScreen(index: indexPath.row)
     }
-    
-    
-    
 }
+
+// MARK: Extensions
 
 extension OfficeDetailViewController{
     func setupUI() {
-        detailImageView.sd_setImage(with: URL(string: viewModel?.image ?? ""))
+      //  detailImageView.sd_setImage(with: URL(string: viewModel?.image ?? ""))
         detailRoomsLabel.text = viewModel?.rooms
         detailSpaceLabel.text = viewModel?.space
         detailCapacityLabel.text = viewModel?.capacity
@@ -116,4 +133,16 @@ extension OfficeDetailViewController{
         navigationController?.navigationBar.tintColor = UIColor.label
     }
     
+    func configureVideoPlayer(){
+        guard let path = Bundle.main.path(forResource: "video", ofType:"mp4") else {
+            debugPrint("video  not found")
+            return
+        }
+        player = AVPlayer(url: URL(fileURLWithPath: path))
+        avpController.player = player
+        avpController.view.frame.size.height = videoView.frame.size.height
+        avpController.view.frame.size.width = videoView.frame.size.width
+        self.videoView.addSubview(avpController.view)
+    
+    }
 }
