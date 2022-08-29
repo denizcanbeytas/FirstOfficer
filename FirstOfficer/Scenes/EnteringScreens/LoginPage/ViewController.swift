@@ -31,7 +31,9 @@ class LoginViewController: UIViewController {
         } else {
             // hide
         }
+
         setupNavigationBar()
+        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func loginClicked(_ sender: UIButton) {

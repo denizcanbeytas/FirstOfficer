@@ -19,6 +19,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        hideKeyboardWhenTappedAround() 
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
