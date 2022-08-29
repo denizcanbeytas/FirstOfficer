@@ -17,18 +17,8 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        uiDesign()
     }
     
-
-    func uiDesign(){
-        
-        createBtnView.layer.cornerRadius = 10
-        createBtnView.layer.borderWidth = 1
-        
-        loginBtnView.layer.cornerRadius = 10
-        loginBtnView.layer.borderWidth = 1
-    }
     @IBAction func createBtnClicked(_ sender: Any) {
         performSegue(withIdentifier: "toRegister", sender: nil)
     }

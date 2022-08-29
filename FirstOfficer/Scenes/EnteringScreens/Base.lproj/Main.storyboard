@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirstOfficer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="FirstOfficer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,6 +123,17 @@
                                             <constraint firstItem="xb9-h3-1og" firstAttribute="leading" secondItem="chG-ND-FX6" secondAttribute="leading" id="KbB-7u-9Pm"/>
                                             <constraint firstAttribute="bottom" secondItem="xb9-h3-1og" secondAttribute="bottom" id="dUV-i5-1Ha"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="LoginBtnBorderColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjr-fN-aeC">
                                         <rect key="frame" x="24" y="73" width="110" height="3"/>
@@ -154,6 +165,23 @@
                                     <constraint firstItem="K5F-gB-oSk" firstAttribute="leading" secondItem="5ms-Po-lHx" secondAttribute="leading" constant="23.5" id="kcD-ik-nuz"/>
                                     <constraint firstItem="At2-ul-Xhr" firstAttribute="leading" secondItem="5ms-Po-lHx" secondAttribute="leading" constant="24" id="mr3-ri-vrg"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OrImage" translatesAutoresizingMaskIntoConstraints="NO" id="wga-VF-vsB">
                                 <rect key="frame" x="0.0" y="726" width="414" height="18"/>
@@ -174,6 +202,11 @@
                                             <constraint firstItem="pBC-4D-zKU" firstAttribute="centerY" secondItem="dQB-S2-IDd" secondAttribute="centerY" id="D0v-BU-P9x"/>
                                             <constraint firstAttribute="width" secondItem="dQB-S2-IDd" secondAttribute="height" multiplier="1:1" id="c1j-oR-w35"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNO-nu-JEZ" userLabel="DummyView">
                                         <rect key="frame" x="50" y="0.0" width="44" height="50"/>
@@ -195,6 +228,11 @@
                                             <constraint firstAttribute="width" secondItem="FQD-sl-nRA" secondAttribute="height" multiplier="1:1" id="SaW-QH-7D8"/>
                                             <constraint firstItem="Wm9-Tf-N97" firstAttribute="centerY" secondItem="FQD-sl-nRA" secondAttribute="centerY" id="jrB-5Z-wKt"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPw-NA-G3z" userLabel="DummyView">
                                         <rect key="frame" x="144" y="0.0" width="44" height="50"/>
@@ -215,6 +253,11 @@
                                             <constraint firstItem="xma-Y6-wne" firstAttribute="centerX" secondItem="7dR-49-uF4" secondAttribute="centerX" id="Uf4-mM-vCO"/>
                                             <constraint firstItem="xma-Y6-wne" firstAttribute="centerY" secondItem="7dR-49-uF4" secondAttribute="centerY" id="Yd3-vT-ybx"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -381,6 +424,17 @@
                                             <constraint firstAttribute="bottom" secondItem="QPv-qK-haC" secondAttribute="bottom" id="PHm-BO-wYW"/>
                                             <constraint firstItem="QPv-qK-haC" firstAttribute="leading" secondItem="3SO-P3-dwc" secondAttribute="leading" id="psa-6k-TaK"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="LoginBtnBorderColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agd-4t-hnM">
                                         <rect key="frame" x="24" y="73" width="110" height="3"/>
@@ -409,6 +463,23 @@
                                     <constraint firstAttribute="bottom" secondItem="3SO-P3-dwc" secondAttribute="bottom" constant="24.5" id="t1y-8i-vPZ"/>
                                     <constraint firstAttribute="width" secondItem="eDj-Iq-PqD" secondAttribute="height" multiplier="331:415" id="tdF-Qm-18D"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OrImage" translatesAutoresizingMaskIntoConstraints="NO" id="hD9-xV-WFR">
                                 <rect key="frame" x="0.0" y="726" width="414" height="18"/>
@@ -429,6 +500,11 @@
                                             <constraint firstItem="S4M-ZD-8yH" firstAttribute="centerX" secondItem="aLe-Gj-ZQy" secondAttribute="centerX" id="GMW-RW-Dnv"/>
                                             <constraint firstAttribute="width" secondItem="aLe-Gj-ZQy" secondAttribute="height" multiplier="1:1" id="MiE-eD-Qnn"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3A-MQ-hqF" userLabel="DummyView">
                                         <rect key="frame" x="50" y="0.0" width="44" height="50"/>
@@ -450,6 +526,11 @@
                                             <constraint firstItem="g9V-ou-OV5" firstAttribute="centerY" secondItem="i9k-pi-E01" secondAttribute="centerY" id="ksr-Vg-c4b"/>
                                             <constraint firstAttribute="width" secondItem="i9k-pi-E01" secondAttribute="height" multiplier="1:1" id="yme-Rb-yie"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6m-f2-K7i" userLabel="DummyView">
                                         <rect key="frame" x="144" y="0.0" width="44" height="50"/>
@@ -470,6 +551,11 @@
                                             <constraint firstItem="f3Q-5T-pG8" firstAttribute="centerY" secondItem="bwD-yW-uB9" secondAttribute="centerY" id="9NJ-ew-swL"/>
                                             <constraint firstItem="f3Q-5T-pG8" firstAttribute="centerX" secondItem="bwD-yW-uB9" secondAttribute="centerX" id="Oqv-sj-yMO"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -617,6 +703,14 @@ Ipsum is not simply.</string>
                                                     <constraint firstItem="1pg-DU-bdG" firstAttribute="top" secondItem="RM0-D9-mmf" secondAttribute="top" id="wWv-mG-Wd4"/>
                                                     <constraint firstItem="1pg-DU-bdG" firstAttribute="leading" secondItem="RM0-D9-mmf" secondAttribute="leading" id="y3s-ZQ-54x"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="im9-Qm-R10">
                                                 <rect key="frame" x="0.0" y="233.5" width="328" height="57.5"/>
@@ -641,6 +735,14 @@ Ipsum is not simply.</string>
                                                     <constraint firstAttribute="trailing" secondItem="up2-17-5rB" secondAttribute="trailing" id="u40-5n-RMd"/>
                                                     <constraint firstItem="up2-17-5rB" firstAttribute="leading" secondItem="im9-Qm-R10" secondAttribute="leading" id="wCA-T8-MHJ"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -738,6 +840,9 @@ Ipsum is not simply.</string>
         <image name="Logo" width="77" height="81"/>
         <image name="OrImage" width="231" height="18"/>
         <image name="Twitter" width="29" height="25"/>
+        <namedColor name="LoginBtnBorderColor">
+            <color red="0.18000000715255737" green="0.10999999940395355" blue="0.67500001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="LoginBtnColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -753,6 +858,9 @@ Ipsum is not simply.</string>
         <namedColor name="welcomeColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

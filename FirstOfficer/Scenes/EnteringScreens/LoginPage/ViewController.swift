@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var loginView: UIView!
@@ -31,8 +31,6 @@ class ViewController: UIViewController {
         } else {
             // hide
         }
-
-        setupUI()
         setupNavigationBar()
     }
     
@@ -47,29 +45,9 @@ class ViewController: UIViewController {
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         btnView.layer.borderColor = UIColor(named: "LoginBtnBorderColor")?.cgColor
     }
-    
-    func setupUI() {
-        loginView.layer.cornerRadius = 30
-        btnView.layer.cornerRadius = 18
-        btnView.layer.borderColor = UIColor(named: "LoginBtnBorderColor")?.cgColor
-        btnView.layer.borderWidth = 4
-        
-        loginView.layer.masksToBounds = false
-        loginView.layer.shadowColor = UIColor.black.cgColor
-        loginView.layer.shadowOpacity = 0.2
-        loginView.layer.shadowOffset = .zero
-        loginView.layer.shadowRadius = 3
-        
-        facebookView.layer.cornerRadius = 22
-        twitterView.layer.cornerRadius = 22
-        emailView.layer.cornerRadius = 22
-        
-        
-    }
-
 }
 
-extension ViewController {
+extension LoginViewController {
     func setupNavigationBar(){
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
         navigationController?.navigationBar.tintColor = UIColor.label

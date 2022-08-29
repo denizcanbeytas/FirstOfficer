@@ -67,9 +67,8 @@ final class MapViewViewController: UIViewController {
         super.viewDidDisappear(animated)
         
     }
-    
+
     // MARK: Setup
-    
     private func setup() {
         let viewController = self
         let interactor = MapViewInteractor()
@@ -85,7 +84,6 @@ final class MapViewViewController: UIViewController {
 }
 
 // MARK: Extensions
-
 extension MapViewViewController: MapViewDisplayLogic {
     func displayOfficesForMap(viewModel: MapView.Fetch.ViewModel) {
         self.viewModel = viewModel
@@ -99,7 +97,7 @@ private extension MKMapView {
       center: location.coordinate,
       latitudinalMeters: regionRadius,
       longitudinalMeters: regionRadius)
-    setRegion(coordinateRegion, animated: true)
+      setRegion(coordinateRegion, animated: true)
   }
 }
 

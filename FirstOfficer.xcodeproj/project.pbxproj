@@ -81,8 +81,7 @@
 		22948BA2287457A10084862E /* FirstOfficerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22948BA1287457A10084862E /* FirstOfficerTests.swift */; };
 		22948BAC287457A10084862E /* FirstOfficerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22948BAB287457A10084862E /* FirstOfficerUITests.swift */; };
 		22948BAE287457A10084862E /* FirstOfficerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22948BAD287457A10084862E /* FirstOfficerUITestsLaunchTests.swift */; };
-		22D02B1E28B7DF2400ADB865 /* mapPin.json in Resources */ = {isa = PBXBuildFile; fileRef = 22D02B1D28B7DF2400ADB865 /* mapPin.json */; };
-		22D02B2028B7DFD600ADB865 /* pinRed.json in Resources */ = {isa = PBXBuildFile; fileRef = 22D02B1F28B7DFD600ADB865 /* pinRed.json */; };
+		22A6953D28BA638300C5D126 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A6953C28BA638300C5D126 /* UIView+Extensions.swift */; };
 		22D02B2228B7E43800ADB865 /* pin.json in Resources */ = {isa = PBXBuildFile; fileRef = 22D02B2128B7E43800ADB865 /* pin.json */; };
 		22ECB2EA28B8E273000E7109 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 22ECB2E928B8E273000E7109 /* video.mp4 */; };
 		22F7C89328B265390058C046 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F7C89128B265390058C046 /* OnBoardingViewController.swift */; };
@@ -192,8 +191,7 @@
 		22948BBB2874587B0084862E /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		22948BBC2874589F0084862E /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		229EB1CA2874B104009D9718 /* FirstOfficer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirstOfficer.entitlements; sourceTree = "<group>"; };
-		22D02B1D28B7DF2400ADB865 /* mapPin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mapPin.json; sourceTree = "<group>"; };
-		22D02B1F28B7DFD600ADB865 /* pinRed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pinRed.json; sourceTree = "<group>"; };
+		22A6953C28BA638300C5D126 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		22D02B2128B7E43800ADB865 /* pin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pin.json; sourceTree = "<group>"; };
 		22ECB2E928B8E273000E7109 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		22F7C89128B265390058C046 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -310,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				224BD43228B2E7CC00F4E252 /* CustomTabBarController.swift */,
+				22A6953C28BA638300C5D126 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -372,17 +371,15 @@
 		2284FC25289D8E0B00D5ADD8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				22F7C88E28B263510058C046 /* OnBoarding */,
+				22A6953E28BA674300C5D126 /* EnteringScreens */,
+				2284FC2B289D904900D5ADD8 /* Offices */,
+				2223AA8128A05292003D765F /* OfficesDetail */,
+				224C567D28B189CC001F5A8E /* Favorites */,
 				2255790E28B41616006923C6 /* MapView */,
 				2255790B28B413FF006923C6 /* PageView */,
 				2245BE1628B3B06300ABB4FF /* WebKit */,
-				22F7C88E28B263510058C046 /* OnBoarding */,
-				224C567D28B189CC001F5A8E /* Favorites */,
-				2284FC2B289D904900D5ADD8 /* Offices */,
-				2223AA8128A05292003D765F /* OfficesDetail */,
 				2223AA9A28A3015C003D765F /* DetailImagesFullScreen */,
-				2284FC26289D8E1700D5ADD8 /* WelcomePage */,
-				2284FC27289D8E3800D5ADD8 /* LoginPage */,
-				2284FC28289D8E5E00D5ADD8 /* LogoutPage */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -395,20 +392,20 @@
 			path = WelcomePage;
 			sourceTree = "<group>";
 		};
-		2284FC27289D8E3800D5ADD8 /* LoginPage */ = {
+		2284FC27289D8E3800D5ADD8 /* RegisterPage */ = {
 			isa = PBXGroup;
 			children = (
 				221B846328908F2400347EDD /* RegisterViewController.swift */,
 			);
-			path = LoginPage;
+			path = RegisterPage;
 			sourceTree = "<group>";
 		};
-		2284FC28289D8E5E00D5ADD8 /* LogoutPage */ = {
+		2284FC28289D8E5E00D5ADD8 /* LoginPage */ = {
 			isa = PBXGroup;
 			children = (
 				22948B8E2874579D0084862E /* ViewController.swift */,
 			);
-			path = LogoutPage;
+			path = LoginPage;
 			sourceTree = "<group>";
 		};
 		2284FC29289D8EB100D5ADD8 /* NetworkLayer */ = {
@@ -426,7 +423,6 @@
 			children = (
 				22948B8C2874579D0084862E /* SceneDelegate.swift */,
 				22948B8A2874579D0084862E /* AppDelegate.swift */,
-				22948B902874579D0084862E /* Main.storyboard */,
 				22948B95287457A10084862E /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
@@ -517,6 +513,17 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		22A6953E28BA674300C5D126 /* EnteringScreens */ = {
+			isa = PBXGroup;
+			children = (
+				22948B902874579D0084862E /* Main.storyboard */,
+				2284FC26289D8E1700D5ADD8 /* WelcomePage */,
+				2284FC27289D8E3800D5ADD8 /* RegisterPage */,
+				2284FC28289D8E5E00D5ADD8 /* LoginPage */,
+			);
+			path = EnteringScreens;
+			sourceTree = "<group>";
+		};
 		22F7C88E28B263510058C046 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,8 +551,6 @@
 				222F8FC628B03D05003EFAA5 /* FavoritesCoreData.xcdatamodeld */,
 				22ECB2E928B8E273000E7109 /* video.mp4 */,
 				22D02B2128B7E43800ADB865 /* pin.json */,
-				22D02B1F28B7DFD600ADB865 /* pinRed.json */,
-				22D02B1D28B7DF2400ADB865 /* mapPin.json */,
 				22790D2228B65D7E00CD9FDE /* emptyLottie.json */,
 				224BD42F28B29E5E00F4E252 /* find.json */,
 				22F7C8A428B286D70058C046 /* findOffice.json */,
@@ -685,9 +690,7 @@
 				2223AAA228A301AF003D765F /* FullScreen.storyboard in Resources */,
 				22F7C89B28B265B30058C046 /* OnBoardingCollectionViewCell.xib in Resources */,
 				2245BE1E28B3B08200ABB4FF /* WebKit.storyboard in Resources */,
-				22D02B2028B7DFD600ADB865 /* pinRed.json in Resources */,
 				22ECB2EA28B8E273000E7109 /* video.mp4 in Resources */,
-				22D02B1E28B7DF2400ADB865 /* mapPin.json in Resources */,
 				22F7C89628B265640058C046 /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -755,6 +758,7 @@
 				2223AA72289DDB98003D765F /* HTTPClient.swift in Sources */,
 				224C568A28B189F5001F5A8E /* FavoriteOfficesWorker.swift in Sources */,
 				221B846428908F2400347EDD /* RegisterViewController.swift in Sources */,
+				22A6953D28BA638300C5D126 /* UIView+Extensions.swift in Sources */,
 				227B71C628A3EEA600D1278B /* FullScreenCollectionViewCell.swift in Sources */,
 				222F8FC828B03D05003EFAA5 /* FavoritesCoreData.xcdatamodeld in Sources */,
 				222F8FCD28B03DF8003EFAA5 /* CoreDataStack.swift in Sources */,

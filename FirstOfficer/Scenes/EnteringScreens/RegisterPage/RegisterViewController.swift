@@ -18,31 +18,17 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupUI()
+        setupNavigationBar()
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         btnView.layer.borderColor = UIColor(named: "LoginBtnBorderColor")?.cgColor
     }
-    
-    func setupUI() {
-        loginView.layer.cornerRadius = 30
-        btnView.layer.cornerRadius = 18
-        btnView.layer.borderColor = UIColor(named: "LoginBtnBorderColor")?.cgColor
-        btnView.layer.borderWidth = 4
+}
 
-        loginView.layer.masksToBounds = false
-        loginView.layer.shadowColor = UIColor.black.cgColor
-        loginView.layer.shadowOpacity = 0.2
-        loginView.layer.shadowOffset = .zero
-        loginView.layer.shadowRadius = 3
-
-        facebookView.layer.cornerRadius = 22
-        twitterView.layer.cornerRadius = 22
-        emailView.layer.cornerRadius = 22
-        
-        
+extension RegisterViewController {
+    func setupNavigationBar(){
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
+        navigationController?.navigationBar.tintColor = UIColor.label
     }
-
 }
