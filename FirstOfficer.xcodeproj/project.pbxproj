@@ -85,6 +85,17 @@
 		22A6954228BD047100C5D126 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 22A6954128BD047100C5D126 /* IQKeyboardManagerSwift */; };
 		22A6954428BD5C4D00C5D126 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A6954328BD5C4D00C5D126 /* UIViewController+Extensions.swift */; };
 		22A6954628BD7C2400C5D126 /* CompositionalLayout+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A6954528BD7C2400C5D126 /* CompositionalLayout+Extensions.swift */; };
+		22A6954828BE32A700C5D126 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22A6954728BE32A700C5D126 /* GoogleService-Info.plist */; };
+		22A6954B28BE34ED00C5D126 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 22A6954A28BE34ED00C5D126 /* FirebaseAuth */; };
+		22A6955428BE373100C5D126 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A6954D28BE373000C5D126 /* Profile.storyboard */; };
+		22A6955528BE373100C5D126 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A6954E28BE373000C5D126 /* ProfileViewController.swift */; };
+		22A6955628BE373100C5D126 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A6954F28BE373100C5D126 /* ProfilePresenter.swift */; };
+		22A6955728BE373100C5D126 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A6955028BE373100C5D126 /* ProfileInteractor.swift */; };
+		22A6955828BE373100C5D126 /* ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A6955128BE373100C5D126 /* ProfileModels.swift */; };
+		22A6955928BE373100C5D126 /* ProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A6955228BE373100C5D126 /* ProfileWorker.swift */; };
+		22A6955A28BE373100C5D126 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A6955328BE373100C5D126 /* ProfileRouter.swift */; };
+		22A6955E28BE3B8D00C5D126 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A6955C28BE3B8C00C5D126 /* ProfileCollectionViewCell.swift */; };
+		22A6955F28BE3B8D00C5D126 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A6955D28BE3B8D00C5D126 /* ProfileCollectionViewCell.xib */; };
 		22D02B2228B7E43800ADB865 /* pin.json in Resources */ = {isa = PBXBuildFile; fileRef = 22D02B2128B7E43800ADB865 /* pin.json */; };
 		22ECB2EA28B8E273000E7109 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 22ECB2E928B8E273000E7109 /* video.mp4 */; };
 		22F7C89328B265390058C046 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F7C89128B265390058C046 /* OnBoardingViewController.swift */; };
@@ -197,6 +208,16 @@
 		22A6953C28BA638300C5D126 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		22A6954328BD5C4D00C5D126 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		22A6954528BD7C2400C5D126 /* CompositionalLayout+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompositionalLayout+Extensions.swift"; sourceTree = "<group>"; };
+		22A6954728BE32A700C5D126 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		22A6954D28BE373000C5D126 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		22A6954E28BE373000C5D126 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		22A6954F28BE373100C5D126 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		22A6955028BE373100C5D126 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		22A6955128BE373100C5D126 /* ProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModels.swift; sourceTree = "<group>"; };
+		22A6955228BE373100C5D126 /* ProfileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWorker.swift; sourceTree = "<group>"; };
+		22A6955328BE373100C5D126 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		22A6955C28BE3B8C00C5D126 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		22A6955D28BE3B8D00C5D126 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		22D02B2128B7E43800ADB865 /* pin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pin.json; sourceTree = "<group>"; };
 		22ECB2E928B8E273000E7109 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		22F7C89128B265390058C046 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2223AA8028A00121003D765F /* SDWebImageMapKit in Frameworks */,
+				22A6954B28BE34ED00C5D126 /* FirebaseAuth in Frameworks */,
 				22A6954228BD047100C5D126 /* IQKeyboardManagerSwift in Frameworks */,
 				2223AA7E28A00121003D765F /* SDWebImage in Frameworks */,
 				22F7C8A028B280B10058C046 /* Lottie in Frameworks */,
@@ -379,6 +401,7 @@
 		2284FC25289D8E0B00D5ADD8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				22A6954C28BE370B00C5D126 /* Profile */,
 				22F7C88E28B263510058C046 /* OnBoarding */,
 				22A6953E28BA674300C5D126 /* EnteringScreens */,
 				2284FC2B289D904900D5ADD8 /* Offices */,
@@ -432,6 +455,7 @@
 				22948B8C2874579D0084862E /* SceneDelegate.swift */,
 				22948B8A2874579D0084862E /* AppDelegate.swift */,
 				22948B95287457A10084862E /* LaunchScreen.storyboard */,
+				22A6954728BE32A700C5D126 /* GoogleService-Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -532,6 +556,30 @@
 			path = EnteringScreens;
 			sourceTree = "<group>";
 		};
+		22A6954C28BE370B00C5D126 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				22A6955B28BE3B6D00C5D126 /* Cells */,
+				22A6954D28BE373000C5D126 /* Profile.storyboard */,
+				22A6954E28BE373000C5D126 /* ProfileViewController.swift */,
+				22A6954F28BE373100C5D126 /* ProfilePresenter.swift */,
+				22A6955028BE373100C5D126 /* ProfileInteractor.swift */,
+				22A6955128BE373100C5D126 /* ProfileModels.swift */,
+				22A6955228BE373100C5D126 /* ProfileWorker.swift */,
+				22A6955328BE373100C5D126 /* ProfileRouter.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		22A6955B28BE3B6D00C5D126 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				22A6955C28BE3B8C00C5D126 /* ProfileCollectionViewCell.swift */,
+				22A6955D28BE3B8D00C5D126 /* ProfileCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		22F7C88E28B263510058C046 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +636,7 @@
 				2223AA7F28A00121003D765F /* SDWebImageMapKit */,
 				22F7C89F28B280B10058C046 /* Lottie */,
 				22A6954128BD047100C5D126 /* IQKeyboardManagerSwift */,
+				22A6954A28BE34ED00C5D126 /* FirebaseAuth */,
 			);
 			productName = FirstOfficer;
 			productReference = 22948B872874579D0084862E /* FirstOfficer.app */;
@@ -665,6 +714,7 @@
 				2223AA7C28A00121003D765F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				22F7C89E28B280B00058C046 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				22A6954028BD047100C5D126 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				22A6954928BE34ED00C5D126 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 22948B882874579D0084862E /* Products */;
 			projectDirPath = "";
@@ -694,14 +744,17 @@
 				224C568528B189F5001F5A8E /* FavoriteOffices.storyboard in Resources */,
 				227B71C728A3EEA600D1278B /* FullScreenCollectionViewCell.xib in Resources */,
 				22F7C8A628B286D70058C046 /* map.json in Resources */,
+				22A6955428BE373100C5D126 /* Profile.storyboard in Resources */,
 				22948B97287457A10084862E /* LaunchScreen.storyboard in Resources */,
 				22948B94287457A10084862E /* Assets.xcassets in Resources */,
 				22948B922874579D0084862E /* Main.storyboard in Resources */,
 				2223AAA228A301AF003D765F /* FullScreen.storyboard in Resources */,
+				22A6955F28BE3B8D00C5D126 /* ProfileCollectionViewCell.xib in Resources */,
 				22F7C89B28B265B30058C046 /* OnBoardingCollectionViewCell.xib in Resources */,
 				2245BE1E28B3B08200ABB4FF /* WebKit.storyboard in Resources */,
 				22ECB2EA28B8E273000E7109 /* video.mp4 in Resources */,
 				22F7C89628B265640058C046 /* OnBoarding.storyboard in Resources */,
+				22A6954828BE32A700C5D126 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,7 +779,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A6955A28BE373100C5D126 /* ProfileRouter.swift in Sources */,
 				22F7C89328B265390058C046 /* OnBoardingViewController.swift in Sources */,
+				22A6955E28BE3B8D00C5D126 /* ProfileCollectionViewCell.swift in Sources */,
 				2255791B28B41634006923C6 /* MapViewWorker.swift in Sources */,
 				2223AAA328A301AF003D765F /* FullScreenViewController.swift in Sources */,
 				22948B8F2874579D0084862E /* ViewController.swift in Sources */,
@@ -738,6 +793,7 @@
 				2223AA74289DDBBD003D765F /* OfficeLoader.swift in Sources */,
 				224C568628B189F5001F5A8E /* FavoriteOfficesViewController.swift in Sources */,
 				2245BE1F28B3B08200ABB4FF /* WebKitViewController.swift in Sources */,
+				22A6955528BE373100C5D126 /* ProfileViewController.swift in Sources */,
 				2223AAA728A301AF003D765F /* FullScreenWorker.swift in Sources */,
 				224C568728B189F5001F5A8E /* FavoriteOfficesPresenter.swift in Sources */,
 				224C568928B189F5001F5A8E /* FavoriteOfficesModels.swift in Sources */,
@@ -748,6 +804,7 @@
 				2223AA8C28A052B7003D765F /* OfficeDetailInteractor.swift in Sources */,
 				2223AA8B28A052B7003D765F /* OfficeDetailPresenter.swift in Sources */,
 				2223AA8D28A052B7003D765F /* OfficeDetailModels.swift in Sources */,
+				22A6955828BE373100C5D126 /* ProfileModels.swift in Sources */,
 				22948B8D2874579D0084862E /* SceneDelegate.swift in Sources */,
 				22A6954628BD7C2400C5D126 /* CompositionalLayout+Extensions.swift in Sources */,
 				2284FC36289D906300D5ADD8 /* OfficesInteractor.swift in Sources */,
@@ -755,6 +812,8 @@
 				2223AA8F28A052B7003D765F /* OfficeDetailRouter.swift in Sources */,
 				22F7C89A28B265B30058C046 /* OnBoardingCollectionViewCell.swift in Sources */,
 				2284FC35289D906300D5ADD8 /* OfficesPresenter.swift in Sources */,
+				22A6955928BE373100C5D126 /* ProfileWorker.swift in Sources */,
+				22A6955728BE373100C5D126 /* ProfileInteractor.swift in Sources */,
 				2284FC39289D906300D5ADD8 /* OfficesRouter.swift in Sources */,
 				2284FC34289D906300D5ADD8 /* OfficesViewController.swift in Sources */,
 				2223AA8A28A052B7003D765F /* OfficeDetailViewController.swift in Sources */,
@@ -784,6 +843,7 @@
 				2255791A28B41634006923C6 /* MapViewModels.swift in Sources */,
 				2284FC38289D906300D5ADD8 /* OfficesWorker.swift in Sources */,
 				2223AA8E28A052B7003D765F /* OfficeDetailWorker.swift in Sources */,
+				22A6955628BE373100C5D126 /* ProfilePresenter.swift in Sources */,
 				2245BE2128B3B08200ABB4FF /* WebKitInteractor.swift in Sources */,
 				224C568B28B189F5001F5A8E /* FavoriteOfficesRouter.swift in Sources */,
 				2284FC3C289D9B2900D5ADD8 /* NetworkModel.swift in Sources */,
@@ -1432,6 +1492,14 @@
 				kind = branch;
 			};
 		};
+		22A6954928BE34ED00C5D126 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		22F7C89E28B280B00058C046 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -1457,6 +1525,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 22A6954028BD047100C5D126 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		22A6954A28BE34ED00C5D126 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22A6954928BE34ED00C5D126 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 		22F7C89F28B280B10058C046 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
