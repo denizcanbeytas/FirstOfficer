@@ -217,6 +217,7 @@ extension OfficesViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         router?.routerToOfficeDetail(index:indexPath.row ) // diğer sayfaya veri göndermek için router'a satırı gönderiyoruz
+        print("tıklanıldı")
     }
 }
 

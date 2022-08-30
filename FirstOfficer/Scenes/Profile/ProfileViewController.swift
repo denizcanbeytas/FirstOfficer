@@ -7,16 +7,22 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 protocol ProfileDisplayLogic: AnyObject {
-    
+    func getFavorites(favorites: [Model])
 }
 
 final class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var emailTF: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var interactor: ProfileBusinessLogic?
     var router: (ProfileRoutingLogic & ProfileDataPassing)?
     var viewController: ProfileViewController?
+    
+    var favouriteOfficesArray: [Model] = []
     
     // MARK: Object lifecycle
     
@@ -30,14 +36,23 @@ final class ProfileViewController: UIViewController {
         setup()
     }
     
+    override func viewDidLoad() {
+        interactor?.getFavorites()
+        showCurrentUser()
+        collectionView.register(UINib(nibName: "ProfileCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "ProfileCollectionViewCell")
+        collectionView.reloadData()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        collectionView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         //navigationController?.setNavigationBarHidden(false, animated: animated)
+        collectionView.reloadData()
     }
     
     // MARK: Setup
@@ -60,24 +75,45 @@ final class ProfileViewController: UIViewController {
         }
         catch { print("error") }
     
-        let vc = storyboard?.instantiateViewController(withIdentifier: "Main") as! WelcomeViewController
-        let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .overFullScreen
-        present(nav, animated: true, completion: nil)
-        
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let destinationVC: WelcomeViewController = storyboard.instantiateViewController(identifier: "Main")
-//        navigationController?.pushViewController(destinationVC, animated: true)
-        
-//        guard let myViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(identifier: "Main") as? WelcomeViewController else {
-//            fatalError("Unable to Instantiate My View Controller")
-//        }
-//        self.viewController?.navigationController?.pushViewController(myViewController, animated: true)
-        
-        print("Tıklandı")
+        let destinationVC = storyboard?.instantiateViewController(withIdentifier: "Main") as! WelcomeViewController
+        let navigationController = UINavigationController(rootViewController: destinationVC)
+        navigationController.modalPresentationStyle = .overFullScreen
+        present(navigationController, animated: true, completion: nil)
     }
 }
 
 extension ProfileViewController: ProfileDisplayLogic {
-    
+    func getFavorites(favorites: [Model]) {
+        favouriteOfficesArray.removeAll()
+        favouriteOfficesArray = favorites
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
 }
+
+extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return favouriteOfficesArray.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCollectionViewCell", for: indexPath) as? ProfileCollectionViewCell else {return UICollectionViewCell()}
+        cell.imageView.sd_setImage(with: URL(string: favouriteOfficesArray[indexPath.row].image ?? ""))
+        return cell
+    }
+
+
+}
+
+
+extension ProfileViewController {
+    func showCurrentUser(){
+        let auth = Auth.auth()
+        let email = (auth.currentUser?.email)!
+        emailTF.text = email
+    }
+}
+
+

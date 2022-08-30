@@ -16,24 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sFv-Mg-DFs">
-                                <rect key="frame" x="139" y="144" width="136" height="136"/>
-                                <color key="backgroundColor" red="1" green="0.45517957180000002" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xVh-kV-T80">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="sFv-Mg-DFs">
+                                <rect key="frame" x="139" y="94" width="136" height="136"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sFv-Mg-DFs" secondAttribute="height" multiplier="1:1" id="YlW-eq-zWk"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkn-A0-TkK">
-                                <rect key="frame" x="0.0" y="288" width="414" height="21"/>
+                                <rect key="frame" x="0.0" y="238" width="414" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jkn-A0-TkK" secondAttribute="height" multiplier="138:7" id="pED-Wf-XvF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efN-fP-crc">
-                                <rect key="frame" x="20" y="370" width="394" height="35"/>
+                                <rect key="frame" x="20" y="299" width="394" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="efN-fP-crc" secondAttribute="height" multiplier="394:35" id="4ol-Qs-Uf2"/>
                                 </constraints>
@@ -42,21 +52,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bpD-Aq-S6Q">
-                                <rect key="frame" x="20" y="413" width="374" height="483"/>
+                                <rect key="frame" x="20" y="342" width="374" height="451"/>
                                 <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dtR-7G-5WZ">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dtR-7G-5WZ">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nxe-uw-h5I" id="DL9-5N-syM"/>
+                                    <outlet property="delegate" destination="nxe-uw-h5I" id="naN-4Y-zrs"/>
+                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5P-Gk-Qzp">
-                                <rect key="frame" x="20" y="44" width="54" height="41"/>
+                                <rect key="frame" x="340" y="52" width="54" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Logout"/>
                                 <connections>
                                     <action selector="logoutClicked:" destination="nxe-uw-h5I" eventType="touchUpInside" id="CEb-ds-SoI"/>
                                 </connections>
@@ -69,20 +83,22 @@
                             <constraint firstItem="bpD-Aq-S6Q" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="2Qo-Rk-Izq"/>
                             <constraint firstItem="bpD-Aq-S6Q" firstAttribute="top" secondItem="efN-fP-crc" secondAttribute="bottom" constant="8" id="7In-ee-5eD"/>
                             <constraint firstItem="jkn-A0-TkK" firstAttribute="top" secondItem="sFv-Mg-DFs" secondAttribute="bottom" constant="8" id="CWp-Yn-Q5Z"/>
-                            <constraint firstItem="sFv-Mg-DFs" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="100" id="E3j-Ul-1sh"/>
+                            <constraint firstItem="sFv-Mg-DFs" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="50" id="E3j-Ul-1sh"/>
                             <constraint firstItem="sFv-Mg-DFs" firstAttribute="width" secondItem="chM-je-gA4" secondAttribute="width" multiplier="0.328" id="QMX-6m-3YT"/>
                             <constraint firstItem="jkn-A0-TkK" firstAttribute="trailing" secondItem="acR-sl-ate" secondAttribute="trailing" id="RzH-8f-Fcc"/>
-                            <constraint firstAttribute="bottom" secondItem="bpD-Aq-S6Q" secondAttribute="bottom" id="SUK-5o-Rs5"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="bottom" secondItem="bpD-Aq-S6Q" secondAttribute="bottom" constant="20" id="SUK-5o-Rs5"/>
                             <constraint firstItem="jkn-A0-TkK" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" id="UJK-7Y-eUr"/>
                             <constraint firstItem="sFv-Mg-DFs" firstAttribute="centerX" secondItem="chM-je-gA4" secondAttribute="centerX" id="UsS-69-QIy"/>
                             <constraint firstItem="efN-fP-crc" firstAttribute="trailing" secondItem="acR-sl-ate" secondAttribute="trailing" id="aAs-CP-JgA"/>
                             <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="bpD-Aq-S6Q" secondAttribute="trailing" constant="20" id="uWT-Pf-dHk"/>
-                            <constraint firstItem="efN-fP-crc" firstAttribute="top" secondItem="jkn-A0-TkK" secondAttribute="bottom" constant="61" id="yNk-ZZ-GpO"/>
+                            <constraint firstItem="efN-fP-crc" firstAttribute="top" secondItem="jkn-A0-TkK" secondAttribute="bottom" constant="40" id="yNk-ZZ-GpO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" selectedImage="person.fill" id="bnA-gx-J5J"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="collectionView" destination="bpD-Aq-S6Q" id="5SS-Qd-T16"/>
+                        <outlet property="emailTF" destination="jkn-A0-TkK" id="Frk-P3-VXx"/>
                         <segue destination="PXH-Xo-Gnd" kind="show" id="3fs-YX-ImH"/>
                     </connections>
                 </viewController>
@@ -102,10 +118,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logout" width="36" height="36"/>
+        <image name="UserPhoto" width="111" height="114"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
