@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 protocol ProfileDisplayLogic: AnyObject {
     
@@ -15,6 +16,7 @@ final class ProfileViewController: UIViewController {
     
     var interactor: ProfileBusinessLogic?
     var router: (ProfileRoutingLogic & ProfileDataPassing)?
+    var viewController: ProfileViewController?
     
     // MARK: Object lifecycle
     
@@ -35,7 +37,7 @@ final class ProfileViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+        //navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     // MARK: Setup
@@ -51,6 +53,28 @@ final class ProfileViewController: UIViewController {
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
+    }
+    @IBAction func logoutClicked(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+        }
+        catch { print("error") }
+    
+        let vc = storyboard?.instantiateViewController(withIdentifier: "Main") as! WelcomeViewController
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .overFullScreen
+        present(nav, animated: true, completion: nil)
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let destinationVC: WelcomeViewController = storyboard.instantiateViewController(identifier: "Main")
+//        navigationController?.pushViewController(destinationVC, animated: true)
+        
+//        guard let myViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(identifier: "Main") as? WelcomeViewController else {
+//            fatalError("Unable to Instantiate My View Controller")
+//        }
+//        self.viewController?.navigationController?.pushViewController(myViewController, animated: true)
+        
+        print("Tıklandı")
     }
 }
 

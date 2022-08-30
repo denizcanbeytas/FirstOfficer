@@ -59,7 +59,7 @@ final class FavoriteOfficesViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         // navigationBar make visible when screen Disappear
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+        //navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     // MARK: Setup

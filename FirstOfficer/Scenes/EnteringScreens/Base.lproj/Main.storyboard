@@ -312,6 +312,7 @@
                         <outlet property="loginBtn" destination="xb9-h3-1og" id="R97-cK-faB"/>
                         <outlet property="loginView" destination="5ms-Po-lHx" id="PvH-PX-q1J"/>
                         <outlet property="logoImage" destination="jmw-Ze-qSA" id="YxS-tI-qDS"/>
+                        <outlet property="passwordTF" destination="vDT-Pj-uEc" id="VPG-Uc-3qW"/>
                         <outlet property="twitterView" destination="FQD-sl-nRA" id="b3H-Ab-amq"/>
                     </connections>
                 </viewController>
@@ -414,6 +415,9 @@
                                                 <color key="tintColor" name="SocialMediaColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="REGISTER"/>
+                                                <connections>
+                                                    <action selector="registerClicked:" destination="6Yd-qR-JGc" eventType="touchUpInside" id="7Q9-xD-XRi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="LoginBtnColor"/>
@@ -603,9 +607,11 @@
                     <navigationItem key="navigationItem" id="VTd-CV-t4X"/>
                     <connections>
                         <outlet property="btnView" destination="3SO-P3-dwc" id="JK5-Zc-tHr"/>
+                        <outlet property="emailTF" destination="nfr-ID-Ndk" id="ILB-8c-C8Q"/>
                         <outlet property="emailView" destination="bwD-yW-uB9" id="mWY-U1-EPg"/>
                         <outlet property="facebookView" destination="aLe-Gj-ZQy" id="ASF-hb-ltj"/>
                         <outlet property="loginView" destination="eDj-Iq-PqD" id="pNQ-yh-0Pm"/>
+                        <outlet property="passwordTF" destination="fhR-sD-jfu" id="G4n-T9-nCQ"/>
                         <outlet property="twitterView" destination="i9k-pi-E01" id="pKP-PP-tPa"/>
                     </connections>
                 </viewController>
@@ -616,7 +622,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="oyA-4u-i8y">
             <objects>
-                <viewController storyboardIdentifier="welcomeVC" id="0hB-Nc-hr5" customClass="WelcomeViewController" customModule="FirstOfficer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="0hB-Nc-hr5" customClass="WelcomeViewController" customModule="FirstOfficer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nce-hO-uA4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

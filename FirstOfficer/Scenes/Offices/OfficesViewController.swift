@@ -118,6 +118,8 @@ final class OfficesViewController: UIViewController {
         alert.setValue(vc, forKey: "contentViewController")
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) in
             // for filter btn selected image
+            self.interactor?.fetchOffices(request: Offices.Fetch.Request())
+            self.tableView.reloadData()
             self.filterBtnImage.image = UIImage(named: "filterImage")
         }))
         alert.addAction(UIAlertAction(title: "Select", style: .default, handler: { [self] (UIAlertAction) in
@@ -262,17 +264,20 @@ extension OfficesViewController: UISearchBarDelegate {
        
         self.filteringData = self.allData.filter{office in
             if office.name!.lowercased().contains(searchText.lowercased()){
+               // self.tableView.reloadData()
                 return true
             }
 //            if office.address!.lowercased().contains(searchText.lowercased()){
 //                return true
 //            }
             if searchText == ""{
+               // self.tableView.reloadData()
                 return true
             }
             return false
         }
         self.tableView.reloadData()
+        
     }
 }
 
