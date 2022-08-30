@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,21 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Screen Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4k4-HP-wFV">
-                                <rect key="frame" x="20" y="79" width="374" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="4k4-HP-wFV" secondAttribute="height" multiplier="374:41" id="MCk-Mw-X8d"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t3O-gl-hJD">
-                                <rect key="frame" x="20" y="185" width="374" height="500"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="t3O-gl-hJD" secondAttribute="height" multiplier="187:250" id="8Cb-xj-BzN"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f1K-eH-OAK">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -45,14 +32,12 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="acR-sl-ate"/>
-                        <color key="backgroundColor" name="DetailContentView"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="t3O-gl-hJD" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="2OT-kL-dBK"/>
-                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="t3O-gl-hJD" secondAttribute="trailing" constant="20" id="9yR-3A-fbW"/>
-                            <constraint firstItem="t3O-gl-hJD" firstAttribute="top" secondItem="4k4-HP-wFV" secondAttribute="bottom" constant="65" id="GVZ-aJ-45w"/>
-                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="4k4-HP-wFV" secondAttribute="trailing" constant="20" id="LSx-ZO-j5i"/>
-                            <constraint firstItem="4k4-HP-wFV" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="35" id="UWO-0O-3XP"/>
-                            <constraint firstItem="4k4-HP-wFV" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="Ua5-6O-Pj4"/>
+                            <constraint firstItem="t3O-gl-hJD" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" id="0d9-1g-aVW"/>
+                            <constraint firstItem="t3O-gl-hJD" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" id="QOt-ko-Hle"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="t3O-gl-hJD" secondAttribute="trailing" id="R7X-NR-AuS"/>
+                            <constraint firstAttribute="bottom" secondItem="t3O-gl-hJD" secondAttribute="bottom" id="kUF-Qf-VYu"/>
                         </constraints>
                     </view>
                     <connections>
@@ -64,9 +49,4 @@
             <point key="canvasLocation" x="105.79710144927537" y="27.455357142857142"/>
         </scene>
     </scenes>
-    <resources>
-        <namedColor name="DetailContentView">
-            <color red="0.98400002717971802" green="0.97299998998641968" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>
