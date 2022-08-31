@@ -117,7 +117,8 @@ final class OfficesViewController: UIViewController {
         let alert = UIAlertController(title: "Select Office Detail", message: "", preferredStyle: .actionSheet)
         alert.setValue(vc, forKey: "contentViewController")
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) in
-            // for filter btn selected image
+
+            self.interactor?.fetchOffices(request: Offices.Fetch.Request())
             self.filterBtnImage.image = UIImage(named: "filterImage")
         }))
         alert.addAction(UIAlertAction(title: "Select", style: .default, handler: { [self] (UIAlertAction) in
@@ -242,13 +243,13 @@ extension OfficesViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickerView.reloadComponent(0)
         pickerView.reloadComponent(1)
+        
         let selectedItem = pickerView.selectedRow(inComponent: 0)
-        //let selectedSecondItem = pickerView.selectedRow(inComponent: 0)
         let selectedData = items[selectedItem].secondItem?[row]
         iter = selectedData ?? ""
         interactor?.fetchFilteringData(request: selectedData ?? "")
-        //searchTF.text = selectedData
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat{
@@ -264,9 +265,6 @@ extension OfficesViewController: UISearchBarDelegate {
             if office.name!.lowercased().contains(searchText.lowercased()){
                 return true
             }
-//            if office.address!.lowercased().contains(searchText.lowercased()){
-//                return true
-//            }
             if searchText == ""{
                 return true
             }
