@@ -52,14 +52,10 @@ final class OfficesViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        //navigationController?.setNavigationBarHidden(true, animated: false)
-       // self.navigationController?.setNavigationBarHidden(true, animated: false)
         interactor?.fetchOffices(request: Offices.Fetch.Request())
         tableView.register(UINib(nibName: "OfficesTableViewCell", bundle: .main), forCellReuseIdentifier: "OfficesTableViewCell")
         searcBar.delegate = self
         //interactor?.getFavoritesID()
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,7 +92,7 @@ final class OfficesViewController: UIViewController {
     private func createPickerView(){
 
         // creating pickerData
-        let capacity: itemsForFiltering = .init(firstItem: "Capacity", secondItem: ["0-5", "5-10", "10-15", "15-20"])
+        let capacity: itemsForFiltering = .init(firstItem: "Capacity", secondItem: ["0-5","0-10", "5-10", "10-15","10-25","15-20"])
         let rooms: itemsForFiltering = .init(firstItem: "Rooms", secondItem: ["0", "1", "2", "3","4", "5", "6", "7","8", "9", "10", "11"])
         let space: itemsForFiltering = .init(firstItem: "Space", secondItem: ["25m2", "50m2", "75m2", "100m2","125m2", "150m2"])
         
@@ -124,7 +120,7 @@ final class OfficesViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Select", style: .default, handler: { [self] (UIAlertAction) in
             // for filter btn selected image
             self.filterBtnImage.image = UIImage(named: "filterImage")
-            //interactor?.fetchFilteringData(request: self.iter )
+            interactor?.fetchFilteringData(request: self.iter )
         }))
         self.present(alert, animated: true, completion: nil)
         //
@@ -249,13 +245,12 @@ extension OfficesViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         let selectedItem = pickerView.selectedRow(inComponent: 0)
         let selectedData = items[selectedItem].secondItem?[row]
         iter = selectedData ?? ""
-        interactor?.fetchFilteringData(request: selectedData ?? "")
+       // interactor?.fetchFilteringData(request: selectedData ?? "")
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat{
         return 100
     }
-    
 }
 
 extension OfficesViewController: UISearchBarDelegate {
