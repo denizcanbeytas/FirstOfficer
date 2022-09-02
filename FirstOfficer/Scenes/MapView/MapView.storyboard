@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nxe-uw-h5I">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View View Controller-->
+        <scene sceneID="D3m-6j-bBI">
+            <objects>
+                <viewController storyboardIdentifier="mapViewVC" id="nxe-uw-h5I" customClass="MapViewViewController" customModule="FirstOfficer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="chM-je-gA4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yzr-rg-7jS">
+                                <rect key="frame" x="6" y="0.0" width="402" height="896"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="18"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="nxe-uw-h5I" id="x9l-IG-Gdp"/>
+                                </connections>
+                            </mapView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yL6-8N-Nhr" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="152" y="393" width="110" height="110"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yL6-8N-Nhr" secondAttribute="height" multiplier="1:1" id="2vU-Xa-dcl"/>
+                                    <constraint firstAttribute="width" constant="110" id="waw-0O-8IS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="acR-sl-ate"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yL6-8N-Nhr" firstAttribute="centerY" secondItem="chM-je-gA4" secondAttribute="centerY" id="9Dr-wr-y9U"/>
+                            <constraint firstAttribute="bottom" secondItem="yzr-rg-7jS" secondAttribute="bottom" id="CS1-F1-kc8"/>
+                            <constraint firstItem="yzr-rg-7jS" firstAttribute="top" secondItem="chM-je-gA4" secondAttribute="top" id="TDD-tA-6Bw"/>
+                            <constraint firstItem="yL6-8N-Nhr" firstAttribute="centerX" secondItem="chM-je-gA4" secondAttribute="centerX" id="dAa-Fo-SsJ"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="yzr-rg-7jS" secondAttribute="trailing" constant="6" id="e73-GQ-nmA"/>
+                            <constraint firstItem="yzr-rg-7jS" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="6" id="wSv-Bd-ZG4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="yL6-8N-Nhr" id="rcY-WR-gBU"/>
+                        <outlet property="mapView" destination="yzr-rg-7jS" id="1Hm-aO-UIe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZo-gs-e4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="27.455357142857142"/>
+        </scene>
+    </scenes>
+</document>

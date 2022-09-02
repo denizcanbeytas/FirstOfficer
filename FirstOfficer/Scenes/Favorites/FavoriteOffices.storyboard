@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nxe-uw-h5I">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites-->
+        <scene sceneID="D3m-6j-bBI">
+            <objects>
+                <viewController storyboardIdentifier="favoritesVC" id="nxe-uw-h5I" customClass="FavoriteOfficesViewController" customModule="FirstOfficer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="chM-je-gA4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvQ-7g-BzM">
+                                <rect key="frame" x="20" y="90" width="414" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rvQ-7g-BzM" secondAttribute="height" multiplier="394:41" id="Bb6-Ra-z4I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Eqc-RJ-OT6">
+                                <rect key="frame" x="20" y="153" width="374" height="660"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nxe-uw-h5I" id="eqS-7D-46m"/>
+                                    <outlet property="delegate" destination="nxe-uw-h5I" id="jGq-ya-u5R"/>
+                                </connections>
+                            </tableView>
+                            <view userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="YMn-vO-a3s" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="20" y="153" width="374" height="497.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YMn-vO-a3s" secondAttribute="height" multiplier="374:497" id="qUs-9M-yht"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="acR-sl-ate"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eqc-RJ-OT6" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="8m2-5R-2lq"/>
+                            <constraint firstItem="YMn-vO-a3s" firstAttribute="centerX" secondItem="chM-je-gA4" secondAttribute="centerX" id="9O2-X6-afw"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="bottom" secondItem="Eqc-RJ-OT6" secondAttribute="bottom" id="9ig-KL-pa1"/>
+                            <constraint firstItem="Eqc-RJ-OT6" firstAttribute="top" secondItem="rvQ-7g-BzM" secondAttribute="bottom" constant="20" id="EVA-yT-heP"/>
+                            <constraint firstItem="YMn-vO-a3s" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="109" id="YZy-Ab-fQV"/>
+                            <constraint firstItem="rvQ-7g-BzM" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="46" id="dMl-X1-SZf"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="Eqc-RJ-OT6" secondAttribute="trailing" constant="20" id="juZ-Nu-Wx0"/>
+                            <constraint firstItem="rvQ-7g-BzM" firstAttribute="trailing" secondItem="acR-sl-ate" secondAttribute="trailing" constant="20" id="o8c-9e-xQH"/>
+                            <constraint firstItem="rvQ-7g-BzM" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="20" id="oej-va-hdY"/>
+                            <constraint firstItem="YMn-vO-a3s" firstAttribute="width" secondItem="chM-je-gA4" secondAttribute="width" multiplier="0.904" id="reX-JI-DIw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="heart" catalog="system" selectedImage="heart.fill" id="ToU-2a-e1y"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emptyLottieView" destination="YMn-vO-a3s" id="cKt-Sp-9Ci"/>
+                        <outlet property="favoritesTabItem" destination="ToU-2a-e1y" id="uGR-A2-1bm"/>
+                        <outlet property="tableView" destination="Eqc-RJ-OT6" id="16H-xi-rSb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZo-gs-e4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="27.455357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
