@@ -23,7 +23,6 @@ class OnBoardingCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
     }
     
     @IBAction func btnAction(_ sender: Any) {

@@ -120,26 +120,4 @@ extension WebKitViewController {
         navigationItem.rightBarButtonItems = [backButton,progressItem,refresh]
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress),options: .new, context: nil)
     }
-    
-    /* Items For the TabBar
-     
-     func setbarButtonItems(){
-         let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
-         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-         let backButton = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .done, target: webView, action: #selector(webView.goBack))
-         let forwardButton = UIBarButtonItem(image: UIImage(systemName: "arrow.forward"), style: .done, target: webView, action: #selector(webView.goForward))
-        
-         
-         progressView = UIProgressView(progressViewStyle: .default)
-         progressView.sizeToFit()
-         let progressItem = UIBarButtonItem(customView: progressView)
-
-         toolbarItems = [backButton,forwardButton,spacer,progressItem,spacer, refresh]
-         navigationController?.isToolbarHidden = false
-         
-         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress),options: .new, context: nil)
-     }
-     
-     
-     */
 }

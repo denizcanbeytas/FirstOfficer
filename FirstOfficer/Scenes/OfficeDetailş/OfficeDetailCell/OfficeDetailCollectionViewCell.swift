@@ -18,18 +18,6 @@ class OfficeDetailCollectionViewCell: UICollectionViewCell {
     }
     
     func config(images: String) {
-//        viewModel.images?.forEach{ result in
-//           imageView.sd_setImage(with: URL(string: result))
-//        }
         imageView.sd_setImage(with: URL(string: images))
-//        for imageSingle in viewModel.images! {
-//            imageView.sd_setImage(with: URL(string: imageSingle))
-//        }
-        
     }
-    
-//    func config(image: String){
-//        imageView.image = UIImage(named: image)
-//    }
-
 }

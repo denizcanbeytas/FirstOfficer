@@ -21,7 +21,6 @@ class OnBoardingViewController: UIViewController {
         setupSlideContent()
         //setupPageControl()
     }
-    
 }
 
 extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -59,10 +58,7 @@ extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDa
         let width = scrollView.frame.width
         currentPage = Int(scrollView.contentOffset.x / width)
         pageControl.currentPage = currentPage
-        
     }
-    
-    
 }
 
 

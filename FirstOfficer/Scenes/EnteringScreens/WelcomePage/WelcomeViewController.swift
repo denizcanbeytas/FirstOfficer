@@ -16,12 +16,12 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func createBtnClicked(_ sender: Any) {
         performSegue(withIdentifier: "toRegister", sender: nil)
     }
+    
     @IBAction func loginBtnClicked(_ sender: Any) {
         performSegue(withIdentifier: "toLogin", sender: nil)
     }

@@ -54,7 +54,6 @@ class CoreDataManager {
         catch {
             completion(.failure(error))
         }
-        
     }
 
     func saveFavoritesToCoreData(with officeResult: Offices.Fetch.ViewModel.Office) {
@@ -68,27 +67,6 @@ class CoreDataManager {
         favouriteOffices.rooms = officeResult.rooms
         favouriteOffices.capacity = officeResult.capacity
         coreDataStack.saveContext()
-       
-//        if let appDelegate = UIApplication.shared.delegate as?AppDelegate{
-//            let context = appDelegate.persistentContainer.viewContext
-//
-//            let entityDescription = NSEntityDescription.insertNewObject(forEntityName: "Model", into: context)
-//           // entityDescription.setValue(viewModel.images, forKey: "images")
-//            entityDescription.setValue(officeResult.name, forKey: "name")
-//            entityDescription.setValue(officeResult.rooms, forKey: "rooms")
-//            entityDescription.setValue(officeResult.address, forKey: "address")
-//            entityDescription.setValue(officeResult.capacity, forKey: "capacity")
-//            entityDescription.setValue(officeResult.image, forKey: "image")
-//            entityDescription.setValue(officeResult.id, forKey: "id")
-//            entityDescription.setValue(officeResult.space, forKey: "space")
-//            //entityDescription.setValue(true, forKey: "fav")
-//            do{
-//                try context.save()
-//                print("Saved")
-//            }catch{
-//                print("Saving Error")
-//            }
-        
         print("Saved")
         
     }
@@ -109,16 +87,4 @@ class CoreDataManager {
         
         print("Deleted")
     }
-    
-    //    func checkIsFavourite(with favoritesID: Int, completion: @escaping (Result<Bool, Error>) -> Void) {
-    //        do {
-    //            let request: NSFetchRequest<Model> = Model.fetchRequest()
-    //            request.returnsObjectsAsFaults = false
-    //            request.predicate = favoritesIDPredicate(of: request, with: favoritesID)
-    //            let fetchedResults = try moc.fetch(request)
-    //            fetchedResults.first != nil ? completion(.success(true)) : completion(.success(false))
-    //        } catch {
-    //            completion(.failure(error))
-    //        }
-    //    }
 }

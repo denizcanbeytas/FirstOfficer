@@ -33,7 +33,6 @@ final class OfficesPresenter: OfficesPresentationLogic {
             
         }
         viewController?.showOffices(viewModel: Offices.Fetch.ViewModel(offices: dataModels))
-        
     }
     
     func sendFavoritesIDToVC(favouritesID: [String]){

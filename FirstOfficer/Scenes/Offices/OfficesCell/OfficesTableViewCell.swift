@@ -92,16 +92,6 @@ class OfficesTableViewCell: UITableViewCell {
         favoriteImage.image = UIImage(named: "FavoriteUnClicked")
 
     }
-    
-//    func setupTAbbarBadgeValue(){
-//        let tabBar = self.inputViewController?.tabBarController!.tabBar
-//        let addedItem = tabBar?.items![1]
-//        var iter = 1
-//        iter += 1
-//        addedItem?.badgeValue = "\(iter)"
-//        addedItem?.badgeColor = UIColor.red
-//    }
-    
 }
 
 

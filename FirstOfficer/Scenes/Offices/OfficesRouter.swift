@@ -28,14 +28,4 @@ final class OfficesRouter: OfficesRoutingLogic, OfficesDataPassing {
         
         self.viewController?.navigationController?.pushViewController(destinationVC, animated: true)
     }
-
 }
-
-/*
-    - destinationVC.router?.dataStore?.officeDetailData = dataStore?.officeData?[index] -> açıklaması
-        . Detail sayfasına, tıklanan tableView hücresindeki elemanın değerlerini göndereceğimiz için, karşı taraftaki data array olmayacak.
- 
-    - destinationVC ile diğer sayfanın router ına erişebildik çünkü router değişkeni diğer sayafanın vc sinde var.
-    - Data nın işlenmeden önceki geldiği son nokta interactor dadır.
- 
- */

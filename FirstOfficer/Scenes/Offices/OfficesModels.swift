@@ -12,10 +12,8 @@ enum Offices {
     
     enum Fetch {
         
-        struct Request {
-            
-        }
-        
+        struct Request {}
+    
         struct Response {
             let offices: OfficeArray
         }
@@ -35,7 +33,6 @@ enum Offices {
             }
         }
     }
-    
 }
 
 struct itemsForFiltering {

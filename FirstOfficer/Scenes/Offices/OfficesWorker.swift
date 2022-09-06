@@ -51,4 +51,4 @@ final class OfficesWorker: OfficesWorkingLogic {
     
 }
 
-// 2.adım : network modelden gelen veriyi result a alıyor respons ile interactor a gönderiyor
+

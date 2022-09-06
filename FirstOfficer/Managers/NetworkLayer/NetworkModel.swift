@@ -9,9 +9,6 @@ import Foundation
 protocol NetworkManagerProtocol{
     func getOffice(completion: @escaping ((Result<OfficeArray,NetworkingErrors>) -> Void))
 }
-
-
-
 // completion: @escaping (OfficeResponse?) -> Void
 struct NetworkManager: NetworkManagerProtocol{
     
@@ -47,7 +44,6 @@ struct NetworkManager: NetworkManagerProtocol{
         }
         task.resume()
     }
-    
 }
 
 enum NetworkingErrors: Error {
@@ -75,4 +71,4 @@ enum NetworkingErrors: Error {
     }
 }
 
-// -> 1.adım
+

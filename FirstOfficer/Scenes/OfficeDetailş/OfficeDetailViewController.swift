@@ -16,7 +16,6 @@ protocol OfficeDetailDisplayLogic: AnyObject {
 final class OfficeDetailViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-   // @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var detailRoomsLabel: UILabel!
     @IBOutlet weak var detailSpaceLabel: UILabel!
     @IBOutlet weak var detailCapacityLabel: UILabel!

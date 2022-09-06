@@ -78,7 +78,6 @@ final class OfficesViewController: UIViewController {
         router.viewController = viewController
         router.dataStore = interactor
     }
-
     
     // MARK: PickerView and ToolBar
     
@@ -211,7 +210,7 @@ extension OfficesViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        router?.routerToOfficeDetail(index:indexPath.row ) // diğer sayfaya veri göndermek için router'a satırı gönderiyoruz
+        router?.routerToOfficeDetail(index:indexPath.row )
     }
 }
 
@@ -245,7 +244,6 @@ extension OfficesViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         let selectedItem = pickerView.selectedRow(inComponent: 0)
         let selectedData = items[selectedItem].secondItem?[row]
         iter = selectedData ?? ""
-       // interactor?.fetchFilteringData(request: selectedData ?? "")
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat{

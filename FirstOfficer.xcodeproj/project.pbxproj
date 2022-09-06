@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		221B846428908F2400347EDD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B846328908F2400347EDD /* RegisterViewController.swift */; };
 		221B8466289094AB00347EDD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B8465289094AB00347EDD /* WelcomeViewController.swift */; };
-		2223AA72289DDB98003D765F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA71289DDB98003D765F /* HTTPClient.swift */; };
-		2223AA74289DDBBD003D765F /* OfficeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA73289DDBBD003D765F /* OfficeLoader.swift */; };
-		2223AA76289DDBD1003D765F /* RemoteOfficeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA75289DDBD1003D765F /* RemoteOfficeLoader.swift */; };
 		2223AA7A289FFEC3003D765F /* OfficesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA78289FFEC3003D765F /* OfficesTableViewCell.swift */; };
 		2223AA7B289FFEC3003D765F /* OfficesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2223AA79289FFEC3003D765F /* OfficesTableViewCell.xib */; };
 		2223AA7E28A00121003D765F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2223AA7D28A00121003D765F /* SDWebImage */; };
@@ -117,9 +114,6 @@
 /* Begin PBXFileReference section */
 		221B846328908F2400347EDD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		221B8465289094AB00347EDD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		2223AA71289DDB98003D765F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		2223AA73289DDBBD003D765F /* OfficeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeLoader.swift; sourceTree = "<group>"; };
-		2223AA75289DDBD1003D765F /* RemoteOfficeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteOfficeLoader.swift; sourceTree = "<group>"; };
 		2223AA78289FFEC3003D765F /* OfficesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficesTableViewCell.swift; sourceTree = "<group>"; };
 		2223AA79289FFEC3003D765F /* OfficesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfficesTableViewCell.xib; sourceTree = "<group>"; };
 		2223AA8228A052B7003D765F /* OfficeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OfficeDetail.storyboard; sourceTree = "<group>"; };
@@ -237,16 +231,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2223AA77289FF0B4003D765F /* exNetwork */ = {
-			isa = PBXGroup;
-			children = (
-				2223AA71289DDB98003D765F /* HTTPClient.swift */,
-				2223AA73289DDBBD003D765F /* OfficeLoader.swift */,
-				2223AA75289DDBD1003D765F /* RemoteOfficeLoader.swift */,
-			);
-			path = exNetwork;
-			sourceTree = "<group>";
-		};
 		2223AA8128A05292003D765F /* OfficesDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,7 +403,6 @@
 		2284FC29289D8EB100D5ADD8 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				2223AA77289FF0B4003D765F /* exNetwork */,
 				2284FC3B289D9B2900D5ADD8 /* NetworkModel.swift */,
 				2284FC3D289D9B7700D5ADD8 /* ResponseModel.swift */,
 			);
@@ -733,9 +716,7 @@
 				221B8466289094AB00347EDD /* WelcomeViewController.swift in Sources */,
 				2255791928B41634006923C6 /* MapViewInteractor.swift in Sources */,
 				2245BE2028B3B08200ABB4FF /* WebKitPresenter.swift in Sources */,
-				2223AA76289DDBD1003D765F /* RemoteOfficeLoader.swift in Sources */,
 				22948B8B2874579D0084862E /* AppDelegate.swift in Sources */,
-				2223AA74289DDBBD003D765F /* OfficeLoader.swift in Sources */,
 				224C568628B189F5001F5A8E /* FavoriteOfficesViewController.swift in Sources */,
 				2245BE1F28B3B08200ABB4FF /* WebKitViewController.swift in Sources */,
 				2223AAA728A301AF003D765F /* FullScreenWorker.swift in Sources */,
@@ -766,7 +747,6 @@
 				2284FC3E289D9B7700D5ADD8 /* ResponseModel.swift in Sources */,
 				2245BE2428B3B08200ABB4FF /* WebKitRouter.swift in Sources */,
 				2255792028B421A7006923C6 /* OfficeAnnotation.swift in Sources */,
-				2223AA72289DDB98003D765F /* HTTPClient.swift in Sources */,
 				224C568A28B189F5001F5A8E /* FavoriteOfficesWorker.swift in Sources */,
 				221B846428908F2400347EDD /* RegisterViewController.swift in Sources */,
 				22A6953D28BA638300C5D126 /* UIView+Extensions.swift in Sources */,

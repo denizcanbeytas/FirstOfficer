@@ -16,7 +16,7 @@ protocol OfficesBusinessLogic: AnyObject {
 }
 
 protocol OfficesDataStore: AnyObject {
-    var officeData: OfficeArray? {get} // presenter dan gelen data ların tutulduğu yer - datannın son hali
+    var officeData: OfficeArray? {get}
 }
 
 final class OfficesInteractor: OfficesBusinessLogic, OfficesDataStore {
@@ -24,8 +24,6 @@ final class OfficesInteractor: OfficesBusinessLogic, OfficesDataStore {
     var officeData: OfficeArray?
     var presenter: OfficesPresentationLogic?
     var worker: OfficesWorkingLogic = OfficesWorker()
-    
-    
     
     func fetchOffices(request: Offices.Fetch.Request) {
         worker.getOffices { result in
@@ -38,7 +36,6 @@ final class OfficesInteractor: OfficesBusinessLogic, OfficesDataStore {
                 self.presenter?.presenterOfficeData(response: Offices.Fetch.Response(offices: officeData))
             case .failure(let error):
                 print(error)
-                
             }
         }
     }
@@ -75,7 +72,3 @@ final class OfficesInteractor: OfficesBusinessLogic, OfficesDataStore {
     }
     
 }
-
-// 3.adım -> çıkacağı bir yer yok completion yok
-//            respnse ile gelen veriyi result a alıyor, resulttan gelen veriyi officedata ya atıyor
-            

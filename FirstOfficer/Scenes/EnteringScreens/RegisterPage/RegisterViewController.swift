@@ -9,7 +9,6 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
-
     @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var btnView: UIView!
     @IBOutlet weak var emailView: UIView!

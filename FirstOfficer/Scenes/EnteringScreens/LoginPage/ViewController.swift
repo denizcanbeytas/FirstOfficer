@@ -37,10 +37,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginClicked(_ sender: UIButton) {
-//        let storyboard = UIStoryboard(name: "Offices", bundle: nil)
-//        let destinationVC = storyboard.instantiateViewController(identifier: "OfficesVC")
-//        self.navigationController?.pushViewController(destinationVC, animated: true)
-        
         self.navigationController?.pushViewController(PageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal), animated: true)
     }
     
