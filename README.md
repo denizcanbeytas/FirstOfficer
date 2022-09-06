@@ -41,7 +41,7 @@ Videos About Screens
 ===========
 | OnBoarding Screen | Filterings |
 | ----------- | ------------ |
- https://user-images.githubusercontent.com/70637660/188655550-7e8f545e-b7d3-4f30-b10a-89ec92358a47.mp4 | https://user-images.githubusercontent.com/70637660/188655748-e0dbb1fc-70cb-4c2f-af3c-dfc87aac331c.mp4 
+| https://user-images.githubusercontent.com/70637660/188659816-4c30f31f-f19e-4a98-8159-f4554f1c116a.mp4 | https://user-images.githubusercontent.com/70637660/188655748-e0dbb1fc-70cb-4c2f-af3c-dfc87aac331c.mp4 |
 
 
 
