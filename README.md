@@ -39,7 +39,7 @@ cd FirstOfficer
 open FirstOfficer.xcodeproj
 ```
 
-Gifs About Screens
+Gifs About The Screens
 ===========
 | OnBoarding Screen | Filterings | Add and Delete Favorites | Map | 
 | ----------- | ------------ |----------- | ------------ |
@@ -50,6 +50,6 @@ Gifs About Screens
 | ------------ | ------------ | ------------ | ------------ | 
 | ![detail](https://user-images.githubusercontent.com/70637660/188670499-778baaf7-3a4b-4c73-94b6-29f1d98efdd5.gif)| ![galerie](https://user-images.githubusercontent.com/70637660/188670531-33e35f0f-11f3-4e14-ab64-0d4fb40c9481.gif)| ![web](https://user-images.githubusercontent.com/70637660/188670599-d0d90aac-6125-49a7-8ada-8d8185bf43c9.gif) | ![video](https://user-images.githubusercontent.com/70637660/188670624-21e8bdea-1cf3-42bd-ada3-c37344a886e7.gif) | 
 
-Video About Project
+Video About The Project
 ===========
 https://user-images.githubusercontent.com/70637660/188668874-5be988ca-76da-4a7c-ad91-c3923c30c4e2.mp4
