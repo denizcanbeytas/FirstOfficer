@@ -42,9 +42,9 @@ https://user-images.githubusercontent.com/70637660/188668874-5be988ca-76da-4a7c-
 
 Videos About Screens
 ===========
-| OnBoarding Screen | Filterings |
-| ----------- | ------------ |
-| ![OnBoarding](https://user-images.githubusercontent.com/70637660/188669197-d5988d89-50d8-4247-9107-66b53c794776.gif)| ![filtering](https://user-images.githubusercontent.com/70637660/188670157-1cd8df0d-3ad3-403f-a5dd-9c66df7005f7.gif)|
+| OnBoarding Screen | Filterings | Add and Delete Favorites | Map | 
+| ----------- | ------------ |----------- | ------------ |
+| ![OnBoarding](https://user-images.githubusercontent.com/70637660/188669197-d5988d89-50d8-4247-9107-66b53c794776.gif)| ![filtering](https://user-images.githubusercontent.com/70637660/188670157-1cd8df0d-3ad3-403f-a5dd-9c66df7005f7.gif)| ![favorites](https://user-images.githubusercontent.com/70637660/188670408-63b1e3df-1aa6-4867-87e2-50d590bf3a1c.gif)| ![map](https://user-images.githubusercontent.com/70637660/188670437-e9df093c-a7e0-413f-ab0b-49c8d5c3973e.gif)| 
 
 | Add and Delete Favorites | Map | 
 | ------------------- | ------------ | 
