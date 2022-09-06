@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		221AA5FC28C79342000CB0DA /* OnBoarding.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 221AA5FB28C79342000CB0DA /* OnBoarding.mp4 */; };
 		221B846428908F2400347EDD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B846328908F2400347EDD /* RegisterViewController.swift */; };
 		221B8466289094AB00347EDD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B8465289094AB00347EDD /* WelcomeViewController.swift */; };
 		2223AA72289DDB98003D765F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA71289DDB98003D765F /* HTTPClient.swift */; };
@@ -116,7 +115,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		221AA5FB28C79342000CB0DA /* OnBoarding.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = OnBoarding.mp4; sourceTree = "<group>"; };
 		221B846328908F2400347EDD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		221B8465289094AB00347EDD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2223AA71289DDB98003D765F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -560,7 +558,6 @@
 				22948B93287457A10084862E /* Assets.xcassets */,
 				222F8FC628B03D05003EFAA5 /* FavoritesCoreData.xcdatamodeld */,
 				22ECB2E928B8E273000E7109 /* video.mp4 */,
-				221AA5FB28C79342000CB0DA /* OnBoarding.mp4 */,
 				22D02B2128B7E43800ADB865 /* pin.json */,
 				22790D2228B65D7E00CD9FDE /* emptyLottie.json */,
 				224BD42F28B29E5E00F4E252 /* find.json */,
@@ -702,7 +699,6 @@
 				22948B922874579D0084862E /* Main.storyboard in Resources */,
 				2223AAA228A301AF003D765F /* FullScreen.storyboard in Resources */,
 				22F7C89B28B265B30058C046 /* OnBoardingCollectionViewCell.xib in Resources */,
-				221AA5FC28C79342000CB0DA /* OnBoarding.mp4 in Resources */,
 				2245BE1E28B3B08200ABB4FF /* WebKit.storyboard in Resources */,
 				22ECB2EA28B8E273000E7109 /* video.mp4 in Resources */,
 				22F7C89628B265640058C046 /* OnBoarding.storyboard in Resources */,
