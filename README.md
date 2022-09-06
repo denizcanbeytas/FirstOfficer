@@ -39,11 +39,7 @@ open FirstOfficer.xcodeproj
 
 Videos About Screens
 ===========
-| OnBoarding Screen | Filterings |
-| ----------- | ------------ |
-| https://github.com/denizcanbeytas/FirstOfficer/blob/main/FirstOfficer/Assets/video.mp4 | https://user-images.githubusercontent.com/70637660/188656282-3f1ab661-cd09-47a5-b823-7450625038f3.mp4 |
+## OnBoarding Screen
+https://user-images.githubusercontent.com/70637660/188666700-32db9e6d-4385-4b20-bea1-3c78f02720d4.mp4
 
-https://github.com/denizcanbeytas/FirstOfficer/blob/main/FirstOfficer/Assets/video.mp4
-
-https://user-images.githubusercontent.com/70637660/188656282-3f1ab661-cd09-47a5-b823-7450625038f3.mp4
 
