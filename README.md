@@ -46,16 +46,8 @@ Videos About Screens
 | ----------- | ------------ |----------- | ------------ |
 | ![OnBoarding](https://user-images.githubusercontent.com/70637660/188669197-d5988d89-50d8-4247-9107-66b53c794776.gif)| ![filtering](https://user-images.githubusercontent.com/70637660/188670157-1cd8df0d-3ad3-403f-a5dd-9c66df7005f7.gif)| ![favorites](https://user-images.githubusercontent.com/70637660/188670408-63b1e3df-1aa6-4867-87e2-50d590bf3a1c.gif)| ![map](https://user-images.githubusercontent.com/70637660/188670437-e9df093c-a7e0-413f-ab0b-49c8d5c3973e.gif)| 
 
-| Add and Delete Favorites | Map | 
-| ------------------- | ------------ | 
-|  ![favorites](https://user-images.githubusercontent.com/70637660/188670408-63b1e3df-1aa6-4867-87e2-50d590bf3a1c.gif)| ![map](https://user-images.githubusercontent.com/70637660/188670437-e9df093c-a7e0-413f-ab0b-49c8d5c3973e.gif)| 
 
-| Offices Detail | Galerie | 
-| ------------ | ------------ | 
-| ![detail](https://user-images.githubusercontent.com/70637660/188670499-778baaf7-3a4b-4c73-94b6-29f1d98efdd5.gif)| ![galerie](https://user-images.githubusercontent.com/70637660/188670531-33e35f0f-11f3-4e14-ab64-0d4fb40c9481.gif)| 
-
-## Web Screen
-| Web Screen | Offices Video | 
-| ---------- | ------------ | 
-| ![web](https://user-images.githubusercontent.com/70637660/188670599-d0d90aac-6125-49a7-8ada-8d8185bf43c9.gif) | ![video](https://user-images.githubusercontent.com/70637660/188670624-21e8bdea-1cf3-42bd-ada3-c37344a886e7.gif) | 
+| Offices Detail | Galerie | Web Screen | Offices Video | 
+| ------------ | ------------ | ------------ | ------------ | 
+| ![detail](https://user-images.githubusercontent.com/70637660/188670499-778baaf7-3a4b-4c73-94b6-29f1d98efdd5.gif)| ![galerie](https://user-images.githubusercontent.com/70637660/188670531-33e35f0f-11f3-4e14-ab64-0d4fb40c9481.gif)| ![web](https://user-images.githubusercontent.com/70637660/188670599-d0d90aac-6125-49a7-8ada-8d8185bf43c9.gif) | ![video](https://user-images.githubusercontent.com/70637660/188670624-21e8bdea-1cf3-42bd-ada3-c37344a886e7.gif) | 
 
