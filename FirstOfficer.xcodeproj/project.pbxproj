@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		221AA5F428C7916C000CB0DA /* OnBoarding.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 221AA5EC28C7916B000CB0DA /* OnBoarding.mp4 */; };
 		221B846428908F2400347EDD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B846328908F2400347EDD /* RegisterViewController.swift */; };
 		221B8466289094AB00347EDD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B8465289094AB00347EDD /* WelcomeViewController.swift */; };
 		2223AA72289DDB98003D765F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA71289DDB98003D765F /* HTTPClient.swift */; };
@@ -116,7 +115,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		221AA5EC28C7916B000CB0DA /* OnBoarding.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = OnBoarding.mp4; sourceTree = "<group>"; };
 		221B846328908F2400347EDD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		221B8465289094AB00347EDD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2223AA71289DDB98003D765F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -239,14 +237,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		221AA5EA28C79149000CB0DA /* Readme */ = {
-			isa = PBXGroup;
-			children = (
-				221AA5EC28C7916B000CB0DA /* OnBoarding.mp4 */,
-			);
-			path = Readme;
-			sourceTree = "<group>";
-		};
 		2223AA77289FF0B4003D765F /* exNetwork */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,7 +467,6 @@
 				22948B892874579D0084862E /* FirstOfficer */,
 				22948BA0287457A10084862E /* FirstOfficerTests */,
 				22948BAA287457A10084862E /* FirstOfficerUITests */,
-				221AA5EA28C79149000CB0DA /* Readme */,
 				22948B882874579D0084862E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -702,7 +691,6 @@
 				22F7C8A728B286D70058C046 /* findOffice.json in Resources */,
 				2223AA7B289FFEC3003D765F /* OfficesTableViewCell.xib in Resources */,
 				2223AA9828A067D3003D765F /* OfficeDetailCollectionViewCell.xib in Resources */,
-				221AA5F428C7916C000CB0DA /* OnBoarding.mp4 in Resources */,
 				224C568528B189F5001F5A8E /* FavoriteOffices.storyboard in Resources */,
 				227B71C728A3EEA600D1278B /* FullScreenCollectionViewCell.xib in Resources */,
 				22F7C8A628B286D70058C046 /* map.json in Resources */,
