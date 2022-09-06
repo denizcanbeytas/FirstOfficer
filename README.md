@@ -12,8 +12,8 @@ Table of contents
 <!--tableOfContetnts-->
    * [Technologies](#technologies)
    * [Installation](#installation)
-   * [Gifs About Screens](#gifs about screens)
-   * [Video About Project](#video about project)
+   * [Gifs About Screens](#gifsaboutscreens)
+   * [Video About Project](#videoaboutproject)
 <!---->
 
 Technologies
