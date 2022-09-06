@@ -45,4 +45,22 @@ https://user-images.githubusercontent.com/70637660/188666700-32db9e6d-4385-4b20-
 ## Main Screen And Filtering
 https://user-images.githubusercontent.com/70637660/188667095-9f2567e7-64cc-4867-85f1-dededbfb7d54.mp4
 
+## Adding and Deleting Favorites
+https://user-images.githubusercontent.com/70637660/188667736-7b29b4cc-e7de-4690-aa92-732f3ddedab5.mp4
+
+## Map Screen
+https://user-images.githubusercontent.com/70637660/188667966-bfbe6343-01cb-4db7-811d-fe013344dcf0.mp4
+
+## Office Detail Screen
+https://user-images.githubusercontent.com/70637660/188667890-0883f916-6b18-419a-876a-2bcafb2289c2.mp4
+
+## Office Galerie Screen
+https://user-images.githubusercontent.com/70637660/188668102-64c11f7e-057e-432d-9e2d-f44f70ec356a.mp4
+
+## Web Screen
+https://user-images.githubusercontent.com/70637660/188668237-3c1042d8-bc8c-4029-8380-eab47bbd229b.mp4
+
+## Offices Video
+https://user-images.githubusercontent.com/70637660/188668257-6dadaf0b-aa91-43fb-bf0b-42a7168d4170.mp4
+
 
