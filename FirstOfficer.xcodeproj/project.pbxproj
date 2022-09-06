@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221AA5F328C7916C000CB0DA /* Filterings.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 221AA5EB28C7916B000CB0DA /* Filterings.mp4 */; };
+		221AA5F428C7916C000CB0DA /* OnBoarding.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 221AA5EC28C7916B000CB0DA /* OnBoarding.mp4 */; };
+		221AA5F528C7916C000CB0DA /* Offices Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 221AA5ED28C7916B000CB0DA /* Offices Video.mp4 */; };
+		221AA5F628C7916C000CB0DA /* Map.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 221AA5EE28C7916B000CB0DA /* Map.mp4 */; };
+		221AA5F728C7916C000CB0DA /* Web Screen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 221AA5EF28C7916B000CB0DA /* Web Screen.mp4 */; };
+		221AA5F828C7916C000CB0DA /* Galerie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 221AA5F028C7916B000CB0DA /* Galerie.mp4 */; };
+		221AA5F928C7916C000CB0DA /* Offices Detail.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 221AA5F128C7916B000CB0DA /* Offices Detail.mp4 */; };
+		221AA5FA28C7916C000CB0DA /* Adding and Deleting Favorites.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 221AA5F228C7916C000CB0DA /* Adding and Deleting Favorites.mp4 */; };
 		221B846428908F2400347EDD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B846328908F2400347EDD /* RegisterViewController.swift */; };
 		221B8466289094AB00347EDD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B8465289094AB00347EDD /* WelcomeViewController.swift */; };
 		2223AA72289DDB98003D765F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223AA71289DDB98003D765F /* HTTPClient.swift */; };
@@ -115,6 +123,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		221AA5EB28C7916B000CB0DA /* Filterings.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Filterings.mp4; sourceTree = "<group>"; };
+		221AA5EC28C7916B000CB0DA /* OnBoarding.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = OnBoarding.mp4; sourceTree = "<group>"; };
+		221AA5ED28C7916B000CB0DA /* Offices Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Offices Video.mp4"; sourceTree = "<group>"; };
+		221AA5EE28C7916B000CB0DA /* Map.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Map.mp4; sourceTree = "<group>"; };
+		221AA5EF28C7916B000CB0DA /* Web Screen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Web Screen.mp4"; sourceTree = "<group>"; };
+		221AA5F028C7916B000CB0DA /* Galerie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Galerie.mp4; sourceTree = "<group>"; };
+		221AA5F128C7916B000CB0DA /* Offices Detail.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Offices Detail.mp4"; sourceTree = "<group>"; };
+		221AA5F228C7916C000CB0DA /* Adding and Deleting Favorites.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Adding and Deleting Favorites.mp4"; sourceTree = "<group>"; };
 		221B846328908F2400347EDD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		221B8465289094AB00347EDD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2223AA71289DDB98003D765F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -237,6 +253,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221AA5EA28C79149000CB0DA /* Readme */ = {
+			isa = PBXGroup;
+			children = (
+				221AA5F228C7916C000CB0DA /* Adding and Deleting Favorites.mp4 */,
+				221AA5EB28C7916B000CB0DA /* Filterings.mp4 */,
+				221AA5F028C7916B000CB0DA /* Galerie.mp4 */,
+				221AA5EE28C7916B000CB0DA /* Map.mp4 */,
+				221AA5F128C7916B000CB0DA /* Offices Detail.mp4 */,
+				221AA5ED28C7916B000CB0DA /* Offices Video.mp4 */,
+				221AA5EC28C7916B000CB0DA /* OnBoarding.mp4 */,
+				221AA5EF28C7916B000CB0DA /* Web Screen.mp4 */,
+			);
+			path = Readme;
+			sourceTree = "<group>";
+		};
 		2223AA77289FF0B4003D765F /* exNetwork */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +498,7 @@
 				22948B892874579D0084862E /* FirstOfficer */,
 				22948BA0287457A10084862E /* FirstOfficerTests */,
 				22948BAA287457A10084862E /* FirstOfficerUITests */,
+				221AA5EA28C79149000CB0DA /* Readme */,
 				22948B882874579D0084862E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -686,19 +718,27 @@
 				2284FC33289D906300D5ADD8 /* Offices.storyboard in Resources */,
 				22790D2328B65D7E00CD9FDE /* emptyLottie.json in Resources */,
 				2223AA8928A052B7003D765F /* OfficeDetail.storyboard in Resources */,
+				221AA5F328C7916C000CB0DA /* Filterings.mp4 in Resources */,
 				224BD43028B29E5E00F4E252 /* find.json in Resources */,
 				22D02B2228B7E43800ADB865 /* pin.json in Resources */,
 				22F7C8A728B286D70058C046 /* findOffice.json in Resources */,
 				2223AA7B289FFEC3003D765F /* OfficesTableViewCell.xib in Resources */,
 				2223AA9828A067D3003D765F /* OfficeDetailCollectionViewCell.xib in Resources */,
+				221AA5F528C7916C000CB0DA /* Offices Video.mp4 in Resources */,
+				221AA5F828C7916C000CB0DA /* Galerie.mp4 in Resources */,
+				221AA5F428C7916C000CB0DA /* OnBoarding.mp4 in Resources */,
+				221AA5F628C7916C000CB0DA /* Map.mp4 in Resources */,
 				224C568528B189F5001F5A8E /* FavoriteOffices.storyboard in Resources */,
 				227B71C728A3EEA600D1278B /* FullScreenCollectionViewCell.xib in Resources */,
 				22F7C8A628B286D70058C046 /* map.json in Resources */,
 				22948B97287457A10084862E /* LaunchScreen.storyboard in Resources */,
 				22948B94287457A10084862E /* Assets.xcassets in Resources */,
+				221AA5FA28C7916C000CB0DA /* Adding and Deleting Favorites.mp4 in Resources */,
+				221AA5F928C7916C000CB0DA /* Offices Detail.mp4 in Resources */,
 				22948B922874579D0084862E /* Main.storyboard in Resources */,
 				2223AAA228A301AF003D765F /* FullScreen.storyboard in Resources */,
 				22F7C89B28B265B30058C046 /* OnBoardingCollectionViewCell.xib in Resources */,
+				221AA5F728C7916C000CB0DA /* Web Screen.mp4 in Resources */,
 				2245BE1E28B3B08200ABB4FF /* WebKit.storyboard in Resources */,
 				22ECB2EA28B8E273000E7109 /* video.mp4 in Resources */,
 				22F7C89628B265640058C046 /* OnBoarding.storyboard in Resources */,
