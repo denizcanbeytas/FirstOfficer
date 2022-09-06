@@ -48,14 +48,14 @@ Videos About Screens
 
 | Add and Delete Favorites | Map | 
 | ------------------- | ------------ | 
-| ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/sorted.gif)  | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/search.gif) | 
+|  ![favorites](https://user-images.githubusercontent.com/70637660/188670408-63b1e3df-1aa6-4867-87e2-50d590bf3a1c.gif)| ![map](https://user-images.githubusercontent.com/70637660/188670437-e9df093c-a7e0-413f-ab0b-49c8d5c3973e.gif)| 
 
 | Offices Detail | Galerie | 
-| ------------ | ------------ | --------------------- |
-| ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/AddTodo.gif) | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/update.gif) | 
+| ------------ | ------------ | 
+| ![detail](https://user-images.githubusercontent.com/70637660/188670499-778baaf7-3a4b-4c73-94b6-29f1d98efdd5.gif)| ![galerie](https://user-images.githubusercontent.com/70637660/188670531-33e35f0f-11f3-4e14-ab64-0d4fb40c9481.gif)| 
 
 ## Web Screen
 | Web Screen | Offices Video | 
 | ---------- | ------------ | 
-| ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/sorted.gif)  | ![image](https://github.com/148-Mobven-iOS-Bootcamp/EserKucuker_Graduation_Project_Vip-Mvvm_Version/blob/Readme/Readme/search.gif) | 
+| ![web](https://user-images.githubusercontent.com/70637660/188670599-d0d90aac-6125-49a7-8ada-8d8185bf43c9.gif) | ![video](https://user-images.githubusercontent.com/70637660/188670624-21e8bdea-1cf3-42bd-ada3-c37344a886e7.gif) | 
 
