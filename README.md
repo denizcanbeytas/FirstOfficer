@@ -41,7 +41,7 @@ Videos About Screens
 ===========
 | OnBoarding Screen | Filterings |
 | ----------- | ------------ |
-| (https://github.com/denizcanbeytas/FirstOfficer/blob/main/FirstOfficer/Assets/OnBoarding.mp4) | https://user-images.githubusercontent.com/70637660/188655748-e0dbb1fc-70cb-4c2f-af3c-dfc87aac331c.mp4 |
+| https://github.com/denizcanbeytas/FirstOfficer/blob/main/FirstOfficer/Assets/OnBoarding.mp4 | https://user-images.githubusercontent.com/70637660/188655748-e0dbb1fc-70cb-4c2f-af3c-dfc87aac331c.mp4 |
 
 
 
